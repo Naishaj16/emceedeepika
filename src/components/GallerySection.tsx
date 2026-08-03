@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { GALLERY } from '../data/emceeData';
 import { Image as ImageIcon, Maximize2, X, MapPin, Calendar } from 'lucide-react';
 import { GalleryItem } from '../types';
+import { Link } from '@tanstack/react-router';
 
 export const GallerySection: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'wedding' | 'corporate' | 'celebrity' | 'international'>('all');
@@ -89,6 +90,15 @@ export const GallerySection: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            to="/gallery"
+            className="inline-flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-3.5 rounded-full font-bold text-sm transition-all shadow-md"
+          >
+            <span>View Full Media Portfolio</span>
+          </Link>
         </div>
       </div>
 

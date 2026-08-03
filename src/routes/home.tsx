@@ -20,13 +20,13 @@ const HomePage: React.FC = () => {
     '@type': 'Person',
     name: 'Deepika Jain',
     jobTitle: 'International Corporate Emcee & Event Host',
-    description: 'Premier international corporate emcee, gala dinner host, and bilingual event anchor available across Chennai, Dubai, Malaysia, and Singapore.',
+    description: 'Deepika Jain hosts weddings, corporate galas, award nights and global summits in four languages across India, the UAE and Asia.',
     url: 'https://emceedeepika.com',
     sameAs: [
-      'https://instagram.com',
-      'https://linkedin.com',
+      'https://www.instagram.com/emcee_deepikajain/?hl=en',
+      'https://in.linkedin.com/in/anchor-deepika-jain%F0%9F%8E%A4-4a240b177',
     ],
-    knowsLanguage: ['English', 'Tamil', 'Hindi'],
+    knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil'],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Emcee & Hosting Services',
@@ -35,21 +35,42 @@ const HomePage: React.FC = () => {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Corporate Summit & Conference Hosting',
+            name: 'Luxury Wedding Host',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Luxury Gala Dinner & D&D Emcee Services',
+            name: 'Corporate Re-presenter',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Bilingual Destination Wedding Anchoring',
+            name: 'Celebrity & Red Carpet Host',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Virtual & Hybrid Global Summits',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Award Shows & Recognition',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Private & Festival Events',
           },
         },
       ],
@@ -59,8 +80,8 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <SEOHead
-        title="Deepika Jain | International Corporate Emcee & Event Host"
-        description="Book Deepika Jain, premier international corporate emcee & wedding anchor for events in Chennai, Dubai, Malaysia & Singapore. Unrivaled stage presence."
+        title="Emcee & Event Host in India, UAE & Singapore | Deepika Jain"
+        description="Deepika Jain hosts weddings, corporate galas, award nights and global summits in four languages across India, the UAE and Asia. Get in touch."
         keywords={[
           'professional emcee for hire',
           'bilingual emcee for hire',

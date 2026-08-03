@@ -39,15 +39,15 @@ export const AboutSection: React.FC = () => {
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-pastel-900 leading-tight">
-              More Than Just a Voice: Crafting Unforgettable Moments
+              The Stage Master
             </h2>
 
             <div className="space-y-4 text-pastel-700 text-base leading-relaxed">
               <p>
-                With over a decade commanding prestigious stages internationally, Deepika Jain has perfected the craft of turning moments into memories. Her signature approach combines high-octane stage energy with empathetic crowd connection.
+                More than a voice — over a decade on some of the world's most demanding stages, Deepika has learned to turn a room of strangers into an audience that feels like family. Her approach pairs high-energy stage presence with something harder to fake: genuinely reading a crowd and meeting it where it is.
               </p>
               <p>
-                Fluent in English, Hindi, Marwari, and Tamil, she connects with multi-cultural audiences authentically—from royal Rajasthan weddings and Dubai corporate galas to Mumbai award nights.
+                Fluent in English, Hindi, Marwari, and Tamil, she moves easily between royal Rajasthan weddings, Dubai corporate galas, and Mumbai award nights — often within the same week. The result for clients: one host who doesn't need a translator, a script doctor, or a backup plan when the guest list gets complicated.
               </p>
             </div>
 
