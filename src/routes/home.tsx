@@ -10,12 +10,67 @@ import { TestimonialsSection } from '../components/TestimonialsSection';
 import { BookingForm } from '../components/BookingForm';
 import { Sparkles } from 'lucide-react';
 import { useBooking } from '../context/BookingContext';
+import { SEOHead } from '../components/SEOHead';
 
 const HomePage: React.FC = () => {
   const { openBooking } = useBooking();
 
+  const homepageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Deepika Jain',
+    jobTitle: 'International Corporate Emcee & Event Host',
+    description: 'Premier international corporate emcee, gala dinner host, and bilingual event anchor available across Chennai, Dubai, Malaysia, and Singapore.',
+    url: 'https://emceedeepika.com',
+    sameAs: [
+      'https://instagram.com',
+      'https://linkedin.com',
+    ],
+    knowsLanguage: ['English', 'Tamil', 'Hindi'],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Emcee & Hosting Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Corporate Summit & Conference Hosting',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Luxury Gala Dinner & D&D Emcee Services',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Bilingual Destination Wedding Anchoring',
+          },
+        },
+      ],
+    },
+  };
+
   return (
     <div>
+      <SEOHead
+        title="Deepika Jain | International Corporate Emcee & Event Host"
+        description="Book Deepika Jain, premier international corporate emcee & wedding anchor for events in Chennai, Dubai, Malaysia & Singapore. Unrivaled stage presence."
+        keywords={[
+          'professional emcee for hire',
+          'bilingual emcee for hire',
+          'international emcee',
+          'corporate emcee international events',
+          'destination wedding emcee Asia Middle East',
+          'multilingual event host',
+        ]}
+        schemaJson={homepageSchema}
+      />
       <Hero onOpenBooking={openBooking} />
       <StatsSection />
       <ServicesBento onOpenBooking={openBooking} />
@@ -28,7 +83,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pastel-700/80 border border-pastel-600 text-gold-light text-xs font-bold uppercase tracking-widest">
             <Sparkles className="w-4 h-4" />
-            <span>Limited Dates for 2024-2025 Season</span>
+            <span>Limited Dates for 2026-2027 Season</span>
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-pastel-50">
@@ -40,9 +95,6 @@ const HomePage: React.FC = () => {
           </p>
 
           <div className="bg-pastel-50 text-pastel-900 p-8 sm:p-10 rounded-3xl shadow-2xl border border-pastel-300 max-w-2xl mx-auto text-left">
-            <h3 className="font-serif text-2xl font-bold text-pastel-900 mb-6 text-center">
-              Quick Availability Request
-            </h3>
             <BookingForm />
           </div>
         </div>

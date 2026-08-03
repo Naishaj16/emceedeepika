@@ -12,9 +12,9 @@ export const AboutSection: React.FC = () => {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden border-8 border-white shadow-2xl bg-pastel-200">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=900"
+                  src="/images/deepika/deepika-2.webp"
                   alt="Deepika Jain - Stage Master"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
 

@@ -65,15 +65,13 @@ const ServicesPage: React.FC = () => {
                   ))}
                 </div>
               </div>
-              <div className="pt-6 mt-6 border-t border-pastel-100">
                 <button
                   onClick={openBooking}
                   className="w-full flex items-center justify-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 py-3 rounded-xl font-bold text-sm transition-all"
                 >
-                  <span>Book {service.title}</span>
+                  <span>Inquire About {service.title}</span>
                   <ArrowRight className="w-4 h-4 text-gold-light" />
                 </button>
-              </div>
             </div>
           ))}
         </div>

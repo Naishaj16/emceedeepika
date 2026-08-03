@@ -39,7 +39,7 @@ const AboutPage: React.FC = () => {
           <div className="lg:col-span-5 relative">
             <div className="rounded-3xl overflow-hidden border-4 border-white shadow-xl aspect-[4/5] bg-pastel-200">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=900"
+                src="/images/deepika/deepika-7.webp"
                 alt="Deepika Jain Portrait"
                 className="w-full h-full object-cover"
               />
@@ -120,7 +120,7 @@ const AboutPage: React.FC = () => {
             onClick={openBooking}
             className="bg-gold-DEFAULT hover:bg-gold-light text-pastel-900 px-8 py-3.5 rounded-full font-bold text-sm transition-all shadow-lg"
           >
-            Check Booking Availability
+            Get in Touch
           </button>
         </div>
       </div>

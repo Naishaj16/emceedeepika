@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '@tanstack/react-router';
-import { Sparkles, Menu, X, Calendar, Phone } from 'lucide-react';
+import { Sparkles, Menu, X, Calendar, ChevronDown, Globe } from 'lucide-react';
 
 interface HeaderProps {
   onOpenBooking: () => void;
@@ -9,6 +9,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [locationsOpen, setLocationsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +25,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
     { name: 'Services', to: '/services' },
     { name: 'Gallery', to: '/gallery' },
     { name: 'Contact', to: '/contact' },
+  ];
+
+  const locations = [
+    { name: 'Chennai, India', to: '/locations/chennai' },
+    { name: 'Dubai, UAE', to: '/locations/dubai' },
+    { name: 'Malaysia (KL)', to: '/locations/malaysia' },
+    { name: 'Singapore', to: '/locations/singapore' },
   ];
 
   return (
@@ -51,7 +59,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.to}
@@ -66,27 +74,47 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               {link.name}
             </Link>
           ))}
-        </nav>
 
-        {/* CTA Button */}
-        <div className="hidden md:flex items-center gap-4">
-          <button
-            onClick={onOpenBooking}
-            className="flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-95 border border-pastel-600/30"
-          >
-            <Calendar className="w-4 h-4 text-gold-light" />
-            <span>Book Now</span>
-          </button>
-        </div>
+          {/* Locations Dropdown */}
+          <div className="relative" onMouseLeave={() => setLocationsOpen(false)}>
+            <button
+              onMouseEnter={() => setLocationsOpen(true)}
+              onClick={() => setLocationsOpen(!locationsOpen)}
+              className="flex items-center gap-1 text-pastel-700 hover:text-pastel-900 font-medium transition-colors cursor-pointer py-1"
+            >
+              <Globe className="w-4 h-4 text-pastel-600" />
+              <span>Locations</span>
+              <ChevronDown className="w-4 h-4 text-pastel-500" />
+            </button>
+
+            {locationsOpen && (
+              <div className="absolute top-full left-0 w-48 bg-pastel-50 border border-pastel-200 rounded-2xl shadow-xl py-2 z-50">
+                {locations.map((loc) => (
+                  <Link
+                    key={loc.to}
+                    to={loc.to}
+                    onClick={() => setLocationsOpen(false)}
+                    className="block px-4 py-2 text-sm text-pastel-800 hover:bg-pastel-100 font-medium"
+                  >
+                    {loc.name}
+                  </Link>
+                ))}
+                <div className="border-t border-pastel-200 my-1 pt-1">
+                  <Link
+                    to="/guides/anchor-vs-emcee"
+                    onClick={() => setLocationsOpen(false)}
+                    className="block px-4 py-2 text-xs text-pastel-600 hover:bg-pastel-100 font-semibold"
+                  >
+                    Guide: Anchor vs Emcee
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
+        </nav>
 
         {/* Mobile Hamburger */}
         <div className="md:hidden flex items-center gap-2">
-          <button
-            onClick={onOpenBooking}
-            className="p-2 bg-pastel-700 text-pastel-50 rounded-full text-xs font-semibold flex items-center gap-1"
-          >
-            <Calendar className="w-4 h-4" />
-          </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-pastel-800 hover:text-pastel-900 rounded-lg"
@@ -109,17 +137,28 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               {link.name}
             </Link>
           ))}
-          <div className="pt-4 border-t border-pastel-200">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenBooking();
-              }}
-              className="w-full flex items-center justify-center gap-2 bg-pastel-700 text-pastel-50 py-3 rounded-full font-semibold text-sm shadow-md"
+
+          <div className="pt-2 border-t border-pastel-200">
+            <span className="text-xs font-bold uppercase tracking-wider text-pastel-500 block mb-2">Target Locations</span>
+            <div className="grid grid-cols-2 gap-2">
+              {locations.map((loc) => (
+                <Link
+                  key={loc.to}
+                  to={loc.to}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-xs font-medium text-pastel-700 bg-pastel-100 p-2 rounded-lg"
+                >
+                  {loc.name}
+                </Link>
+              ))}
+            </div>
+            <Link
+              to="/guides/anchor-vs-emcee"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block text-xs font-semibold text-pastel-600 mt-2 text-center"
             >
-              <Calendar className="w-4 h-4 text-gold-light" />
-              Check Availability & Book
-            </button>
+              Read Guide: Anchor vs Emcee Difference
+            </Link>
           </div>
         </div>
       )}

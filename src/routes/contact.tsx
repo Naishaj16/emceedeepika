@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoute } from '@tanstack/react-router';
 import { rootRoute } from './root';
 import { BookingForm } from '../components/BookingForm';
-import { Mail, Phone, MapPin, Sparkles, Clock, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Sparkles, Clock, Globe, Instagram, Linkedin } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const ContactPage: React.FC = () => {
             <span>Get in Touch</span>
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-pastel-900">
-            Book Deepika for Your Event
+            Connect with Deepika for Your Event
           </h1>
           <p className="text-base text-pastel-700 max-w-2xl mx-auto">
             Direct communication with Deepika's management team for date reservations and customized event proposals.
@@ -60,6 +60,31 @@ const ContactPage: React.FC = () => {
                     <p className="text-pastel-600">Mumbai & Rajasthan, India</p>
                     <p className="text-pastel-600">Dubai, United Arab Emirates (Frequent Base)</p>
                   </div>
+                </div>
+              </div>
+
+              {/* Social Channels */}
+              <div className="border-t border-pastel-200 pt-6">
+                <h4 className="font-bold text-pastel-900 text-sm mb-3">Official Social Handles</h4>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://www.instagram.com/emcee_deepikajain/?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-pastel-100 hover:bg-pastel-200 text-pastel-800 px-4 py-2 rounded-full font-semibold text-xs transition-all border border-pastel-300"
+                  >
+                    <Instagram className="w-4 h-4 text-rose-500" />
+                    <span>@emcee_deepikajain</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-pastel-100 hover:bg-pastel-200 text-pastel-800 px-4 py-2 rounded-full font-semibold text-xs transition-all border border-pastel-300"
+                  >
+                    <Linkedin className="w-4 h-4 text-sky-600" />
+                    <span>LinkedIn</span>
+                  </a>
                 </div>
               </div>
             </div>

@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 onClick={onOpenBooking}
                 className="flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-4 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95"
               >
-                <span>Book Deepika For Event</span>
+                <span>Get In Touch</span>
                 <ArrowRight className="w-4 h-4 text-gold-light" />
               </button>
 
@@ -74,9 +74,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               
               <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl bg-pastel-200 aspect-[4/5]">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=900"
+                  src="/images/deepika/deepika-hero.webp"
                   alt="Deepika Jain - Professional Emcee"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
                 />
                 
                 {/* Floating Pastel Badge */}
@@ -84,7 +84,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-xs uppercase tracking-wider text-pastel-700 font-bold">Upcoming Season</p>
-                      <p className="text-sm font-serif font-bold text-pastel-900">2024-2025 Bookings Open</p>
+                      <p className="text-sm font-serif font-bold text-pastel-900">2026-2027 Inquiries Open</p>
                     </div>
                     <span className="w-3 h-3 rounded-full bg-pastel-500 animate-pulse"></span>
                   </div>
