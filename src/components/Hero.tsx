@@ -19,7 +19,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
           <div className="lg:col-span-7 space-y-6 text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pastel-200/70 border border-pastel-300 text-pastel-800 text-xs font-semibold uppercase tracking-wider shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-gold-dark" />
-              <span>International Multilingual Emcee & Host</span>
+              <span>Professional Event Host — 4 Languages</span>
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-pastel-900">
@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             </h1>
 
             <p className="text-base sm:text-lg text-pastel-700 leading-relaxed max-w-2xl font-normal">
-              12+ Years of Stage Mastery | 100+ Global Shows | Multilingual Elegance (English, Hindi, Marwari, Tamil). Bringing poise, infectious warmth, and royal charisma to global stages.
+              12+ Years Hosting | Fluent in 4 Languages (English, Hindi, Marwari, Tamil) | 100+ Global Events. Commanding stages with warmth, energy, and genuine connection.
             </p>
 
             {/* CTAs */}
@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 onClick={onOpenBooking}
                 className="flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-4 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95"
               >
-                <span>Get In Touch</span>
+                <span>Request Your Quote</span>
                 <ArrowRight className="w-4 h-4 text-gold-light" />
               </button>
 

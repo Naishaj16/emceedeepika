@@ -35,11 +35,11 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pastel-200 border border-pastel-300 text-pastel-800 text-xs font-bold uppercase tracking-widest">
               <Star className="w-3.5 h-3.5 text-gold-DEFAULT" />
-              <span>The Stage Master</span>
+              <span>Master of Ceremonies</span>
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-pastel-900 leading-tight">
-              More Than Just a Voice: Art of Stage Alchemy
+              More Than Just a Voice: Crafting Unforgettable Moments
             </h2>
 
             <div className="space-y-4 text-pastel-700 text-base leading-relaxed">
@@ -47,7 +47,7 @@ export const AboutSection: React.FC = () => {
                 With over a decade commanding prestigious stages internationally, Deepika Jain has perfected the craft of turning moments into memories. Her signature approach combines high-octane stage energy with empathetic crowd connection.
               </p>
               <p>
-                Fluent in English, Hindi, Marwari, and Tamil, she effortlessly bridges multi-cultural audiences at royal Rajasthan weddings, Dubai corporate galas, and Mumbai award nights.
+                Fluent in English, Hindi, Marwari, and Tamil, she connects with multi-cultural audiences authentically—from royal Rajasthan weddings and Dubai corporate galas to Mumbai award nights.
               </p>
             </div>
 
@@ -66,14 +66,13 @@ export const AboutSection: React.FC = () => {
               ))}
             </div>
 
-            {/* Media feature logos */}
+            {/* Client achievements */}
             <div className="pt-6 border-t border-pastel-200">
-              <p className="text-xs uppercase tracking-widest font-bold text-pastel-500 mb-4">Featured in Media & Press</p>
-              <div className="flex flex-wrap items-center gap-8 text-pastel-400 font-serif text-lg font-bold">
-                <span>Forbes India</span>
-                <span>VOGUE</span>
-                <span>Hindustan Times</span>
-                <span>Economic Times</span>
+              <p className="text-xs uppercase tracking-widest font-bold text-pastel-500 mb-4">Trusted by</p>
+              <div className="text-sm text-pastel-700 space-y-2">
+                <p>✓ Fortune 500 Corporate Event Teams</p>
+                <p>✓ Luxury Wedding Planners & High-Net-Worth Families</p>
+                <p>✓ International Destination Event Organizers</p>
               </div>
             </div>
 

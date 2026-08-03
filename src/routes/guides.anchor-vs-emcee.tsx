@@ -173,7 +173,7 @@ const AnchorVsEmceePage: React.FC = () => {
               onClick={openBooking}
               className="bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2"
             >
-              <span>Get in Touch</span>
+              <span>Check My Availability</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

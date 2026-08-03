@@ -138,13 +138,13 @@ const ServicesPage: React.FC = () => {
             <div>
               <span className="text-xs uppercase tracking-widest text-pastel-300 font-bold">Estimated Starting Investment</span>
               <p className="font-serif text-3xl font-bold text-gold-light">₹ {calculateEstimate()} *</p>
-              <p className="text-[11px] text-pastel-300/80 mt-1">* Subject to date availability, custom script needs & travel logistics.</p>
+              <p className="text-[11px] text-pastel-300/80 mt-1">*Preliminary estimate. Final quote includes full event hosting, custom script, and 2 pre-event rehearsals. International travel and rush turnaround available at additional cost.</p>
             </div>
             <button
               onClick={openBooking}
               className="bg-gold-DEFAULT hover:bg-gold-light text-pastel-900 px-6 py-3 rounded-xl font-bold text-sm transition-all shadow-md shrink-0"
             >
-              Lock Date & Request Formal Quote
+              Get Exact Pricing
             </button>
           </div>
         </div>

@@ -48,13 +48,13 @@ const AboutPage: React.FC = () => {
 
           <div className="lg:col-span-7 space-y-6">
             <h2 className="font-serif text-3xl font-bold text-pastel-900">
-              Transforming Events into Unforgettable Memories
+              Crafting Events That Connect
             </h2>
             <p className="text-pastel-700 leading-relaxed">
-              Deepika Jain believes that a great emcee is far more than a speaker with a microphone—she is the heartbeat of an event. With an innate ability to read audience emotions, she seamlessly blends warmth, high energy, and royal elegance.
+              Great events need more than a microphone—they need genuine connection. Deepika brings warmth, energy, and authenticity to every moment, creating celebrations that feel grounded and memorable.
             </p>
             <p className="text-pastel-700 leading-relaxed">
-              Fluent in <strong>English, Hindi, Marwari, and Tamil</strong>, Deepika connects effortlessly with guests of diverse cultural backgrounds. Whether it is a traditional Marwari wedding ceremony or a modern tech convention, she adapts tone, language, and cadence to perfection.
+              Fluent in <strong>English, Hindi, Marwari, and Tamil</strong>, Deepika connects authentically with guests of diverse cultural backgrounds. Whether hosting a traditional Marwari wedding or a modern tech summit, she adapts her tone and language to match the moment.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-4">
@@ -120,7 +120,7 @@ const AboutPage: React.FC = () => {
             onClick={openBooking}
             className="bg-gold-DEFAULT hover:bg-gold-light text-pastel-900 px-8 py-3.5 rounded-full font-bold text-sm transition-all shadow-lg"
           >
-            Get in Touch
+            Request Your Quote
           </button>
         </div>
       </div>
