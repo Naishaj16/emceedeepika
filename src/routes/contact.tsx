@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoute } from '@tanstack/react-router';
 import { rootRoute } from './root';
-import { Mail, Phone, MapPin, Sparkles, Clock, Globe, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Sparkles, Clock, Globe, Instagram, Linkedin, ArrowRight } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   return (
@@ -39,8 +39,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-pastel-900 text-base">Official Email</h4>
-                    <p className="text-pastel-700 font-medium">booking@emceedeepika.com</p>
-                    <p className="text-pastel-500 text-xs">deepika.emcee@gmail.com</p>
+                    <p className="text-pastel-700 font-medium">dishajain395@gmail.com</p>
                   </div>
                 </div>
 
@@ -50,8 +49,8 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-pastel-900 text-base">Phone & WhatsApp</h4>
-                    <p className="text-pastel-700 font-medium">+91 98765 43210 <span className="text-xs text-pastel-500 font-normal">(Management)</span></p>
-                    <p className="text-pastel-700 font-medium">+91 91234 56789 <span className="text-xs text-pastel-500 font-normal">(Event Desk)</span></p>
+                    <p className="text-pastel-700 font-medium">+91 8056958856 <span className="text-xs text-pastel-500 font-normal">(Primary / WhatsApp)</span></p>
+                    <p className="text-pastel-700 font-medium">+91 8056914320 <span className="text-xs text-pastel-500 font-normal">(Management Desk)</span></p>
                   </div>
                 </div>
 
@@ -79,7 +78,34 @@ const ContactPage: React.FC = () => {
                   className="flex items-center gap-2 bg-pastel-50 hover:bg-pastel-100 text-pastel-800 px-4 py-2.5 rounded-2xl font-bold text-xs transition-all border border-pastel-200 shadow-xs"
                 >
                   <Instagram className="w-4 h-4 text-rose-500" />
-                  <span>@emcee_deepikajain</span>
+                  <span>Instagram</span>
+                </a>
+                <a
+                  href="https://wa.me/918056958856"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-pastel-50 hover:bg-pastel-100 text-pastel-800 px-4 py-2.5 rounded-2xl font-bold text-xs transition-all border border-pastel-200 shadow-xs"
+                >
+                  <Phone className="w-4 h-4 text-emerald-600" />
+                  <span>WhatsApp</span>
+                </a>
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-pastel-50 hover:bg-pastel-100 text-pastel-800 px-4 py-2.5 rounded-2xl font-bold text-xs transition-all border border-pastel-200 shadow-xs"
+                >
+                  <Globe className="w-4 h-4 text-blue-600" />
+                  <span>Facebook</span>
+                </a>
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-pastel-50 hover:bg-pastel-100 text-pastel-800 px-4 py-2.5 rounded-2xl font-bold text-xs transition-all border border-pastel-200 shadow-xs"
+                >
+                  <Globe className="w-4 h-4 text-red-600" />
+                  <span>YouTube</span>
                 </a>
                 <a
                   href="https://www.linkedin.com"
@@ -88,7 +114,7 @@ const ContactPage: React.FC = () => {
                   className="flex items-center gap-2 bg-pastel-50 hover:bg-pastel-100 text-pastel-800 px-4 py-2.5 rounded-2xl font-bold text-xs transition-all border border-pastel-200 shadow-xs"
                 >
                   <Linkedin className="w-4 h-4 text-sky-600" />
-                  <span>LinkedIn Profile</span>
+                  <span>LinkedIn</span>
                 </a>
               </div>
             </div>
@@ -127,10 +153,10 @@ const ContactPage: React.FC = () => {
             <div className="pt-6 border-t border-pastel-700">
               <a
                 href="/portfolio"
-                className="w-full flex items-center justify-center gap-2 bg-gold-DEFAULT hover:bg-gold-light text-pastel-900 py-4 rounded-2xl font-bold text-sm transition-all shadow-md hover:scale-[1.02]"
+                className="w-full flex items-center justify-center gap-2 bg-gold-DEFAULT hover:bg-gold-light text-pastel-900 py-4 rounded-2xl font-bold text-sm transition-all shadow-md hover:scale-[1.02] group"
               >
                 <span>View Portfolio & Media Decks</span>
-                <span className="text-base">🎙️</span>
+                <ArrowRight className="w-4 h-4 text-pastel-900 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>

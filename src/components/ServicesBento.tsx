@@ -75,15 +75,31 @@ export const ServicesBento: React.FC<ServicesBentoProps> = ({ onOpenBooking }) =
                     </div>
                   ))}
                 </div>
+
+                {service.subEvents && service.subEvents.length > 0 && (
+                  <div className="pt-3 border-t border-pastel-100">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-2">Events Covered:</span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {service.subEvents.map((subEvt) => (
+                        <span
+                          key={subEvt}
+                          className="px-2.5 py-1 rounded-lg bg-pastel-100 border border-pastel-200 text-pastel-800 font-semibold text-[11px] shadow-xs"
+                        >
+                          {subEvt}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="relative z-10 pt-6 mt-6 border-t border-pastel-100 flex items-center justify-between">
                 <Link
                   to="/portfolio"
-                  className="inline-flex items-center gap-2 font-bold text-xs uppercase tracking-wider text-pastel-800 hover:text-pastel-600 group"
+                  className="inline-flex items-center gap-2 font-bold text-xs uppercase tracking-wider text-pastel-800 hover:text-pastel-600 gold-underline group"
                 >
                   <span>View {service.category} Portfolio</span>
-                  <span className="text-base inline-block transition-transform duration-300 group-hover:translate-x-1.5 group-hover:scale-125">🎙️</span>
+                  <ArrowRight className="w-4 h-4 text-gold-DEFAULT group-hover:translate-x-1 transition-transform" />
                 </Link>
 
                 <span className="text-xs font-semibold text-pastel-500 uppercase tracking-widest">

@@ -102,7 +102,7 @@ const AboutPage: React.FC = () => {
             Fluent in the languages her audiences actually speak
           </h2>
           <p className="text-base text-pastel-800 leading-relaxed">
-            Deepika hosts confidently in <strong>English, Hindi, Marwari, and Tamil</strong> — not as a party trick, but because a genuinely mixed guest list deserves a host who won't leave part of the room disconnected. Whether it's a North Indian and South Indian family sharing a wedding, or a Dubai crowd spanning South Asian, Gulf, and Western guests, she moves between languages naturally, without losing the moment's timing or tone.
+            Deepika hosts confidently in <strong>English, Hindi, Telugu, Tamil, and Marwari</strong> — not as a party trick, but because a genuinely mixed guest list deserves a host who won't leave part of the room disconnected. Whether it's a North Indian and South Indian family sharing a wedding, or a Dubai crowd spanning South Asian, Gulf, and Western guests, she moves between languages naturally, without losing the moment's timing or tone.
           </p>
         </div>
 
@@ -133,12 +133,12 @@ const AboutPage: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             <div className="bg-white rounded-2xl p-6 border border-pastel-200 text-center space-y-2 shadow-xs">
-              <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">12+</span>
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">15+</span>
               <span className="text-xs font-bold uppercase tracking-wider text-pastel-800 block">Years Experience</span>
               <p className="text-[11px] text-pastel-600">On stage commanding live audiences</p>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-pastel-200 text-center space-y-2 shadow-xs">
-              <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">100+</span>
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">2500+</span>
               <span className="text-xs font-bold uppercase tracking-wider text-pastel-800 block">Shows Hosted</span>
               <p className="text-[11px] text-pastel-600">Internationally executed</p>
             </div>
@@ -148,9 +148,9 @@ const AboutPage: React.FC = () => {
               <p className="text-[11px] text-pastel-600">Cross-cultural stage mastery</p>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-pastel-200 text-center space-y-2 shadow-xs">
-              <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">4</span>
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">5</span>
               <span className="text-xs font-bold uppercase tracking-wider text-pastel-800 block">Languages</span>
-              <p className="text-[11px] text-pastel-600">English, Hindi, Marwari, Tamil</p>
+              <p className="text-[11px] text-pastel-600">English, Hindi, Telugu, Tamil, Marwari</p>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-pastel-200 text-center space-y-2 shadow-xs sm:col-span-2 lg:col-span-1">
               <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">500K+</span>

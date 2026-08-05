@@ -1,12 +1,13 @@
 export interface ServiceItem {
   id: string;
   title: string;
-  category: 'wedding' | 'corporate' | 'celebrity' | 'virtual' | 'award' | 'birthday' | 'private';
+  category: 'wedding' | 'corporate' | 'celebrity' | 'virtual' | 'award' | 'birthday' | 'private' | 'government' | 'family';
   shortDesc: string;
   fullDesc: string;
   iconName: string;
   image: string;
   features: string[];
+  subEvents?: string[];
   link?: string;
   linkText?: string;
   colSpan: string;

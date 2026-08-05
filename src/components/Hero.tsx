@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, CheckCircle2, Globe2, Sparkles } from 'lucide-react';
+import { ArrowRight, Award, CheckCircle2, Globe2, Sparkles, Mic } from 'lucide-react';
 import { Link } from '@tanstack/react-router';
 
 interface HeroProps {
@@ -28,17 +28,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             </h1>
 
             <p className="text-base sm:text-lg text-pastel-700 leading-relaxed max-w-2xl font-normal">
-              Twelve years on stage, over 100 shows across 15+ countries, and four languages ready for whatever the room needs — English, Hindi, Marwari, and Tamil. Deepika brings poise, warmth, and real command of a room to weddings, corporate galas, and global summits.
+              12+ years on stage, over 100 shows across 15+ countries, and four languages ready for whatever the room needs — English, Hindi, Marwari, and Tamil. Deepika brings poise, warmth, and real command of a room to weddings, corporate galas, and global summits.
             </p>
 
             {/* CTAs */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <Link
                 to="/contact"
-                className="flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-4 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95"
+                className="flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-4 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 group"
               >
+                <Mic className="w-4 h-4 text-gold-light" />
                 <span>Get in Touch with Deepika</span>
-                <ArrowRight className="w-4 h-4 text-gold-light" />
+                <ArrowRight className="w-4 h-4 text-gold-light group-hover:translate-x-1 transition-transform" />
               </Link>
 
               <Link

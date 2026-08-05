@@ -10,7 +10,7 @@ const ServicesPage: React.FC = () => {
   const { openBooking } = useBooking();
 
   // Interactive Package Estimator State
-  const [eventType, setEventType] = useState<'wedding' | 'corporate' | 'celebrity' | 'virtual' | 'award' | 'birthday' | 'private'>('wedding');
+  const [eventType, setEventType] = useState<'wedding' | 'corporate' | 'celebrity' | 'virtual' | 'award' | 'birthday' | 'private' | 'government' | 'family'>('wedding');
   const [days, setDays] = useState<number>(1);
   const [locationType, setLocationType] = useState<'domestic' | 'international'>('domestic');
 
@@ -24,6 +24,8 @@ const ServicesPage: React.FC = () => {
       case 'award': base = 110000; break;
       case 'birthday': base = 75000; break;
       case 'private': base = 85000; break;
+      case 'government': base = 125000; break;
+      case 'family': base = 70000; break;
     }
     const locationMultiplier = locationType === 'international' ? 1.5 : 1.0;
     const total = base * days * locationMultiplier;
@@ -125,6 +127,22 @@ const ServicesPage: React.FC = () => {
                     </div>
                   ))}
                 </div>
+
+                {service.subEvents && service.subEvents.length > 0 && (
+                  <div className="pt-3 border-t border-pastel-100 space-y-2">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-gold-dark">Specific Events & Functions Covered:</h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {service.subEvents.map((subEvt) => (
+                        <span
+                          key={subEvt}
+                          className="px-2.5 py-1 rounded-lg bg-pastel-100 border border-pastel-200 text-pastel-900 font-semibold text-xs shadow-2xs"
+                        >
+                          {subEvt}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="pt-4 border-t border-pastel-100 flex flex-col gap-3">
@@ -133,7 +151,7 @@ const ServicesPage: React.FC = () => {
                   className="inline-flex items-center justify-between text-sm font-bold text-pastel-800 hover:text-gold-dark group transition-colors"
                 >
                   <span>View {service.category} Portfolio & Deck</span>
-                  <span className="text-base inline-block transition-transform duration-300 group-hover:translate-x-1.5 group-hover:scale-125">🎙️</span>
+                  <ArrowRight className="w-4 h-4 text-gold-DEFAULT group-hover:translate-x-1 transition-transform" />
                 </Link>
                 
                 <button
@@ -157,7 +175,7 @@ const ServicesPage: React.FC = () => {
             Why Work With Deepika
           </h2>
           <p className="text-base text-pastel-800 leading-relaxed font-normal">
-            12+ years of experience, 100+ shows across 15+ countries, and fluency in four languages mean one host can cover a genuinely mixed guest list without a translator or a second act. Every engagement starts with a discovery call to understand your event, your audience, and the tone you want on stage — not a generic script dropped into a new venue.
+            15+ years of experience, 2,500+ shows across 15+ countries, and fluency in five languages mean one host can cover a genuinely mixed guest list without a translator or a second act. Every engagement starts with a discovery call to understand your event, your audience, and the tone you want on stage — not a generic script dropped into a new venue.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-pastel-200">
             <div className="flex items-start gap-3">
@@ -174,8 +192,8 @@ const ServicesPage: React.FC = () => {
                 <Languages className="w-5 h-5 text-pastel-800" />
               </div>
               <div>
-                <h4 className="font-bold text-sm text-pastel-900">4 Languages</h4>
-                <p className="text-xs text-pastel-700">English, Hindi, Marwari, Tamil</p>
+                <h4 className="font-bold text-sm text-pastel-900">5 Languages</h4>
+                <p className="text-xs text-pastel-700">English, Hindi, Telugu, Tamil, Marwari</p>
               </div>
             </div>
             <div className="flex items-start gap-3">

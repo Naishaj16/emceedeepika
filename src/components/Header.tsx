@@ -10,6 +10,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,13 +20,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'Home', to: '/' },
-    { name: 'About', to: '/about' },
-    { name: 'Services', to: '/services' },
-    { name: 'Portfolio', to: '/portfolio' },
-    { name: 'Gallery', to: '/gallery' },
-    { name: 'Contact', to: '/contact' },
+  const weddingSubEvents = [
+    'Haldi Carnival',
+    'Varmala Ceremony',
+    'Baraat & Baraat on Wheels',
+    'High-Energy Sangeet Night',
+    'Mayra / Maira Function',
+    'Milni Protocol',
+    'Ring Ceremony & Engagement',
+    'Grand Reception Gala',
   ];
 
   const locations = [
@@ -63,20 +66,88 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              activeProps={{
-                className: 'text-pastel-800 font-bold border-b-2 border-gold-DEFAULT pb-1',
-              }}
-              inactiveProps={{
-                className: 'text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors',
-              }}
-            >
-              {link.name}
-            </Link>
-          ))}
+          <Link to="/" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">Home</Link>
+          <Link to="/about" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">About</Link>
+
+          {/* Event & Services Dropdown */}
+          <div className="relative" onMouseLeave={() => setServicesOpen(false)}>
+            <div className="flex items-center gap-1">
+              <Link
+                to="/services"
+                onMouseEnter={() => setServicesOpen(true)}
+                className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors py-1"
+              >
+                Events & Services
+              </Link>
+              <button
+                onMouseEnter={() => setServicesOpen(true)}
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="text-pastel-700 hover:text-pastel-900 focus:outline-none"
+              >
+                <ChevronDown className="w-4 h-4 text-pastel-500" />
+              </button>
+            </div>
+
+            {servicesOpen && (
+              <div className="absolute top-full left-0 w-80 max-h-[75vh] overflow-y-auto bg-white border border-pastel-200 rounded-2xl shadow-2xl p-4 z-50 space-y-4">
+                <div className="border-b border-pastel-100 pb-3">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Luxury Weddings</span>
+                  <div className="space-y-1">
+                    {weddingSubEvents.map((event) => (
+                      <Link
+                        key={event}
+                        to="/services"
+                        onClick={() => setServicesOpen(false)}
+                        className="block px-2 py-0.5 rounded-lg text-xs font-medium text-pastel-800 hover:bg-pastel-100 hover:text-gold-dark transition-colors"
+                      >
+                        • {event}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border-b border-pastel-100 pb-3">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Corporate & Tech</span>
+                  <div className="space-y-1">
+                    {['Corporate Galas & Dinners', 'Product & Brand Launches', 'Leadership & Tech Summits', 'Town Halls & Annual Meets', 'Panel Moderation & Q&A'].map((evt) => (
+                      <Link key={evt} to="/services" onClick={() => setServicesOpen(false)} className="block px-2 py-0.5 rounded-lg text-xs font-medium text-pastel-800 hover:bg-pastel-100">• {evt}</Link>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border-b border-pastel-100 pb-3">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Government & Protocol</span>
+                  <div className="space-y-1">
+                    {['State & Ministerial Summits', 'Inaugurations & Foundation Ceremonies', 'Diplomatic Delegations & Expos', 'Government Award Functions'].map((evt) => (
+                      <Link key={evt} to="/services" onClick={() => setServicesOpen(false)} className="block px-2 py-0.5 rounded-lg text-xs font-medium text-pastel-800 hover:bg-pastel-100">• {evt}</Link>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border-b border-pastel-100 pb-3">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Baby Shower & Milestones</span>
+                  <div className="space-y-1">
+                    {['Traditional Godh Bharai / Seemantham', 'Modern Baby Shower Celebrations', 'Naming Ceremonies (Namkaran)', '1st Birthday & Cradle Ceremonies'].map((evt) => (
+                      <Link key={evt} to="/services" onClick={() => setServicesOpen(false)} className="block px-2 py-0.5 rounded-lg text-xs font-medium text-pastel-800 hover:bg-pastel-100">• {evt}</Link>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Celebrity & Special Events</span>
+                  <div className="space-y-1">
+                    {['Red Carpet Galas', 'Movie & Music Launches', 'Award Shows', 'Milestone Birthdays', 'Diwali & Festival Galas'].map((evt) => (
+                      <Link key={evt} to="/services" onClick={() => setServicesOpen(false)} className="block px-2 py-0.5 rounded-lg text-xs font-medium text-pastel-800 hover:bg-pastel-100">• {evt}</Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <Link to="/portfolio" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">Portfolio</Link>
+          <Link to="/gallery" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">Gallery</Link>
+          <Link to="/contact" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">Contact</Link>
 
           {/* Locations Dropdown */}
           <div className="relative" onMouseLeave={() => setLocationsOpen(false)}>
@@ -120,17 +191,44 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-pastel-100 border-b border-pastel-200 px-6 py-6 space-y-4 shadow-xl">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1"
-            >
-              {link.name}
-            </Link>
-          ))}
+        <div className="md:hidden bg-pastel-100 border-b border-pastel-200 px-6 py-6 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto">
+          <Link to="/" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Home</Link>
+          <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">About</Link>
+          <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Events & Services</Link>
+
+          <div className="pl-3 border-l-2 border-gold-DEFAULT space-y-3 my-2">
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Luxury Wedding Events</span>
+              {weddingSubEvents.map((evt) => (
+                <Link key={evt} to="/services" onClick={() => setMobileMenuOpen(false)} className="block text-xs text-pastel-700 hover:text-pastel-900 py-0.5">• {evt}</Link>
+              ))}
+            </div>
+
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Government & Protocol</span>
+              {['State Summits', 'Inaugurations', 'Diplomatic Handovers', 'Government Awards'].map((evt) => (
+                <Link key={evt} to="/services" onClick={() => setMobileMenuOpen(false)} className="block text-xs text-pastel-700 hover:text-pastel-900 py-0.5">• {evt}</Link>
+              ))}
+            </div>
+
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Baby Shower & Milestones</span>
+              {['Godh Bharai / Seemantham', 'Baby Shower', 'Naming Ceremonies (Namkaran)', '1st Birthday'].map((evt) => (
+                <Link key={evt} to="/services" onClick={() => setMobileMenuOpen(false)} className="block text-xs text-pastel-700 hover:text-pastel-900 py-0.5">• {evt}</Link>
+              ))}
+            </div>
+
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Corporate & Special Events</span>
+              {['Product Launches', 'Tech Summits', 'Award Galas', 'Red Carpet', 'Festival Celebrations'].map((evt) => (
+                <Link key={evt} to="/services" onClick={() => setMobileMenuOpen(false)} className="block text-xs text-pastel-700 hover:text-pastel-900 py-0.5">• {evt}</Link>
+              ))}
+            </div>
+          </div>
+
+          <Link to="/portfolio" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Portfolio</Link>
+          <Link to="/gallery" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Gallery</Link>
+          <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Contact</Link>
 
           <div className="pt-2 border-t border-pastel-200">
             <span className="text-xs font-bold uppercase tracking-wider text-pastel-500 block mb-2">Target Locations</span>
@@ -140,7 +238,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                   key={loc.to}
                   to={loc.to}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-xs font-medium text-pastel-700 bg-pastel-100 p-2 rounded-lg"
+                  className="block text-xs font-medium text-pastel-700 bg-white p-2 rounded-lg border border-pastel-200"
                 >
                   {loc.name}
                 </Link>

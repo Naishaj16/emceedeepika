@@ -51,43 +51,65 @@ export const Footer: React.FC = () => {
             <h4 className="font-serif text-lg font-semibold text-pastel-50">Follow & Connect</h4>
             <div className="space-y-2 text-sm text-pastel-300">
               <p className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-pastel-400" />
-                <span>booking@emceedeepika.com</span>
+                <Mail className="w-4 h-4 text-pastel-400 shrink-0" />
+                <span>dishajain395@gmail.com</span>
               </p>
               <p className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-pastel-400" />
+                <Phone className="w-4 h-4 text-pastel-400 shrink-0" />
+                <span>+91 8056958856 / 8056914320</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-pastel-400 shrink-0" />
                 <span>Chennai | Dubai | Singapore</span>
               </p>
             </div>
 
-            {/* Social Media Links */}
-            <div className="flex items-center gap-3 pt-2">
+            {/* Social Media Links: FB, WA, Insta, YT, LinkedIn */}
+            <div className="flex flex-wrap items-center gap-2.5 pt-2">
               <a
                 href="https://www.instagram.com/emcee_deepikajain/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-pastel-800 hover:bg-pastel-700 text-pastel-200 hover:text-white flex items-center justify-center transition-all border border-pastel-700 hover:scale-110"
+                className="w-9 h-9 rounded-full bg-pastel-800 hover:bg-pastel-700 text-pastel-200 hover:text-white flex items-center justify-center transition-all border border-pastel-700 hover:scale-110"
                 aria-label="Instagram Profile"
               >
-                <Instagram className="w-5 h-5 text-rose-400" />
+                <Instagram className="w-4 h-4 text-rose-400" />
               </a>
               <a
-                href="https://www.linkedin.com"
+                href="https://wa.me/918056958856"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-pastel-800 hover:bg-pastel-700 text-pastel-200 hover:text-white flex items-center justify-center transition-all border border-pastel-700 hover:scale-110"
-                aria-label="LinkedIn Profile"
+                className="w-9 h-9 rounded-full bg-pastel-800 hover:bg-pastel-700 text-pastel-200 hover:text-white flex items-center justify-center transition-all border border-pastel-700 hover:scale-110"
+                aria-label="WhatsApp Contact"
               >
-                <Linkedin className="w-5 h-5 text-sky-400" />
+                <Phone className="w-4 h-4 text-emerald-400" />
+              </a>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-pastel-800 hover:bg-pastel-700 text-pastel-200 hover:text-white flex items-center justify-center transition-all border border-pastel-700 hover:scale-110"
+                aria-label="Facebook Profile"
+              >
+                <Globe className="w-4 h-4 text-blue-400" />
               </a>
               <a
                 href="https://www.youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-pastel-800 hover:bg-pastel-700 text-pastel-200 hover:text-white flex items-center justify-center transition-all border border-pastel-700 hover:scale-110"
+                className="w-9 h-9 rounded-full bg-pastel-800 hover:bg-pastel-700 text-pastel-200 hover:text-white flex items-center justify-center transition-all border border-pastel-700 hover:scale-110"
                 aria-label="YouTube Channel"
               >
-                <Youtube className="w-5 h-5 text-red-400" />
+                <Youtube className="w-4 h-4 text-red-400" />
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-pastel-800 hover:bg-pastel-700 text-pastel-200 hover:text-white flex items-center justify-center transition-all border border-pastel-700 hover:scale-110"
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin className="w-4 h-4 text-sky-400" />
               </a>
             </div>
           </div>

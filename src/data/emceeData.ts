@@ -17,6 +17,18 @@ export const SERVICES: ServiceItem[] = [
     iconName: 'Heart',
     image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200',
     features: ['Custom Sangeet & Reception Scripts', 'Multilingual Guest Warm-up', 'Seamless Royal Entry', 'Cross-Generational Engagement'],
+    subEvents: [
+      'Haldi Carnival',
+      'Varmala Ceremony',
+      'Baraat & Baraat on Wheels',
+      'High-Energy Sangeet Night',
+      'Mayra / Maira Function',
+      'Milni Protocol',
+      'Ring Ceremony / Engagement',
+      'Grand Reception Gala',
+      'Mehndi & Pool Party Warm-up',
+      'Cocktail & Sundowner Night'
+    ],
     link: '/services/wedding-emcee',
     linkText: 'Learn more about wedding emcee services →',
     colSpan: 'md:col-span-6',
@@ -30,6 +42,14 @@ export const SERVICES: ServiceItem[] = [
     iconName: 'Briefcase',
     image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800',
     features: ['Brand Storytelling', 'Panel Moderation', 'Live Q&A Management', 'Executive & Sponsor Protocol'],
+    subEvents: [
+      'Corporate Galas & Dinners',
+      'Product & Brand Launches',
+      'Leadership & Tech Summits',
+      'Town Halls & Annual Meets',
+      'Panel Moderation & Q&A',
+      'Dealer & Partner Meets'
+    ],
     link: '/services/corporate-event-emcee',
     linkText: 'Learn more about corporate event hosting →',
     colSpan: 'md:col-span-6',
@@ -43,6 +63,13 @@ export const SERVICES: ServiceItem[] = [
     iconName: 'Star',
     image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=800',
     features: ['Quick Wit Under Pressure', 'VIP-Stage Awareness', 'On-the-Spot VIP Interviews', 'Red Carpet Crowd Energy'],
+    subEvents: [
+      'Red Carpet Gala Arrivals',
+      'Movie & Music Launches',
+      'Press Conferences & Media Meets',
+      'Fashion Shows & Pageants',
+      'VIP Fan Interactions'
+    ],
     link: '#',
     linkText: 'Learn more about celebrity hosting →',
     colSpan: 'md:col-span-6',
@@ -56,6 +83,12 @@ export const SERVICES: ServiceItem[] = [
     iconName: 'Video',
     image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&q=80&w=1200',
     features: ['Studio-Grade Presentation', 'Multi-Timezone Coordination', 'Live Polling & Engagement', 'Platform-Savvy Delivery'],
+    subEvents: [
+      'Global Hybrid Conferences',
+      'Virtual Award Ceremonies',
+      'Live Streamed Webinars & Fireside Chats',
+      'Interactive Product Keynotes'
+    ],
     link: '#',
     linkText: 'Learn more about virtual event hosting →',
     colSpan: 'md:col-span-6',
@@ -69,6 +102,12 @@ export const SERVICES: ServiceItem[] = [
     iconName: 'Trophy',
     image: '/images/deepika/deepika-6.webp',
     features: ['Sharp Podium Timing', 'Honoree Recognition Protocol', 'Warm Crowd Engagement', 'Zero Dead Air Flow'],
+    subEvents: [
+      'Corporate Excellence Awards',
+      'Industry & Trade Recognition Nights',
+      'Gala Award Banquets',
+      'Employee Recognition Shows'
+    ],
     link: '/services/award-show-emcee',
     linkText: 'Learn more about award show hosting →',
     colSpan: 'md:col-span-6',
@@ -82,6 +121,12 @@ export const SERVICES: ServiceItem[] = [
     iconName: 'Sparkles',
     image: '/images/deepika/deepika-5.webp',
     features: ['Milestone Birthday Planning', 'Personal Unscripted Style', 'Intimate & Large Gathering Flow', 'Genuinely Fun Atmosphere'],
+    subEvents: [
+      'Milestone 50th / 60th / 80th Birthdays',
+      'Silver & Golden Anniversary Celebrations',
+      'Theme Parties & Gala Dinners',
+      'Kid & Teen Grand Milestone Parties'
+    ],
     link: '/services/birthday-emcee',
     linkText: 'Learn more about birthday & celebration hosting →',
     colSpan: 'md:col-span-6',
@@ -95,8 +140,53 @@ export const SERVICES: ServiceItem[] = [
     iconName: 'Globe',
     image: '/images/deepika/deepika-4.webp',
     features: ['Diwali, Navratri, Onam & Eid Hosting', 'Diaspora Community Connection', 'Dubai, Singapore & Malaysia Expertise', 'Rich Cultural Fluency'],
-    link: '/services/private-festival-emcee',
+    subEvents: [
+      'Diwali & New Year Galas',
+      'Navratri & Dandiya Nights',
+      'Onam & Eid Cultural Evenings',
+      'Private Family Reunions & Soirees'
+    ],
+    link: '/services',
     linkText: 'Learn more about private & festival hosting →',
+    colSpan: 'md:col-span-6',
+  },
+  {
+    id: 'government-events',
+    title: 'Government & Protocol Event Hosting',
+    category: 'government',
+    shortDesc: 'Official state ceremonies, diplomatic summits, and public inaugurations with strict protocol.',
+    fullDesc: 'Official state ceremonies, diplomatic summits, public inaugurations, and inter-governmental conferences demand strict adherence to protocol, clear bi/multilingual dignitary announcements, and dignified stage presence. Deepika executes VIP introductions, state anthem protocols, and formal address handovers with supreme decorum.',
+    iconName: 'ShieldCheck',
+    image: '/images/deepika/deepika-1.webp',
+    features: ['Dignitary Protocol & Etiquette', 'Multilingual Formal Announcements', 'State & Cultural Ceremonies', 'Impeccable Stage Decorum'],
+    subEvents: [
+      'State & Ministerial Summits',
+      'Inaugurations & Foundation Ceremonies',
+      'Diplomatic Delegations & Expos',
+      'Government Award Functions',
+      'Public Cultural Festivals & Vigils'
+    ],
+    link: '/services',
+    linkText: 'Learn more about government event hosting →',
+    colSpan: 'md:col-span-6',
+  },
+  {
+    id: 'baby-shower',
+    title: 'Baby Shower & Milestone Hosting',
+    category: 'family',
+    shortDesc: 'Warm, joyous hosting for baby showers, Godh Bharai, and naming ceremonies.',
+    fullDesc: 'Celebrating new beginnings with heart, humor, and family-first warmth. From traditional Godh Bharai and Seemantham rituals to modern gender-neutral baby showers and Naming Ceremonies (Namkaran), Deepika creates an inclusive, joy-filled atmosphere where family and guests of all ages feel cherished.',
+    iconName: 'Heart',
+    image: '/images/deepika/deepika-3.webp',
+    features: ['Godh Bharai & Seemantham Rituals', 'Interactive Family Games', 'Naming Ceremony (Namkaran) Flow', 'Warm & Joyous Atmosphere'],
+    subEvents: [
+      'Traditional Godh Bharai / Seemantham',
+      'Modern Baby Shower Celebrations',
+      'Naming Ceremonies (Namkaran)',
+      '1st Birthday & Cradle Ceremonies'
+    ],
+    link: '/services',
+    linkText: 'Learn more about baby shower hosting →',
     colSpan: 'md:col-span-6',
   },
 ];

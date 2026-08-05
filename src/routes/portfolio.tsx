@@ -48,14 +48,14 @@ const PortfolioPage: React.FC = () => {
     {
       title: 'Excellence in Stage Anchoring & Protocol',
       issuer: 'National Live Media & Stage Guild',
-      desc: 'Honored for 12+ years of unscripted poise, VIP guest interviews, and faultless timing.',
+      desc: 'Honored for 15+ years of unscripted poise, VIP guest interviews, and faultless timing.',
     },
   ];
 
   const highlights = [
-    { label: '12+ Years Stage Mastery', desc: 'Commanding high-profile global audiences since 2012' },
-    { label: '4-Language Fluency', desc: 'Seamless hosting in English, Hindi, Marwari & Tamil' },
-    { label: '100+ International Shows', desc: 'Across 15+ countries including UAE, Singapore & Malaysia' },
+    { label: '15+ Years Stage Mastery', desc: 'Commanding high-profile global audiences' },
+    { label: '5-Language Fluency', desc: 'Seamless hosting in English, Hindi, Telugu, Tamil & Marwari' },
+    { label: '2500+ Shows Hosted', desc: 'Across 15+ countries including UAE, Singapore & Malaysia' },
     { label: 'End-to-End Execution', desc: 'Custom scripts, rehearsals, and VIP protocol management' },
   ];
 
