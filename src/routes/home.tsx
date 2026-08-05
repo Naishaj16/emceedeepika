@@ -96,9 +96,32 @@ const HomePage: React.FC = () => {
       <StatsSection />
       <ServicesBento onOpenBooking={openBooking} />
       <AboutSection />
-      <GallerySection />
       <TestimonialsSection />
 
+      {/* Download Portfolio Section */}
+      <section className="py-20 bg-gradient-to-br from-pastel-100 via-white to-pastel-100 border-t border-pastel-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <span className="text-xs font-bold uppercase tracking-widest text-gold-dark bg-pastel-200 px-4 py-1.5 rounded-full border border-pastel-300">
+            Official Credentials & Media Kit
+          </span>
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-pastel-900">
+            Download Deepika Jain's Official Portfolio
+          </h2>
+          <p className="text-base text-pastel-700 max-w-2xl mx-auto font-normal leading-relaxed">
+            Need a formal presentation deck for your event planning committee? Download the full 2026 media kit containing credentials, show history, testimonials, and stage specifications.
+          </p>
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="/Deepika_Jain_Official_Emcee_Portfolio_2026.pdf"
+              download="Deepika_Jain_Official_Emcee_Portfolio_2026.pdf"
+              className="inline-flex items-center gap-3 bg-pastel-800 hover:bg-pastel-900 text-pastel-50 px-8 py-4 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-xl hover:scale-105"
+            >
+              <Sparkles className="w-5 h-5 text-gold-light" />
+              <span>Download Portfolio PDF</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

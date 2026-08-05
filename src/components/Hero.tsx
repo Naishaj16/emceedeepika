@@ -74,9 +74,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               
               <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl bg-pastel-200 aspect-[4/5]">
                 <img
-                  src="/images/deepika/deepika-hero.webp"
-                  alt="Deepika Jain - Professional Emcee"
-                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                  src="/images/deepika/deepika-5.webp"
+                  alt="Deepika Jain - Premium Wedding Emcee"
+                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
                 />
                 
                 {/* Floating Pastel Badge */}

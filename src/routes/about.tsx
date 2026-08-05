@@ -86,7 +86,7 @@ const AboutPage: React.FC = () => {
                 <span>How it started</span>
               </h3>
               <p className="text-sm text-pastel-700 leading-relaxed">
-                What began as a passion for connecting with people on stage grew into a career spanning royal Rajasthan weddings, Dubai corporate galas, and Mumbai award nights — often within the same month. Along the way, the throughline stayed the same: an event only works if the person holding the microphone can adapt in real time, in whichever language the room needs.
+                Based out of <strong>Chennai & Mumbai, India</strong> with a frequent base in <strong>Dubai, UAE</strong>, what began as a passion for connecting with people on stage grew into a career spanning royal Rajasthan weddings, Chennai & Dubai corporate galas, and Mumbai award nights — often within the same month. Along the way, the throughline stayed the same: an event only works if the person holding the microphone can adapt in real time, in whichever language the room needs.
               </p>
             </div>
           </div>

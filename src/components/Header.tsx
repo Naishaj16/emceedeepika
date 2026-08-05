@@ -23,6 +23,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
     { name: 'Home', to: '/' },
     { name: 'About', to: '/about' },
     { name: 'Services', to: '/services' },
+    { name: 'Portfolio', to: '/portfolio' },
     { name: 'Gallery', to: '/gallery' },
     { name: 'Contact', to: '/contact' },
   ];
@@ -101,15 +102,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                     {loc.name}
                   </Link>
                 ))}
-                <div className="border-t border-pastel-200 my-1 pt-1">
-                  <Link
-                    to="/guides/anchor-vs-emcee"
-                    onClick={() => setLocationsOpen(false)}
-                    className="block px-4 py-2 text-xs text-pastel-600 hover:bg-pastel-100 font-semibold"
-                  >
-                    Guide: Anchor vs Emcee
-                  </Link>
-                </div>
               </div>
             )}
           </div>
@@ -154,13 +146,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                 </Link>
               ))}
             </div>
-            <Link
-              to="/guides/anchor-vs-emcee"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-xs font-semibold text-pastel-600 mt-2 text-center"
-            >
-              Read Guide: Anchor vs Emcee Difference
-            </Link>
           </div>
         </div>
       )}

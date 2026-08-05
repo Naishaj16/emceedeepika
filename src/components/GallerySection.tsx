@@ -5,54 +5,26 @@ import { GalleryItem } from '../types';
 import { Link } from '@tanstack/react-router';
 
 export const GallerySection: React.FC = () => {
-  const [filter, setFilter] = useState<'all' | 'wedding' | 'corporate' | 'celebrity' | 'international'>('all');
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
-
-  const filteredItems = filter === 'all'
-    ? GALLERY
-    : GALLERY.filter((item) => item.category === filter);
 
   return (
     <section className="py-24 bg-pastel-50 relative" id="gallery">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-pastel-600 bg-pastel-100 px-4 py-1.5 rounded-full border border-pastel-200">
             Memorable Moments
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-pastel-900">
-            A Glimpse into the Stage Magic
+            Stage Showcase & Event Highlights
           </h2>
           <p className="text-base text-pastel-700">
-            Capturing high-energy performances, royal entries, and gala hosts across continents.
+            Capturing high-energy performances, royal entries, celebrity interviews, and destination galas.
           </p>
-        </div>
-
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {[
-            { label: 'All Events', key: 'all' },
-            { label: 'Weddings', key: 'wedding' },
-            { label: 'Corporate Galas', key: 'corporate' },
-            { label: 'Celebrity Shows', key: 'celebrity' },
-            { label: 'International', key: 'international' },
-          ].map((tab) => (
-            <button
-              key={tab.key}
-              onClick={() => setFilter(tab.key as any)}
-              className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
-                filter === tab.key
-                  ? 'bg-pastel-700 text-pastel-50 shadow-md border border-pastel-700'
-                  : 'bg-white text-pastel-800 hover:bg-pastel-200 border border-pastel-200'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
         </div>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
+          {GALLERY.map((item) => (
             <div
               key={item.id}
               onClick={() => setSelectedItem(item)}

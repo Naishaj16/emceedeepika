@@ -29,6 +29,7 @@ export const Footer: React.FC = () => {
               <li><Link to="/" className="hover:text-pastel-50">Home</Link></li>
               <li><Link to="/about" className="hover:text-pastel-50">About Deepika</Link></li>
               <li><Link to="/services" className="hover:text-pastel-50">Emcee Services</Link></li>
+              <li><Link to="/portfolio" className="hover:text-pastel-50 font-semibold text-gold-light">Portfolio & Deck</Link></li>
               <li><Link to="/gallery" className="hover:text-pastel-50">Event Gallery</Link></li>
               <li><Link to="/contact" className="hover:text-pastel-50">Contact Us</Link></li>
             </ul>
@@ -42,7 +43,6 @@ export const Footer: React.FC = () => {
               <li><Link to="/locations/dubai" className="hover:text-pastel-50">Corporate Emcee Dubai</Link></li>
               <li><Link to="/locations/malaysia" className="hover:text-pastel-50">D&D Emcee Malaysia (KL)</Link></li>
               <li><Link to="/locations/singapore" className="hover:text-pastel-50">Emcee Singapore</Link></li>
-              <li><Link to="/guides/anchor-vs-emcee" className="hover:text-pastel-50 text-gold-light font-semibold">Guide: Anchor vs Emcee</Link></li>
             </ul>
           </div>
 

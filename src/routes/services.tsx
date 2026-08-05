@@ -128,23 +128,13 @@ const ServicesPage: React.FC = () => {
               </div>
 
               <div className="pt-4 border-t border-pastel-100 flex flex-col gap-3">
-                {service.link && service.link !== '#' ? (
-                  <Link
-                    to={service.link}
-                    className="inline-flex items-center justify-between text-sm font-bold text-pastel-800 hover:text-gold-dark group transition-colors"
-                  >
-                    <span>{service.linkText}</span>
-                    <ArrowRight className="w-4 h-4 text-gold-DEFAULT group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                ) : (
-                  <button
-                    onClick={openBooking}
-                    className="inline-flex items-center justify-between text-sm font-bold text-pastel-800 hover:text-gold-dark group transition-colors text-left"
-                  >
-                    <span>Inquire about {service.title} →</span>
-                    <ArrowRight className="w-4 h-4 text-gold-DEFAULT group-hover:translate-x-1 transition-transform" />
-                  </button>
-                )}
+                <Link
+                  to="/portfolio"
+                  className="inline-flex items-center justify-between text-sm font-bold text-pastel-800 hover:text-gold-dark group transition-colors"
+                >
+                  <span>View {service.category} Portfolio & Deck</span>
+                  <span className="text-base inline-block transition-transform duration-300 group-hover:translate-x-1.5 group-hover:scale-125">🎙️</span>
+                </Link>
                 
                 <button
                   onClick={openBooking}

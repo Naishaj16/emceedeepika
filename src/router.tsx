@@ -6,7 +6,7 @@ import { servicesRoute } from './routes/services';
 import { galleryRoute } from './routes/gallery';
 import { contactRoute } from './routes/contact';
 import { chennaiRoute, dubaiRoute, malaysiaRoute, singaporeRoute } from './routes/locations';
-import { anchorVsEmceeRoute } from './routes/guides.anchor-vs-emcee';
+import { portfolioRoute } from './routes/portfolio';
 
 const routeTree = rootRoute.addChildren([
   homeRoute,
@@ -14,11 +14,11 @@ const routeTree = rootRoute.addChildren([
   servicesRoute,
   galleryRoute,
   contactRoute,
+  portfolioRoute,
   chennaiRoute,
   dubaiRoute,
   malaysiaRoute,
   singaporeRoute,
-  anchorVsEmceeRoute,
 ]);
 
 export const router = createRouter({

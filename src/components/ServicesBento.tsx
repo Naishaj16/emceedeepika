@@ -78,13 +78,13 @@ export const ServicesBento: React.FC<ServicesBentoProps> = ({ onOpenBooking }) =
               </div>
 
               <div className="relative z-10 pt-6 mt-6 border-t border-pastel-100 flex items-center justify-between">
-                <button
-                  onClick={onOpenBooking}
-                  className="inline-flex items-center gap-2 font-bold text-xs uppercase tracking-wider text-pastel-800 hover:text-pastel-600 gold-underline"
+                <Link
+                  to="/portfolio"
+                  className="inline-flex items-center gap-2 font-bold text-xs uppercase tracking-wider text-pastel-800 hover:text-pastel-600 group"
                 >
-                  <span>Inquire for {service.category}</span>
-                  <ArrowRight className="w-4 h-4 text-gold-DEFAULT" />
-                </button>
+                  <span>View {service.category} Portfolio</span>
+                  <span className="text-base inline-block transition-transform duration-300 group-hover:translate-x-1.5 group-hover:scale-125">🎙️</span>
+                </Link>
 
                 <span className="text-xs font-semibold text-pastel-500 uppercase tracking-widest">
                   {service.category}

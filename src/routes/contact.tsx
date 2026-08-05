@@ -1,7 +1,6 @@
 import React from 'react';
 import { createRoute } from '@tanstack/react-router';
 import { rootRoute } from './root';
-import { BookingForm } from '../components/BookingForm';
 import { Mail, Phone, MapPin, Sparkles, Clock, Globe, Instagram, Linkedin } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
@@ -22,91 +21,118 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Contact Details Column */}
-          <div className="lg:col-span-5 space-y-8">
-            <div className="bg-white p-8 rounded-3xl border border-pastel-200 shadow-sm space-y-6">
-              <h3 className="font-serif text-2xl font-bold text-pastel-900">Direct Inquiries</h3>
-              <div className="space-y-4 text-sm">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          {/* Card 1: Direct Channels */}
+          <div className="bg-white p-8 sm:p-10 rounded-3xl border border-pastel-200 shadow-md flex flex-col justify-between space-y-6">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pastel-100 border border-pastel-200 text-xs font-bold text-pastel-800 uppercase tracking-wider mb-4">
+                <Globe className="w-4 h-4 text-gold-DEFAULT" />
+                <span>Direct Contact Channels</span>
+              </div>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-pastel-900 mb-6">Reach Management</h3>
+              
+              <div className="space-y-6 text-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-pastel-100 text-pastel-700 flex items-center justify-center shrink-0">
+                  <div className="w-11 h-11 rounded-2xl bg-pastel-100 text-pastel-700 flex items-center justify-center shrink-0 border border-pastel-200">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-pastel-900">Official Email</h4>
-                    <p className="text-pastel-600">booking@emceedeepika.com</p>
-                    <p className="text-pastel-600">deepika.emcee@gmail.com</p>
+                    <h4 className="font-bold text-pastel-900 text-base">Official Email</h4>
+                    <p className="text-pastel-700 font-medium">booking@emceedeepika.com</p>
+                    <p className="text-pastel-500 text-xs">deepika.emcee@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-pastel-100 text-pastel-700 flex items-center justify-center shrink-0">
+                  <div className="w-11 h-11 rounded-2xl bg-pastel-100 text-pastel-700 flex items-center justify-center shrink-0 border border-pastel-200">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-pastel-900">Phone / WhatsApp</h4>
-                    <p className="text-pastel-600">+91 98765 43210 (Management)</p>
-                    <p className="text-pastel-600">+91 91234 56789 (Event Desk)</p>
+                    <h4 className="font-bold text-pastel-900 text-base">Phone & WhatsApp</h4>
+                    <p className="text-pastel-700 font-medium">+91 98765 43210 <span className="text-xs text-pastel-500 font-normal">(Management)</span></p>
+                    <p className="text-pastel-700 font-medium">+91 91234 56789 <span className="text-xs text-pastel-500 font-normal">(Event Desk)</span></p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-pastel-100 text-pastel-700 flex items-center justify-center shrink-0">
+                  <div className="w-11 h-11 rounded-2xl bg-pastel-100 text-pastel-700 flex items-center justify-center shrink-0 border border-pastel-200">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-pastel-900">Base Locations</h4>
-                    <p className="text-pastel-600">Mumbai & Rajasthan, India</p>
-                    <p className="text-pastel-600">Dubai, United Arab Emirates (Frequent Base)</p>
+                    <h4 className="font-bold text-pastel-900 text-base">Base Locations</h4>
+                    <p className="text-pastel-700 font-medium">Chennai & Mumbai, India <span className="text-xs text-pastel-500 font-normal">(Primary Base)</span></p>
+                    <p className="text-pastel-700 font-medium">Dubai, UAE & Rajasthan <span className="text-xs text-pastel-500 font-normal">(Frequent Base)</span></p>
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Social Channels */}
-              <div className="border-t border-pastel-200 pt-6">
-                <h4 className="font-bold text-pastel-900 text-sm mb-3">Official Social Handles</h4>
-                <div className="flex items-center gap-3">
-                  <a
-                    href="https://www.instagram.com/emcee_deepikajain/?hl=en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-pastel-100 hover:bg-pastel-200 text-pastel-800 px-4 py-2 rounded-full font-semibold text-xs transition-all border border-pastel-300"
-                  >
-                    <Instagram className="w-4 h-4 text-rose-500" />
-                    <span>@emcee_deepikajain</span>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-pastel-100 hover:bg-pastel-200 text-pastel-800 px-4 py-2 rounded-full font-semibold text-xs transition-all border border-pastel-300"
-                  >
-                    <Linkedin className="w-4 h-4 text-sky-600" />
-                    <span>LinkedIn</span>
-                  </a>
+            {/* Social Handles */}
+            <div className="border-t border-pastel-200 pt-6">
+              <h4 className="font-bold text-pastel-900 text-xs uppercase tracking-wider mb-3">Official Social Profiles</h4>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="https://www.instagram.com/emcee_deepikajain/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-pastel-50 hover:bg-pastel-100 text-pastel-800 px-4 py-2.5 rounded-2xl font-bold text-xs transition-all border border-pastel-200 shadow-xs"
+                >
+                  <Instagram className="w-4 h-4 text-rose-500" />
+                  <span>@emcee_deepikajain</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-pastel-50 hover:bg-pastel-100 text-pastel-800 px-4 py-2.5 rounded-2xl font-bold text-xs transition-all border border-pastel-200 shadow-xs"
+                >
+                  <Linkedin className="w-4 h-4 text-sky-600" />
+                  <span>LinkedIn Profile</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Direct Management & Portfolio Download Desk */}
+          <div className="bg-pastel-800 text-pastel-50 p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col justify-between space-y-6 text-left border border-pastel-700">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 text-gold-light text-xs font-bold uppercase tracking-wider bg-pastel-700/60 px-3.5 py-1.5 rounded-full border border-pastel-600">
+                <Clock className="w-4 h-4" />
+                <span>Direct Desk & Turnaround</span>
+              </div>
+              
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">Event Consultations & Riders</h3>
+              
+              <p className="text-sm text-pastel-200 leading-relaxed font-normal">
+                For prompt event date reservations, custom script proposals, technical stage riders, and package estimates, connect directly via phone or WhatsApp.
+              </p>
+
+              <div className="space-y-3 pt-2 text-xs text-pastel-200">
+                <div className="flex items-center gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span>Instant response on WhatsApp for date availability</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span>Customized run-of-show templates provided</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span>Bilingual script review for multi-cultural events</span>
                 </div>
               </div>
             </div>
 
-            {/* Availability Note */}
-            <div className="bg-pastel-800 text-pastel-50 p-8 rounded-3xl space-y-3">
-              <div className="flex items-center gap-2 text-gold-light text-xs font-bold uppercase tracking-wider">
-                <Clock className="w-4 h-4" />
-                <span>Response Time Guarantee</span>
-              </div>
-              <p className="text-sm text-pastel-200">
-                Our management desk responds to all event inquiries within <strong>6 business hours</strong> with initial proposal options and event consultation details.
-              </p>
+            <div className="pt-6 border-t border-pastel-700">
+              <a
+                href="/portfolio"
+                className="w-full flex items-center justify-center gap-2 bg-gold-DEFAULT hover:bg-gold-light text-pastel-900 py-4 rounded-2xl font-bold text-sm transition-all shadow-md hover:scale-[1.02]"
+              >
+                <span>View Portfolio & Media Decks</span>
+                <span className="text-base">🎙️</span>
+              </a>
             </div>
-          </div>
-
-          {/* Form Column */}
-          <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-pastel-200 shadow-md">
-            <h3 className="font-serif text-2xl font-bold text-pastel-900 mb-6">
-              Send an Event Inquiry
-            </h3>
-            <BookingForm />
           </div>
         </div>
       </div>
