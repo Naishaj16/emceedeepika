@@ -9,10 +9,12 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Column */}
           <div className="space-y-4 md:col-span-1">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-pastel-700 flex items-center justify-center text-pastel-100">
-                <Sparkles className="w-4 h-4 text-gold-light" />
-              </div>
+            <Link to="/" className="flex items-center gap-3">
+              <img
+                src="/logo.png"
+                alt="Emcee Deepika Jain Logo"
+                className="w-14 h-14 object-contain bg-white/10 rounded-xl p-1 border border-white/20"
+              />
               <span className="font-serif text-xl font-bold text-pastel-50">Deepika Jain</span>
             </Link>
             <p className="text-pastel-300 text-sm leading-relaxed">

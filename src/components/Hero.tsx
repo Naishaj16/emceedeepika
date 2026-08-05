@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 to="/contact"
                 className="flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-4 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95"
               >
-                <span>Check Availability — 2026–2027 Season</span>
+                <span>Get in Touch with Deepika</span>
                 <ArrowRight className="w-4 h-4 text-gold-light" />
               </Link>
 

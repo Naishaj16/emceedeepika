@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { createRoute } from '@tanstack/react-router';
+import { createRoute, Link } from '@tanstack/react-router';
 import { rootRoute } from './root';
 import { SERVICES } from '../data/emceeData';
-import { Check, Sparkles, Calculator, ArrowRight } from 'lucide-react';
+import { Check, Sparkles, Calculator, ArrowRight, HelpCircle, Calendar, ShieldCheck, Globe, Languages } from 'lucide-react';
 import { useBooking } from '../context/BookingContext';
+import { SEOHead } from '../components/SEOHead';
 
 const ServicesPage: React.FC = () => {
   const { openBooking } = useBooking();
 
   // Interactive Package Estimator State
-  const [eventType, setEventType] = useState<'wedding' | 'corporate' | 'celebrity' | 'virtual'>('wedding');
+  const [eventType, setEventType] = useState<'wedding' | 'corporate' | 'celebrity' | 'virtual' | 'award' | 'birthday' | 'private'>('wedding');
   const [days, setDays] = useState<number>(1);
   const [locationType, setLocationType] = useState<'domestic' | 'international'>('domestic');
 
@@ -20,43 +21,103 @@ const ServicesPage: React.FC = () => {
       case 'corporate': base = 100000; break;
       case 'celebrity': base = 150000; break;
       case 'virtual': base = 60000; break;
+      case 'award': base = 110000; break;
+      case 'birthday': base = 75000; break;
+      case 'private': base = 85000; break;
     }
     const locationMultiplier = locationType === 'international' ? 1.5 : 1.0;
     const total = base * days * locationMultiplier;
     return total.toLocaleString('en-IN');
   };
 
+  const servicesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Emcee & Event Hosting Services',
+    provider: {
+      '@type': 'Person',
+      name: 'Deepika Jain',
+    },
+    description: 'Book a multilingual emcee for weddings, corporate galas, award nights, birthdays, and private events across India, the UAE, and Asia.',
+    areaServed: ['India', 'United Arab Emirates', 'Singapore', 'Malaysia', 'Asia'],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Hosting Services',
+      itemListElement: SERVICES.map((service) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: service.title,
+          description: service.fullDesc,
+        },
+      })),
+    },
+  };
+
+  const faqs = [
+    {
+      q: 'Which event types does Deepika host?',
+      a: 'Weddings, corporate events, celebrity and red carpet appearances, virtual and hybrid summits, award shows, birthdays, and private or festival celebrations.',
+    },
+    {
+      q: 'Does she travel internationally?',
+      a: 'Yes — she\'s hosted events across 15+ countries, with regular bookings across Chennai, Mumbai, Delhi NCR, Udaipur, Dubai, Singapore, and Malaysia.',
+    },
+    {
+      q: 'Can she host in more than one language during the same event?',
+      a: 'Yes — English, Hindi, Marwari, and Tamil, switched naturally as the guest list requires.',
+    },
+  ];
+
   return (
     <div className="pt-28 pb-24 bg-pastel-50">
-      {/* Header */}
+      <SEOHead
+        title="Emcee & Event Hosting Services | Deepika Jain"
+        description="Book a multilingual emcee for weddings, corporate galas, award nights, birthdays, and private events across India, the UAE, and Asia."
+        keywords={[
+          'Emcee & Event Hosting Services',
+          'multilingual wedding emcee',
+          'corporate gala host',
+          'celebrity red carpet host',
+          'award show emcee',
+          'birthday party emcee',
+          'diaspora festival event host',
+        ]}
+        schemaJson={servicesSchema}
+      />
+
+      {/* Hero / Header Section */}
       <div className="bg-gradient-to-b from-pastel-100 to-pastel-50 py-16 border-b border-pastel-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pastel-200 border border-pastel-300 text-pastel-800 text-xs font-bold uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5 text-gold-DEFAULT" />
-            <span>Tailored Hosting Services</span>
+            <span>Master of Ceremonies & Stage Host</span>
           </div>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-pastel-900">
-            Services & Package Estimator
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-pastel-900 leading-tight">
+            Emcee & Event Hosting Services
           </h1>
-          <p className="text-base text-pastel-700 max-w-2xl mx-auto">
-            Comprehensive hosting solutions for luxury weddings, corporate galas, celebrity shows, and global summits.
+          <p className="text-base sm:text-lg text-pastel-700 leading-relaxed max-w-3xl mx-auto font-normal">
+            Deepika Jain is a multilingual emcee and event host with 12+ years of experience and 100+ shows hosted across 15+ countries. Fluent in English, Hindi, Marwari, and Tamil, she brings the same preparation, stage presence, and cultural fluency to every kind of event — from a two-day destination wedding to a 90-minute corporate keynote. Below is the full range of hosting services, each tailored to the pace and tone the event actually needs.
           </p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
         {/* Services Listing */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {SERVICES.map((service) => (
-            <div key={service.id} className="bg-white rounded-3xl border border-pastel-200 p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div key={service.id} className="bg-white rounded-3xl border border-pastel-200 p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-6">
               <div className="space-y-4">
-                <span className="text-xs uppercase font-bold tracking-widest text-gold-dark bg-pastel-100 px-3 py-1 rounded-full border border-pastel-200">
-                  {service.category}
-                </span>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs uppercase font-bold tracking-widest text-gold-dark bg-pastel-100 px-3 py-1 rounded-full border border-pastel-200">
+                    {service.category}
+                  </span>
+                </div>
                 <h3 className="font-serif text-2xl font-bold text-pastel-900">{service.title}</h3>
                 <p className="text-sm text-pastel-700 leading-relaxed">{service.fullDesc}</p>
+                
                 <div className="pt-2 space-y-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-pastel-800">Key Deliverables:</h4>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-pastel-800">Key Highlights:</h4>
                   {service.features.map((feat) => (
                     <div key={feat} className="flex items-center gap-2 text-xs text-pastel-800 font-medium">
                       <Check className="w-4 h-4 text-pastel-600 shrink-0" />
@@ -65,18 +126,81 @@ const ServicesPage: React.FC = () => {
                   ))}
                 </div>
               </div>
+
+              <div className="pt-4 border-t border-pastel-100 flex flex-col gap-3">
+                {service.link && service.link !== '#' ? (
+                  <Link
+                    to={service.link}
+                    className="inline-flex items-center justify-between text-sm font-bold text-pastel-800 hover:text-gold-dark group transition-colors"
+                  >
+                    <span>{service.linkText}</span>
+                    <ArrowRight className="w-4 h-4 text-gold-DEFAULT group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                ) : (
+                  <button
+                    onClick={openBooking}
+                    className="inline-flex items-center justify-between text-sm font-bold text-pastel-800 hover:text-gold-dark group transition-colors text-left"
+                  >
+                    <span>Inquire about {service.title} →</span>
+                    <ArrowRight className="w-4 h-4 text-gold-DEFAULT group-hover:translate-x-1 transition-transform" />
+                  </button>
+                )}
+                
                 <button
                   onClick={openBooking}
-                  className="w-full flex items-center justify-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 py-3 rounded-xl font-bold text-sm transition-all"
+                  className="w-full flex items-center justify-center gap-2 bg-pastel-800 hover:bg-pastel-900 text-pastel-50 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-xs"
                 >
                   <span>Inquire About {service.title}</span>
-                  <ArrowRight className="w-4 h-4 text-gold-light" />
                 </button>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Interactive Estimator Box */}
+        {/* Why Book Deepika */}
+        <div className="bg-gradient-to-br from-pastel-100 via-white to-pastel-100 rounded-3xl border border-pastel-300 p-8 sm:p-12 shadow-sm space-y-6 max-w-5xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pastel-200 text-pastel-800 text-xs font-bold uppercase tracking-widest">
+            <ShieldCheck className="w-4 h-4 text-gold-DEFAULT" />
+            <span>Unmatched Experience & Cultural Versatility</span>
+          </div>
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-pastel-900">
+            Why Work With Deepika
+          </h2>
+          <p className="text-base text-pastel-800 leading-relaxed font-normal">
+            12+ years of experience, 100+ shows across 15+ countries, and fluency in four languages mean one host can cover a genuinely mixed guest list without a translator or a second act. Every engagement starts with a discovery call to understand your event, your audience, and the tone you want on stage — not a generic script dropped into a new venue.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-pastel-200">
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 rounded-xl bg-pastel-200 flex items-center justify-center shrink-0">
+                <Globe className="w-5 h-5 text-pastel-800" />
+              </div>
+              <div>
+                <h4 className="font-bold text-sm text-pastel-900">15+ Countries</h4>
+                <p className="text-xs text-pastel-700">Proven global adaptability</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 rounded-xl bg-pastel-200 flex items-center justify-center shrink-0">
+                <Languages className="w-5 h-5 text-pastel-800" />
+              </div>
+              <div>
+                <h4 className="font-bold text-sm text-pastel-900">4 Languages</h4>
+                <p className="text-xs text-pastel-700">English, Hindi, Marwari, Tamil</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 rounded-xl bg-pastel-200 flex items-center justify-center shrink-0">
+                <Calendar className="w-5 h-5 text-pastel-800" />
+              </div>
+              <div>
+                <h4 className="font-bold text-sm text-pastel-900">Custom Scripting</h4>
+                <p className="text-xs text-pastel-700">Tailored discovery call standard</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Interactive Package Estimator Box */}
         <div className="bg-white rounded-3xl border-2 border-pastel-300 p-8 sm:p-12 shadow-xl space-y-8 max-w-4xl mx-auto">
           <div className="flex items-center gap-3 border-b border-pastel-200 pb-6">
             <div className="w-12 h-12 rounded-2xl bg-pastel-100 text-pastel-700 flex items-center justify-center">
@@ -101,6 +225,9 @@ const ServicesPage: React.FC = () => {
                 <option value="corporate">Corporate Gala / Launch</option>
                 <option value="celebrity">Celebrity / Red Carpet</option>
                 <option value="virtual">Virtual / Hybrid Event</option>
+                <option value="award">Award Shows & Recognition</option>
+                <option value="birthday">Birthday & Celebration</option>
+                <option value="private">Private & Festival Events</option>
               </select>
             </div>
 
@@ -146,6 +273,43 @@ const ServicesPage: React.FC = () => {
             >
               Get Exact Pricing
             </button>
+          </div>
+        </div>
+
+        {/* Frequently Asked Questions */}
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="text-center space-y-2">
+            <span className="text-xs font-bold uppercase tracking-widest text-gold-dark bg-pastel-100 px-3 py-1 rounded-full border border-pastel-200">
+              Clear Answers
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-pastel-900">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => (
+              <div key={idx} className="bg-white rounded-2xl border border-pastel-200 p-6 shadow-xs space-y-2">
+                <h3 className="font-serif text-lg font-bold text-pastel-900 flex items-start gap-3">
+                  <HelpCircle className="w-5 h-5 text-gold-DEFAULT shrink-0 mt-0.5" />
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="text-sm text-pastel-700 leading-relaxed pl-8">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="pt-8 text-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-3 bg-gold-DEFAULT hover:bg-gold-light text-pastel-900 px-8 py-4 rounded-full font-bold text-base transition-all shadow-lg hover:shadow-xl hover:scale-105"
+            >
+              <Calendar className="w-5 h-5" />
+              <span>Get in Touch for Event Inquiries</span>
+            </Link>
           </div>
         </div>
       </div>

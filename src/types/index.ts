@@ -1,12 +1,14 @@
 export interface ServiceItem {
   id: string;
   title: string;
-  category: 'wedding' | 'corporate' | 'celebrity' | 'virtual' | 'award' | 'private';
+  category: 'wedding' | 'corporate' | 'celebrity' | 'virtual' | 'award' | 'birthday' | 'private';
   shortDesc: string;
   fullDesc: string;
   iconName: string;
   image: string;
   features: string[];
+  link?: string;
+  linkText?: string;
   colSpan: string;
 }
 

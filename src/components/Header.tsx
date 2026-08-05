@@ -44,15 +44,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-pastel-200 border border-pastel-300 flex items-center justify-center text-pastel-800 shadow-sm group-hover:scale-105 transition-transform">
-            <Sparkles className="w-5 h-5 text-pastel-600" />
-          </div>
+        <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
+          <img
+            src="/logo.png"
+            alt="Emcee Deepika Jain Logo"
+            className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain drop-shadow-sm group-hover:scale-105 transition-transform"
+          />
           <div>
-            <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-pastel-900 block group-hover:text-pastel-700 transition-colors">
+            <span className="font-serif text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-pastel-900 block group-hover:text-pastel-700 transition-colors">
               Deepika Jain
             </span>
-            <span className="text-[10px] uppercase tracking-widest text-pastel-600 font-semibold block">
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-pastel-600 font-semibold block">
               International Emcee & Host
             </span>
           </div>

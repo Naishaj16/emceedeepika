@@ -96,7 +96,7 @@ const ContactPage: React.FC = () => {
                 <span>Response Time Guarantee</span>
               </div>
               <p className="text-sm text-pastel-200">
-                Our management desk responds to all availability inquiries within <strong>6 business hours</strong> with date confirmation and fee structure.
+                Our management desk responds to all event inquiries within <strong>6 business hours</strong> with initial proposal options and event consultation details.
               </p>
             </div>
           </div>
@@ -104,7 +104,7 @@ const ContactPage: React.FC = () => {
           {/* Form Column */}
           <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-pastel-200 shadow-md">
             <h3 className="font-serif text-2xl font-bold text-pastel-900 mb-6">
-              Send an Availability Request
+              Send an Event Inquiry
             </h3>
             <BookingForm />
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { SERVICES } from '../data/emceeData';
-import { Heart, Briefcase, Star, Video, ArrowRight, Check, Trophy, Sparkles } from 'lucide-react';
+import { Heart, Briefcase, Star, Video, ArrowRight, Check, Trophy, Sparkles, Globe } from 'lucide-react';
 import { Link } from '@tanstack/react-router';
 
 interface ServicesBentoProps {
@@ -16,6 +16,7 @@ export const ServicesBento: React.FC<ServicesBentoProps> = ({ onOpenBooking }) =
       case 'Video': return <Video className="w-6 h-6 text-gold-DEFAULT" />;
       case 'Trophy': return <Trophy className="w-6 h-6 text-gold-DEFAULT" />;
       case 'Sparkles': return <Sparkles className="w-6 h-6 text-gold-DEFAULT" />;
+      case 'Globe': return <Globe className="w-6 h-6 text-gold-DEFAULT" />;
       default: return <Star className="w-6 h-6 text-gold-DEFAULT" />;
     }
   };
