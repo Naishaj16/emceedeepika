@@ -36,10 +36,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? 'pastel-glass shadow-md py-3'
-          : 'bg-gradient-to-b from-pastel-100/90 to-transparent py-5'
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled || mobileMenuOpen
+          ? 'bg-pastel-100 border-b border-pastel-200 shadow-sm py-3'
+          : 'bg-pastel-100/90 border-b border-pastel-200/60 py-4 sm:py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -128,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-pastel-50/95 backdrop-blur-lg border-b border-pastel-200 px-6 py-6 space-y-4 shadow-xl">
+        <div className="md:hidden bg-pastel-100 border-b border-pastel-200 px-6 py-6 space-y-4 shadow-xl">
           {navLinks.map((link) => (
             <Link
               key={link.to}
