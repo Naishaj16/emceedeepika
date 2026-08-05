@@ -196,11 +196,11 @@ export const BookingForm: React.FC<{ onSuccess?: () => void }> = ({ onSuccess })
         className="w-full flex items-center justify-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 py-3.5 rounded-xl font-bold text-sm transition-all shadow-md hover:shadow-lg disabled:opacity-50"
       >
         {isSubmitting ? (
-          <span>Checking Availability & Sending...</span>
+          <span>Sending Inquiry...</span>
         ) : (
           <>
             <Send className="w-4 h-4 text-gold-light" />
-            <span>Check Availability & Get Quote</span>
+            <span>Send Event Inquiry</span>
           </>
         )}
       </button>
