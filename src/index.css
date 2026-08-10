@@ -3,6 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html, body {
+    background-color: #F6FAF7 !important;
+    color: #13281D !important;
+    font-family: 'Montserrat', sans-serif;
+    color-scheme: light !important;
+  }
+
   html, body, button, a, input, select, textarea, [role="button"], * {
     cursor: url('/mic-cursor.svg') 2 2, pointer !important;
   }

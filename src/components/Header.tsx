@@ -191,7 +191,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-pastel-100 border-b border-pastel-200 px-6 py-6 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto">
+        <div className="md:hidden bg-[#EBF5EE] border-b border-pastel-200 px-6 py-6 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto text-pastel-900">
           <Link to="/" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Home</Link>
           <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">About</Link>
           <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Events & Services</Link>
