@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync-photos": "python3 ../sync-google-photos.py"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.67.0",

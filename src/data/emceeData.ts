@@ -226,6 +226,22 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const GALLERY: GalleryItem[] = [
   {
+    "id": "g-226",
+    "title": "Live Showcase Event #226",
+    "category": "wedding",
+    "image": "/images/gallery/wedding/gphoto-c2b205def641.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-227",
+    "title": "Live Showcase Event #227",
+    "category": "wedding",
+    "image": "/images/gallery/wedding/gphoto-a3245987f055.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
     "id": "g-1",
     "title": "Luxury Sangeet & Royal Entry Hosting #1",
     "category": "wedding",
