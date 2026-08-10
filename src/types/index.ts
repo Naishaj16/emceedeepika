@@ -28,7 +28,7 @@ export interface Testimonial {
 export interface GalleryItem {
   id: string;
   title: string;
-  category: 'all' | 'wedding' | 'corporate' | 'celebrity' | 'international';
+  category: 'all' | 'wedding' | 'corporate' | 'celebrity' | 'international' | 'festival' | 'award' | 'birthday' | 'spotlight';
   image: string;
   location: string;
   year: string;

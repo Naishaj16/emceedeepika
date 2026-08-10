@@ -6,11 +6,29 @@ import { Link } from '@tanstack/react-router';
 
 export const GallerySection: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [visibleCount, setVisibleCount] = useState<number>(12);
+
+  const categories = [
+    { key: 'all', label: 'All Media' },
+    { key: 'wedding', label: 'Weddings' },
+    { key: 'corporate', label: 'Corporate' },
+    { key: 'festival', label: 'Festivals' },
+    { key: 'international', label: 'International' },
+    { key: 'award', label: 'Awards' },
+    { key: 'spotlight', label: 'Spotlight' },
+  ];
+
+  const filteredGallery = GALLERY.filter((item) =>
+    activeCategory === 'all' ? true : item.category === activeCategory
+  );
+
+  const visibleItems = filteredGallery.slice(0, visibleCount);
 
   return (
     <section className="py-24 bg-pastel-50 relative" id="gallery">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-pastel-600 bg-pastel-100 px-4 py-1.5 rounded-full border border-pastel-200">
             Memorable Moments
           </span>
@@ -18,13 +36,33 @@ export const GallerySection: React.FC = () => {
             Stage Showcase & Event Highlights
           </h2>
           <p className="text-base text-pastel-700">
-            Capturing high-energy performances, royal entries, celebrity interviews, and destination galas.
+            Explore 220+ organized photos across Weddings, Corporate Galas, Festivals, Awards, and Stage Spotlight.
           </p>
+        </div>
+
+        {/* Filter Category Tabs */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+          {categories.map((cat) => (
+            <button
+              key={cat.key}
+              onClick={() => {
+                setActiveCategory(cat.key);
+                setVisibleCount(12);
+              }}
+              className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all border ${
+                activeCategory === cat.key
+                  ? 'bg-pastel-800 text-pastel-50 border-pastel-800 shadow-md scale-105'
+                  : 'bg-white text-pastel-700 border-pastel-200 hover:bg-pastel-100'
+              }`}
+            >
+              {cat.label} ({cat.key === 'all' ? GALLERY.length : GALLERY.filter(i => i.category === cat.key).length})
+            </button>
+          ))}
         </div>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {GALLERY.map((item) => (
+          {visibleItems.map((item) => (
             <div
               key={item.id}
               onClick={() => setSelectedItem(item)}
@@ -33,6 +71,7 @@ export const GallerySection: React.FC = () => {
               <img
                 src={item.image}
                 alt={item.title}
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
 
@@ -64,14 +103,17 @@ export const GallerySection: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <Link
-            to="/gallery"
-            className="inline-flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-3.5 rounded-full font-bold text-sm transition-all shadow-md"
-          >
-            <span>View Full Media Portfolio</span>
-          </Link>
-        </div>
+        {/* Load More Button */}
+        {visibleCount < filteredGallery.length && (
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setVisibleCount((prev) => prev + 12)}
+              className="inline-flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-3.5 rounded-full font-bold text-sm transition-all shadow-md"
+            >
+              <span>Load More Photos ({filteredGallery.length - visibleCount} remaining)</span>
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Lightbox Modal */}
