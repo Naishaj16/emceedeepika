@@ -36,7 +36,7 @@ export const GallerySection: React.FC = () => {
             Stage Showcase & Event Highlights
           </h2>
           <p className="text-base text-pastel-700">
-            Explore 220+ organized photos across Weddings, Corporate Galas, Festivals, Awards, and Stage Spotlight.
+            Explore organized media highlights across Weddings, Corporate Galas, Festivals, Awards, and Stage Spotlight.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export const GallerySection: React.FC = () => {
                   : 'bg-white text-pastel-700 border-pastel-200 hover:bg-pastel-100'
               }`}
             >
-              {cat.label} ({cat.key === 'all' ? GALLERY.length : GALLERY.filter(i => i.category === cat.key).length})
+              {cat.label}
             </button>
           ))}
         </div>
@@ -72,7 +72,7 @@ export const GallerySection: React.FC = () => {
                 src={item.image}
                 alt={item.title}
                 loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
 
               {/* Overlay on hover */}
@@ -110,7 +110,7 @@ export const GallerySection: React.FC = () => {
               onClick={() => setVisibleCount((prev) => prev + 12)}
               className="inline-flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-3.5 rounded-full font-bold text-sm transition-all shadow-md"
             >
-              <span>Load More Photos ({filteredGallery.length - visibleCount} remaining)</span>
+              <span>Load More Photos</span>
             </button>
           </div>
         )}

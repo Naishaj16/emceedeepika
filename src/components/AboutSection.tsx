@@ -70,7 +70,7 @@ export const AboutSection: React.FC = () => {
             <div className="pt-6 border-t border-pastel-200">
               <p className="text-xs uppercase tracking-widest font-bold text-pastel-500 mb-4">Trusted by</p>
               <div className="text-sm text-pastel-700 space-y-2">
-                <p>✓ Fortune 500 Corporate Event Teams</p>
+                <p>✓ Leading Corporate Event Teams & Brand Organizers</p>
                 <p>✓ Luxury Wedding Planners & High-Net-Worth Families</p>
                 <p>✓ International Destination Event Organizers</p>
               </div>
