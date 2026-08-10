@@ -17,62 +17,48 @@ const HomePage: React.FC = () => {
 
   const homepageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Person',
+    '@type': ['Person', 'LocalBusiness'],
     name: 'Deepika Jain',
-    jobTitle: 'International Corporate Emcee & Event Host',
-    description: 'Deepika Jain hosts weddings, corporate galas, award nights and global summits in four languages across India, the UAE and Asia.',
+    image: 'https://emceedeepika.com/images/deepika/deepika-5.webp',
+    jobTitle: 'International Multilingual Emcee & Event Host',
+    description: 'Deepika Jain hosts weddings, corporate galas, award nights, summits, government ceremonies, and family milestones in four languages across India, UAE, and Asia.',
     url: 'https://emceedeepika.com',
+    telephone: '+918056958856',
+    email: 'dishajain395@gmail.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Chennai',
+      addressRegion: 'Tamil Nadu',
+      addressCountry: 'India',
+    },
+    areaServed: ['Chennai', 'Mumbai', 'Delhi NCR', 'Udaipur', 'Dubai', 'Singapore', 'Malaysia'],
     sameAs: [
       'https://www.instagram.com/emcee_deepikajain/?hl=en',
       'https://in.linkedin.com/in/anchor-deepika-jain%F0%9F%8E%A4-4a240b177',
+      'https://www.facebook.com/emceedeepikajain',
+      'https://www.youtube.com/@besteventemceeandanchor'
     ],
     knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil'],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '150',
+      bestRating: '5',
+      worstRating: '1'
+    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Emcee & Hosting Services',
       itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Luxury Wedding Host',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Corporate Re-presenter',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Celebrity & Red Carpet Host',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Virtual & Hybrid Global Summits',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Award Shows & Recognition',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Private & Festival Events',
-          },
-        },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Luxury Wedding Host' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate Event Hosting' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Celebrity & Red Carpet Hosting' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Virtual & Hybrid Global Summits' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Award Shows & Recognition Events' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Birthday Party & Celebration Hosting' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Private & Festival Events' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Government & Protocol Event Hosting' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Baby Shower & Milestone Hosting' } },
       ],
     },
   };
@@ -90,6 +76,7 @@ const HomePage: React.FC = () => {
           'destination wedding emcee Asia Middle East',
           'multilingual event host',
         ]}
+        canonicalUrl="https://emceedeepika.com/"
         schemaJson={homepageSchema}
       />
       <Hero onOpenBooking={openBooking} />

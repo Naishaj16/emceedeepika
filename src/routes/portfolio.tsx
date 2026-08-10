@@ -53,9 +53,9 @@ const PortfolioPage: React.FC = () => {
   ];
 
   const highlights = [
-    { label: '15+ Years Stage Mastery', desc: 'Commanding high-profile global audiences' },
-    { label: '5-Language Fluency', desc: 'Seamless hosting in English, Hindi, Telugu, Tamil & Marwari' },
-    { label: '2500+ Shows Hosted', desc: 'Across 15+ countries including UAE, Singapore & Malaysia' },
+    { label: '12+ Years Stage Mastery', desc: 'Commanding high-profile global audiences' },
+    { label: '4-Language Fluency', desc: 'Seamless hosting in English, Hindi, Marwari & Tamil' },
+    { label: '100+ Shows Hosted', desc: 'Across 15+ countries including UAE, Singapore & Malaysia' },
     { label: 'End-to-End Execution', desc: 'Custom scripts, rehearsals, and VIP protocol management' },
   ];
 
@@ -70,6 +70,7 @@ const PortfolioPage: React.FC = () => {
           'corporate emcee awards',
           'event host media kit PDF',
         ]}
+        canonicalUrl="https://emceedeepika.com/portfolio"
         schemaJson={portfolioSchema}
       />
 

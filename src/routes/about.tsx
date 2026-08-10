@@ -36,6 +36,7 @@ const AboutPage: React.FC = () => {
           'wedding and corporate emcee India UAE Asia',
           'bilingual event presenter',
         ]}
+        canonicalUrl="https://emceedeepika.com/about"
         schemaJson={aboutSchema}
       />
 

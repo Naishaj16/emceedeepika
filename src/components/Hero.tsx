@@ -54,11 +54,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             <div className="pt-6 flex flex-wrap items-center gap-6 border-t border-pastel-200/80">
               <div className="flex items-center gap-2 text-pastel-800 text-xs font-semibold">
                 <CheckCircle2 className="w-4 h-4 text-pastel-600" />
-                <span>Verified Stage Host</span>
+                <span>12+ Years Stage Mastery</span>
               </div>
               <div className="flex items-center gap-2 text-pastel-800 text-xs font-semibold">
                 <Award className="w-4 h-4 text-gold-DEFAULT" />
-                <span>Top Event Host 2024</span>
+                <span>100+ Global Events</span>
               </div>
               <div className="flex items-center gap-2 text-pastel-800 text-xs font-semibold">
                 <Globe2 className="w-4 h-4 text-pastel-600" />

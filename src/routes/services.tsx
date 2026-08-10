@@ -85,6 +85,7 @@ const ServicesPage: React.FC = () => {
           'birthday party emcee',
           'diaspora festival event host',
         ]}
+        canonicalUrl="https://emceedeepika.com/services"
         schemaJson={servicesSchema}
       />
 
