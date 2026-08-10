@@ -66,13 +66,13 @@ export const GallerySection: React.FC = () => {
             <div
               key={item.id}
               onClick={() => setSelectedItem(item)}
-              className="group relative rounded-2xl overflow-hidden bg-pastel-200 border border-pastel-200 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer aspect-[4/3]"
+              className="group relative rounded-2xl overflow-hidden bg-pastel-900/90 border border-pastel-200 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer aspect-[4/3] flex items-center justify-center p-1"
             >
               <img
                 src={item.image}
                 alt={item.title}
                 loading="lazy"
-                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700 rounded-xl"
               />
 
               {/* Overlay on hover */}
