@@ -2,8 +2,8 @@ import { ServiceItem, Testimonial, GalleryItem } from '../types';
 
 export const STATS = [
   { label: 'Years Experience', value: '12+', subtitle: 'Mastering the Stage' },
-  { label: 'Global Shows', value: '100+', subtitle: 'Across 15+ Countries' },
-  { label: 'Languages Spoken', value: '4', subtitle: 'English, Hindi, Marwari, Tamil' },
+  { label: 'Global Shows', value: '2,500+', subtitle: 'Across 15+ Countries' },
+  { label: 'Languages Spoken', value: '5', subtitle: 'English, Hindi, Marwari, Tamil, Telugu' },
   { label: 'Audience Reached', value: '500K+', subtitle: 'Energized Guests Worldwide' },
 ];
 
@@ -13,7 +13,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Luxury Wedding Host',
     category: 'wedding',
     shortDesc: 'From sangeet to reception, Deepika weaves cultural tradition with modern flow.',
-    fullDesc: 'From the high-energy chaos of a sangeet to the polish of a reception gala, Deepika weaves cultural tradition with modern flow — custom scripts, multilingual guest warm-up, and a seamless royal entry for every function. For multi-language, multi-generation guest lists, having one host who can move naturally between English, Hindi, Marwari, and Tamil means no guest is left out of the moment.',
+    fullDesc: 'From the high-energy chaos of a sangeet to the polish of a reception gala, Deepika weaves cultural tradition with modern flow — custom scripts, multilingual guest warm-up, and a seamless royal entry for every function. For multi-language, multi-generation guest lists, having one host who can move naturally between English, Hindi, Marwari, Tamil, and Telugu means no guest is left out of the moment.',
     iconName: 'Heart',
     image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200',
     features: ['Custom Sangeet & Reception Scripts', 'Multilingual Guest Warm-up', 'Seamless Royal Entry', 'Cross-Generational Engagement'],

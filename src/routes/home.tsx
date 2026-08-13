@@ -31,14 +31,14 @@ const HomePage: React.FC = () => {
       addressRegion: 'Tamil Nadu',
       addressCountry: 'India',
     },
-    areaServed: ['Chennai', 'Mumbai', 'Delhi NCR', 'Udaipur', 'Dubai', 'Singapore', 'Malaysia'],
+    areaServed: ['Chennai', 'Mumbai', 'Delhi NCR', 'Udaipur', 'Dubai', 'Singapore', 'Malaysia', 'Bali', 'Phuket', 'Maldives'],
     sameAs: [
       'https://www.instagram.com/emcee_deepikajain/',
       'https://www.facebook.com/emceedeepikajain',
       'https://www.youtube.com/@besteventemceeandanchor',
       'https://in.linkedin.com/in/anchor-deepika-jain%F0%9F%8E%A4-4a240b177'
     ],
-    knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil'],
+    knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil', 'Telugu'],
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
@@ -66,8 +66,8 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <SEOHead
-        title="Emcee & Event Host in India, UAE & Singapore | Deepika Jain"
-        description="Deepika Jain hosts weddings, corporate galas, award nights and global summits in four languages across India, the UAE and Asia. Get in touch."
+        title="Emcee & Event Host in India, UAE, Singapore & International | Deepika Jain"
+        description="Deepika Jain has hosted 2,500+ shows across 15+ countries including Singapore, Dubai, Bali, Phuket, and Maldives in 5 languages (English, Hindi, Marwari, Tamil, Telugu)."
         keywords={[
           'professional emcee for hire',
           'bilingual emcee for hire',

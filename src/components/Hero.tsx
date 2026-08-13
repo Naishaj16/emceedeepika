@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             </h1>
 
             <p className="text-base sm:text-lg text-pastel-700 leading-relaxed max-w-2xl font-normal">
-              12+ years on stage, over 100 shows across 15+ countries, and four languages ready for whatever the room needs — English, Hindi, Marwari, and Tamil. Deepika brings poise, warmth, and real command of a room to weddings, corporate galas, and global summits.
+              12+ years on stage, over 2,500 shows across 15+ countries (Singapore, Dubai, Bali, Phuket, Maldives & beyond), and 5 languages ready for whatever the room needs — English, Hindi, Marwari, Tamil, and Telugu. Deepika brings poise, warmth, and real command of a room to weddings, corporate galas, and global summits.
             </p>
 
             {/* CTAs */}

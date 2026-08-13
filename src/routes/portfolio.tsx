@@ -54,8 +54,8 @@ const PortfolioPage: React.FC = () => {
 
   const highlights = [
     { label: '12+ Years Stage Mastery', desc: 'Commanding high-profile global audiences' },
-    { label: '4-Language Fluency', desc: 'Seamless hosting in English, Hindi, Marwari & Tamil' },
-    { label: '100+ Shows Hosted', desc: 'Across 15+ countries including UAE, Singapore & Malaysia' },
+    { label: '5-Language Fluency', desc: 'Seamless hosting in English, Hindi, Marwari, Tamil & Telugu' },
+    { label: '2,500+ Shows Hosted', desc: 'Across 15+ countries (Singapore, Dubai, Bali, Phuket, Maldives & more)' },
     { label: 'End-to-End Execution', desc: 'Custom scripts, rehearsals, and VIP protocol management' },
   ];
 

@@ -41,7 +41,7 @@ const ServicesPage: React.FC = () => {
       name: 'Deepika Jain',
     },
     description: 'Book a multilingual emcee for weddings, corporate galas, award nights, birthdays, and private events across India, the UAE, and Asia.',
-    areaServed: ['India', 'United Arab Emirates', 'Singapore', 'Malaysia', 'Asia'],
+    areaServed: ['India', 'United Arab Emirates', 'Singapore', 'Malaysia', 'Indonesia (Bali)', 'Thailand (Phuket)', 'Maldives', 'Asia'],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Hosting Services',
@@ -63,11 +63,11 @@ const ServicesPage: React.FC = () => {
     },
     {
       q: 'Does she travel internationally?',
-      a: 'Yes — she\'s hosted events across 15+ countries, with regular bookings across Chennai, Mumbai, Delhi NCR, Udaipur, Dubai, Singapore, and Malaysia.',
+      a: 'Yes — she\'s hosted 2,500+ events across 15+ countries, with regular bookings across Chennai, Mumbai, Delhi NCR, Udaipur, Dubai, Singapore, Malaysia, Bali, Phuket, and Maldives.',
     },
     {
       q: 'Can she host in more than one language during the same event?',
-      a: 'Yes — English, Hindi, Marwari, and Tamil, switched naturally as the guest list requires.',
+      a: 'Yes — English, Hindi, Marwari, Tamil, and Telugu, switched naturally as the guest list requires.',
     },
   ];
 

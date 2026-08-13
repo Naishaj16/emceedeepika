@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => {
     '@type': 'Person',
     name: 'Deepika Jain',
     jobTitle: 'International Multilingual Emcee & Event Host',
-    description: 'Deepika Jain is a multilingual emcee with 12+ years and 100+ shows across 15+ countries, hosting weddings, galas, and global summits.',
+    description: 'Deepika Jain is a multilingual emcee with 12+ years and 2,500+ shows across 15+ countries including Singapore, Dubai, Bali, Phuket, and Maldives.',
     url: 'https://emceedeepika.com/about',
     sameAs: [
       'https://www.instagram.com/emcee_deepikajain/',
@@ -22,15 +22,15 @@ const AboutPage: React.FC = () => {
       'https://www.youtube.com/@besteventemceeandanchor',
       'https://in.linkedin.com/in/anchor-deepika-jain%F0%9F%8E%A4-4a240b177',
     ],
-    knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil'],
-    workLocation: ['Chennai', 'Mumbai', 'Delhi NCR', 'Udaipur', 'Dubai', 'Singapore', 'Malaysia'],
+    knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil', 'Telugu'],
+    workLocation: ['Chennai', 'Mumbai', 'Delhi NCR', 'Udaipur', 'Dubai', 'Singapore', 'Malaysia', 'Bali', 'Phuket', 'Maldives'],
   };
 
   return (
     <div className="pt-28 pb-24 bg-pastel-50">
       <SEOHead
         title="About Deepika Jain | International Emcee & Event Host"
-        description="Meet Deepika Jain — a multilingual emcee with 12+ years and 100+ shows across 15+ countries, hosting weddings, galas, and global summits."
+        description="Meet Deepika Jain — a 5-language emcee with 12+ years and 2,500+ shows across Singapore, Dubai, Bali, Phuket, Maldives & beyond."
         keywords={[
           'About Deepika Jain',
           'multilingual emcee bio',
