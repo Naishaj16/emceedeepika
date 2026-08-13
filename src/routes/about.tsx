@@ -17,7 +17,9 @@ const AboutPage: React.FC = () => {
     description: 'Deepika Jain is a multilingual emcee with 12+ years and 100+ shows across 15+ countries, hosting weddings, galas, and global summits.',
     url: 'https://emceedeepika.com/about',
     sameAs: [
-      'https://www.instagram.com/emcee_deepikajain/?hl=en',
+      'https://www.instagram.com/emcee_deepikajain/',
+      'https://www.facebook.com/emceedeepikajain',
+      'https://www.youtube.com/@besteventemceeandanchor',
       'https://in.linkedin.com/in/anchor-deepika-jain%F0%9F%8E%A4-4a240b177',
     ],
     knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil'],

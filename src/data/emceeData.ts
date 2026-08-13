@@ -226,6 +226,1318 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const GALLERY: GalleryItem[] = [
   {
+    "id": "g-301",
+    "title": "Live Showcase Event #301",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-7c84fe38fe45.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-302",
+    "title": "Live Showcase Event #302",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-693f1c5e2a70.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-303",
+    "title": "Live Showcase Event #303",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-2e6c2adcaac7.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-304",
+    "title": "Live Showcase Event #304",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-c6c1f6869c71.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-305",
+    "title": "Live Showcase Event #305",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-fe7906e94312.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-306",
+    "title": "Live Showcase Event #306",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-6cefc07148ee.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-307",
+    "title": "Live Showcase Event #307",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-86e6fa855cd4.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-308",
+    "title": "Live Showcase Event #308",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-6e1f8d86ccc8.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-309",
+    "title": "Live Showcase Event #309",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-2741852603f1.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-310",
+    "title": "Live Showcase Event #310",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-e35ea80f6a0d.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-311",
+    "title": "Live Showcase Event #311",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-0aa4909d5d01.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-312",
+    "title": "Live Showcase Event #312",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-1fdef24e3876.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-313",
+    "title": "Live Showcase Event #313",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-f36607031dc0.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-314",
+    "title": "Live Showcase Event #314",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-daf26c8f8b16.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-315",
+    "title": "Live Showcase Event #315",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-c74f8ef8165a.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-316",
+    "title": "Live Showcase Event #316",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-98dfd6efb38e.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-317",
+    "title": "Live Showcase Event #317",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-8a0fa4351dbe.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-318",
+    "title": "Live Showcase Event #318",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-c348f14b2ac0.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-319",
+    "title": "Live Showcase Event #319",
+    "category": "festival",
+    "image": "/images/gallery/festival/gphoto-14ca04dc47c2.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-228",
+    "title": "Live Showcase Event #228",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-faee28daa34c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-229",
+    "title": "Live Showcase Event #229",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-597bb0efcc87.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-230",
+    "title": "Live Showcase Event #230",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-0c5624cb727d.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-231",
+    "title": "Live Showcase Event #231",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-0fb47a215bc4.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-232",
+    "title": "Live Showcase Event #232",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-f155ceb1b5ba.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-233",
+    "title": "Live Showcase Event #233",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-b4fe78751ea2.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-234",
+    "title": "Live Showcase Event #234",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-29a54bb40551.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-235",
+    "title": "Live Showcase Event #235",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-586021fed529.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-236",
+    "title": "Live Showcase Event #236",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-4d6a438d6f92.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-237",
+    "title": "Live Showcase Event #237",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-27a074bb7fcc.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-238",
+    "title": "Live Showcase Event #238",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-4622c77a1f2b.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-239",
+    "title": "Live Showcase Event #239",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-e024a340e34b.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-240",
+    "title": "Live Showcase Event #240",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-1b63909a1dcc.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-241",
+    "title": "Live Showcase Event #241",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-30e75b14118b.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-242",
+    "title": "Live Showcase Event #242",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-418ee571844b.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-243",
+    "title": "Live Showcase Event #243",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-54e109e2cd50.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-244",
+    "title": "Live Showcase Event #244",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-b76b7c34815f.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-245",
+    "title": "Live Showcase Event #245",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-1b56f4f8f6b3.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-246",
+    "title": "Live Showcase Event #246",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-9871e606e93a.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-247",
+    "title": "Live Showcase Event #247",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-5fc0bb086d37.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-248",
+    "title": "Live Showcase Event #248",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-a30d7bcd2e96.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-249",
+    "title": "Live Showcase Event #249",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-68f9a86ff101.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-250",
+    "title": "Live Showcase Event #250",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-9132ff277efd.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-251",
+    "title": "Live Showcase Event #251",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-1f66f9cb0280.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-252",
+    "title": "Live Showcase Event #252",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-b574789d4609.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-253",
+    "title": "Live Showcase Event #253",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-2254bc654010.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-254",
+    "title": "Live Showcase Event #254",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-4dcec52d64fe.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-255",
+    "title": "Live Showcase Event #255",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-9fa5f51ef653.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-256",
+    "title": "Live Showcase Event #256",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-ac9e87ee895d.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-257",
+    "title": "Live Showcase Event #257",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-30a6c5295214.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-258",
+    "title": "Live Showcase Event #258",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-6ea61b422cc6.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-259",
+    "title": "Live Showcase Event #259",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-77f112731b60.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-260",
+    "title": "Live Showcase Event #260",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-c703e314af9c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-261",
+    "title": "Live Showcase Event #261",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-9ab5da0d888b.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-262",
+    "title": "Live Showcase Event #262",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-eb8f18a48359.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-263",
+    "title": "Live Showcase Event #263",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-7d077215b17c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-264",
+    "title": "Live Showcase Event #264",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-369216857e00.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-265",
+    "title": "Live Showcase Event #265",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-0e519e2d8798.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-266",
+    "title": "Live Showcase Event #266",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-521f670a242c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-267",
+    "title": "Live Showcase Event #267",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-3789eb322273.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-268",
+    "title": "Live Showcase Event #268",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-4b4c29d8dfed.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-269",
+    "title": "Live Showcase Event #269",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-8fd0e200ec7e.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-270",
+    "title": "Live Showcase Event #270",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-cc5ab2b83e1a.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-271",
+    "title": "Live Showcase Event #271",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-99a62814e851.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-272",
+    "title": "Live Showcase Event #272",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-2e95562ac6c8.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-273",
+    "title": "Live Showcase Event #273",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-9a3d9ce983cc.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-274",
+    "title": "Live Showcase Event #274",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-80952b543d77.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-275",
+    "title": "Live Showcase Event #275",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-52deb530c480.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-276",
+    "title": "Live Showcase Event #276",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-d850e741b7a4.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-277",
+    "title": "Live Showcase Event #277",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-3daf6d3f4c5c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-278",
+    "title": "Live Showcase Event #278",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-0e2b981eacd9.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-279",
+    "title": "Live Showcase Event #279",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-83e56247b3cf.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-280",
+    "title": "Live Showcase Event #280",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-c924efd57280.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-281",
+    "title": "Live Showcase Event #281",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-8bfcdb126a7f.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-282",
+    "title": "Live Showcase Event #282",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-e2b150272aa6.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-283",
+    "title": "Live Showcase Event #283",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-519db6175753.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-284",
+    "title": "Live Showcase Event #284",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-a7056fa01459.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-285",
+    "title": "Live Showcase Event #285",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-70c6ff6b5786.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-286",
+    "title": "Live Showcase Event #286",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-ee635ef40173.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-287",
+    "title": "Live Showcase Event #287",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-dcf736e8bc25.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-288",
+    "title": "Live Showcase Event #288",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-580b9987af0f.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-289",
+    "title": "Live Showcase Event #289",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-776ee0728674.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-290",
+    "title": "Live Showcase Event #290",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-6f174d7cef26.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-291",
+    "title": "Live Showcase Event #291",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-e983d3a212fd.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-292",
+    "title": "Live Showcase Event #292",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-91479ea237b5.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-293",
+    "title": "Live Showcase Event #293",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-dfc763234462.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-294",
+    "title": "Live Showcase Event #294",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-1d5e6105c21d.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-295",
+    "title": "Live Showcase Event #295",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-6c9153c0b61c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-296",
+    "title": "Live Showcase Event #296",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-cdb5d8b3dead.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-297",
+    "title": "Live Showcase Event #297",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-491cbbcf82f3.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-298",
+    "title": "Live Showcase Event #298",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-f4295d478625.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-299",
+    "title": "Live Showcase Event #299",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-1eab0448a376.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-300",
+    "title": "Live Showcase Event #300",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-c469fe0b53e7.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-228",
+    "title": "Live Showcase Event #228",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-faee28daa34c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-229",
+    "title": "Live Showcase Event #229",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-597bb0efcc87.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-230",
+    "title": "Live Showcase Event #230",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-0c5624cb727d.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-231",
+    "title": "Live Showcase Event #231",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-0fb47a215bc4.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-232",
+    "title": "Live Showcase Event #232",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-f155ceb1b5ba.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-233",
+    "title": "Live Showcase Event #233",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-b4fe78751ea2.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-234",
+    "title": "Live Showcase Event #234",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-29a54bb40551.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-235",
+    "title": "Live Showcase Event #235",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-586021fed529.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-236",
+    "title": "Live Showcase Event #236",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-4d6a438d6f92.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-237",
+    "title": "Live Showcase Event #237",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-27a074bb7fcc.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-238",
+    "title": "Live Showcase Event #238",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-4622c77a1f2b.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-239",
+    "title": "Live Showcase Event #239",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-e024a340e34b.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-240",
+    "title": "Live Showcase Event #240",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-1b63909a1dcc.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-241",
+    "title": "Live Showcase Event #241",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-30e75b14118b.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-242",
+    "title": "Live Showcase Event #242",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-418ee571844b.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-243",
+    "title": "Live Showcase Event #243",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-54e109e2cd50.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-244",
+    "title": "Live Showcase Event #244",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-b76b7c34815f.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-245",
+    "title": "Live Showcase Event #245",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-1b56f4f8f6b3.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-246",
+    "title": "Live Showcase Event #246",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-9871e606e93a.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-247",
+    "title": "Live Showcase Event #247",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-5fc0bb086d37.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-248",
+    "title": "Live Showcase Event #248",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-a30d7bcd2e96.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-249",
+    "title": "Live Showcase Event #249",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-68f9a86ff101.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-250",
+    "title": "Live Showcase Event #250",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-9132ff277efd.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-251",
+    "title": "Live Showcase Event #251",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-1f66f9cb0280.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-252",
+    "title": "Live Showcase Event #252",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-b574789d4609.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-253",
+    "title": "Live Showcase Event #253",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-2254bc654010.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-254",
+    "title": "Live Showcase Event #254",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-4dcec52d64fe.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-255",
+    "title": "Live Showcase Event #255",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-9fa5f51ef653.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-256",
+    "title": "Live Showcase Event #256",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-30a6c5295214.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-257",
+    "title": "Live Showcase Event #257",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-6ea61b422cc6.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-258",
+    "title": "Live Showcase Event #258",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-77f112731b60.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-259",
+    "title": "Live Showcase Event #259",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-c703e314af9c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-260",
+    "title": "Live Showcase Event #260",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-9ab5da0d888b.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-261",
+    "title": "Live Showcase Event #261",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-eb8f18a48359.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-262",
+    "title": "Live Showcase Event #262",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-7d077215b17c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-263",
+    "title": "Live Showcase Event #263",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-369216857e00.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-264",
+    "title": "Live Showcase Event #264",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-0e519e2d8798.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-265",
+    "title": "Live Showcase Event #265",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-521f670a242c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-266",
+    "title": "Live Showcase Event #266",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-3789eb322273.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-267",
+    "title": "Live Showcase Event #267",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-4b4c29d8dfed.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-268",
+    "title": "Live Showcase Event #268",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-8fd0e200ec7e.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-269",
+    "title": "Live Showcase Event #269",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-cc5ab2b83e1a.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-270",
+    "title": "Live Showcase Event #270",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-99a62814e851.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-271",
+    "title": "Live Showcase Event #271",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-2e95562ac6c8.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-272",
+    "title": "Live Showcase Event #272",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-9a3d9ce983cc.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-273",
+    "title": "Live Showcase Event #273",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-80952b543d77.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-274",
+    "title": "Live Showcase Event #274",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-52deb530c480.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-275",
+    "title": "Live Showcase Event #275",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-d850e741b7a4.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-276",
+    "title": "Live Showcase Event #276",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-3daf6d3f4c5c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-277",
+    "title": "Live Showcase Event #277",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-0e2b981eacd9.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-278",
+    "title": "Live Showcase Event #278",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-83e56247b3cf.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-279",
+    "title": "Live Showcase Event #279",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-c924efd57280.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-280",
+    "title": "Live Showcase Event #280",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-8bfcdb126a7f.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-281",
+    "title": "Live Showcase Event #281",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-e2b150272aa6.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-282",
+    "title": "Live Showcase Event #282",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-519db6175753.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-283",
+    "title": "Live Showcase Event #283",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-a7056fa01459.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-284",
+    "title": "Live Showcase Event #284",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-70c6ff6b5786.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-285",
+    "title": "Live Showcase Event #285",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-ee635ef40173.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-286",
+    "title": "Live Showcase Event #286",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-dcf736e8bc25.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-287",
+    "title": "Live Showcase Event #287",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-580b9987af0f.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-288",
+    "title": "Live Showcase Event #288",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-776ee0728674.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-289",
+    "title": "Live Showcase Event #289",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-6f174d7cef26.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-290",
+    "title": "Live Showcase Event #290",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-e983d3a212fd.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-291",
+    "title": "Live Showcase Event #291",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-91479ea237b5.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-292",
+    "title": "Live Showcase Event #292",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-dfc763234462.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-293",
+    "title": "Live Showcase Event #293",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-1d5e6105c21d.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-294",
+    "title": "Live Showcase Event #294",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-6c9153c0b61c.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-295",
+    "title": "Live Showcase Event #295",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-cdb5d8b3dead.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-296",
+    "title": "Live Showcase Event #296",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-491cbbcf82f3.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-297",
+    "title": "Live Showcase Event #297",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-f4295d478625.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-298",
+    "title": "Live Showcase Event #298",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-1eab0448a376.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
+    "id": "g-299",
+    "title": "Live Showcase Event #299",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-c469fe0b53e7.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
     "id": "g-226",
     "title": "Live Showcase Event #226",
     "category": "corporate",
@@ -240,1805 +1552,5 @@ export const GALLERY: GalleryItem[] = [
     "image": "/images/gallery/corporate/gphoto-a3245987f055.jpg",
     "location": "Udaipur / International",
     "year": "2026"
-  },
-  {
-    "id": "g-1",
-    "title": "Luxury Sangeet & Royal Entry Hosting #1",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-1.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-2",
-    "title": "Grand Varmala Protocol & Stage Command #2",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-10.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-3",
-    "title": "Traditional Haldi & Mehndi Warm-up #3",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-11.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-4",
-    "title": "Destination Reception Gala & Couple Entry #4",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-12.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-5",
-    "title": "Baraat & High-Energy Stage Hosting #5",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-13.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-6",
-    "title": "Multi-generational Wedding Anchor #6",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-14.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-7",
-    "title": "Royal Wedding Celebration \u2014 Udaipur #7",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-15.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-8",
-    "title": "Luxury Destination Sangeet Night #8",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-16.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-9",
-    "title": "Luxury Sangeet & Royal Entry Hosting #9",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-17.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-10",
-    "title": "Grand Varmala Protocol & Stage Command #10",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-18.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-11",
-    "title": "Traditional Haldi & Mehndi Warm-up #11",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-19.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-12",
-    "title": "Destination Reception Gala & Couple Entry #12",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-2.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-13",
-    "title": "Baraat & High-Energy Stage Hosting #13",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-20.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-14",
-    "title": "Multi-generational Wedding Anchor #14",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-21.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-15",
-    "title": "Royal Wedding Celebration \u2014 Udaipur #15",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-22.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-16",
-    "title": "Luxury Destination Sangeet Night #16",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-23.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-17",
-    "title": "Luxury Sangeet & Royal Entry Hosting #17",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-24.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-18",
-    "title": "Grand Varmala Protocol & Stage Command #18",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-25.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-19",
-    "title": "Traditional Haldi & Mehndi Warm-up #19",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-26.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-20",
-    "title": "Destination Reception Gala & Couple Entry #20",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-27.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-21",
-    "title": "Baraat & High-Energy Stage Hosting #21",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-28.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-22",
-    "title": "Multi-generational Wedding Anchor #22",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-29.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-23",
-    "title": "Royal Wedding Celebration \u2014 Udaipur #23",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-3.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-24",
-    "title": "Luxury Destination Sangeet Night #24",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-30.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-25",
-    "title": "Luxury Sangeet & Royal Entry Hosting #25",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-31.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-26",
-    "title": "Grand Varmala Protocol & Stage Command #26",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-32.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-27",
-    "title": "Traditional Haldi & Mehndi Warm-up #27",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-33.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-28",
-    "title": "Destination Reception Gala & Couple Entry #28",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-34.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-29",
-    "title": "Baraat & High-Energy Stage Hosting #29",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-35.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-30",
-    "title": "Multi-generational Wedding Anchor #30",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-36.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-31",
-    "title": "Royal Wedding Celebration \u2014 Udaipur #31",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-37.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-32",
-    "title": "Luxury Destination Sangeet Night #32",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-38.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-33",
-    "title": "Luxury Sangeet & Royal Entry Hosting #33",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-39.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-34",
-    "title": "Grand Varmala Protocol & Stage Command #34",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-4.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-35",
-    "title": "Traditional Haldi & Mehndi Warm-up #35",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-40.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-36",
-    "title": "Destination Reception Gala & Couple Entry #36",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-41.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-37",
-    "title": "Baraat & High-Energy Stage Hosting #37",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-42.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-38",
-    "title": "Multi-generational Wedding Anchor #38",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-43.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-39",
-    "title": "Royal Wedding Celebration \u2014 Udaipur #39",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-44.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-40",
-    "title": "Luxury Destination Sangeet Night #40",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-45.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-41",
-    "title": "Luxury Sangeet & Royal Entry Hosting #41",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-46.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-42",
-    "title": "Grand Varmala Protocol & Stage Command #42",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-47.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-43",
-    "title": "Traditional Haldi & Mehndi Warm-up #43",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-48.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-44",
-    "title": "Destination Reception Gala & Couple Entry #44",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-49.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-45",
-    "title": "Baraat & High-Energy Stage Hosting #45",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-5.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-46",
-    "title": "Multi-generational Wedding Anchor #46",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-50.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-47",
-    "title": "Royal Wedding Celebration \u2014 Udaipur #47",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-51.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-48",
-    "title": "Luxury Destination Sangeet Night #48",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-52.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-49",
-    "title": "Luxury Sangeet & Royal Entry Hosting #49",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-53.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-50",
-    "title": "Grand Varmala Protocol & Stage Command #50",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-54.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-51",
-    "title": "Traditional Haldi & Mehndi Warm-up #51",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-55.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-52",
-    "title": "Destination Reception Gala & Couple Entry #52",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-56.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-53",
-    "title": "Baraat & High-Energy Stage Hosting #53",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-57.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-54",
-    "title": "Multi-generational Wedding Anchor #54",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-58.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-55",
-    "title": "Royal Wedding Celebration \u2014 Udaipur #55",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-59.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-56",
-    "title": "Luxury Destination Sangeet Night #56",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-6.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-57",
-    "title": "Luxury Sangeet & Royal Entry Hosting #57",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-60.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-58",
-    "title": "Grand Varmala Protocol & Stage Command #58",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-61.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-59",
-    "title": "Traditional Haldi & Mehndi Warm-up #59",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-62.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-60",
-    "title": "Destination Reception Gala & Couple Entry #60",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-63.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-61",
-    "title": "Baraat & High-Energy Stage Hosting #61",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-64.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-62",
-    "title": "Multi-generational Wedding Anchor #62",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-65.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-63",
-    "title": "Royal Wedding Celebration \u2014 Udaipur #63",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-66.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-64",
-    "title": "Luxury Destination Sangeet Night #64",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-67.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-65",
-    "title": "Luxury Sangeet & Royal Entry Hosting #65",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-68.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-66",
-    "title": "Grand Varmala Protocol & Stage Command #66",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-69.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-67",
-    "title": "Traditional Haldi & Mehndi Warm-up #67",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-7.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-68",
-    "title": "Destination Reception Gala & Couple Entry #68",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-70.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-69",
-    "title": "Baraat & High-Energy Stage Hosting #69",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-71.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-70",
-    "title": "Multi-generational Wedding Anchor #70",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-72.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-71",
-    "title": "Royal Wedding Celebration \u2014 Udaipur #71",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-73.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-72",
-    "title": "Luxury Destination Sangeet Night #72",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-74.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-73",
-    "title": "Luxury Sangeet & Royal Entry Hosting #73",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-75.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-74",
-    "title": "Grand Varmala Protocol & Stage Command #74",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-76.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-75",
-    "title": "Traditional Haldi & Mehndi Warm-up #75",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-77.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-76",
-    "title": "Destination Reception Gala & Couple Entry #76",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-78.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-77",
-    "title": "Baraat & High-Energy Stage Hosting #77",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-79.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-78",
-    "title": "Multi-generational Wedding Anchor #78",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-8.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-79",
-    "title": "Royal Wedding Celebration \u2014 Udaipur #79",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-80.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-80",
-    "title": "Luxury Destination Sangeet Night #80",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-81.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2024"
-  },
-  {
-    "id": "g-81",
-    "title": "Luxury Sangeet & Royal Entry Hosting #81",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/wedding-9.jpg",
-    "location": "Udaipur / Chennai",
-    "year": "2025"
-  },
-  {
-    "id": "g-82",
-    "title": "Global Tech Summit & Keynote Moderation #1",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-1.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-83",
-    "title": "Corporate Excellence Award Gala #2",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-10.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-84",
-    "title": "Leadership Summit & Executive Panel Host #3",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-11.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-85",
-    "title": "Annual Dealer Meet & Product Launch #4",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-12.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-86",
-    "title": "Brand Launch & VIP Stage Moderation #5",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-13.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-87",
-    "title": "Corporate Recognition Gala \u2014 Mumbai #6",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-14.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-88",
-    "title": "Town Hall & Strategy Summit Host #7",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-15.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-89",
-    "title": "Executive Evening & Speaker Introductions #8",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-16.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-90",
-    "title": "Global Tech Summit & Keynote Moderation #9",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-17.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-91",
-    "title": "Corporate Excellence Award Gala #10",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-18.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-92",
-    "title": "Leadership Summit & Executive Panel Host #11",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-19.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-93",
-    "title": "Annual Dealer Meet & Product Launch #12",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-2.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-94",
-    "title": "Brand Launch & VIP Stage Moderation #13",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-20.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-95",
-    "title": "Corporate Recognition Gala \u2014 Mumbai #14",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-21.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-96",
-    "title": "Town Hall & Strategy Summit Host #15",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-22.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-97",
-    "title": "Executive Evening & Speaker Introductions #16",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-23.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-98",
-    "title": "Global Tech Summit & Keynote Moderation #17",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-24.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-99",
-    "title": "Corporate Excellence Award Gala #18",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-25.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-100",
-    "title": "Leadership Summit & Executive Panel Host #19",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-26.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-101",
-    "title": "Annual Dealer Meet & Product Launch #20",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-27.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-102",
-    "title": "Brand Launch & VIP Stage Moderation #21",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-28.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-103",
-    "title": "Corporate Recognition Gala \u2014 Mumbai #22",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-29.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-104",
-    "title": "Town Hall & Strategy Summit Host #23",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-3.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-105",
-    "title": "Executive Evening & Speaker Introductions #24",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-30.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-106",
-    "title": "Global Tech Summit & Keynote Moderation #25",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-31.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-107",
-    "title": "Corporate Excellence Award Gala #26",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-32.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-108",
-    "title": "Leadership Summit & Executive Panel Host #27",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-33.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-109",
-    "title": "Annual Dealer Meet & Product Launch #28",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-34.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-110",
-    "title": "Brand Launch & VIP Stage Moderation #29",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-35.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-111",
-    "title": "Corporate Recognition Gala \u2014 Mumbai #30",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-36.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-112",
-    "title": "Town Hall & Strategy Summit Host #31",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-37.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-113",
-    "title": "Executive Evening & Speaker Introductions #32",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-38.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-114",
-    "title": "Global Tech Summit & Keynote Moderation #33",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-39.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-115",
-    "title": "Corporate Excellence Award Gala #34",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-4.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-116",
-    "title": "Leadership Summit & Executive Panel Host #35",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-40.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-117",
-    "title": "Annual Dealer Meet & Product Launch #36",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-41.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-118",
-    "title": "Brand Launch & VIP Stage Moderation #37",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-42.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-119",
-    "title": "Corporate Recognition Gala \u2014 Mumbai #38",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-43.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-120",
-    "title": "Town Hall & Strategy Summit Host #39",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-44.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-121",
-    "title": "Executive Evening & Speaker Introductions #40",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-45.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-122",
-    "title": "Global Tech Summit & Keynote Moderation #41",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-46.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-123",
-    "title": "Corporate Excellence Award Gala #42",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-47.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-124",
-    "title": "Leadership Summit & Executive Panel Host #43",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-48.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-125",
-    "title": "Annual Dealer Meet & Product Launch #44",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-49.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-126",
-    "title": "Brand Launch & VIP Stage Moderation #45",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-5.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-127",
-    "title": "Corporate Recognition Gala \u2014 Mumbai #46",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-50.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-128",
-    "title": "Town Hall & Strategy Summit Host #47",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-51.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-129",
-    "title": "Executive Evening & Speaker Introductions #48",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-52.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-130",
-    "title": "Global Tech Summit & Keynote Moderation #49",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-53.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-131",
-    "title": "Corporate Excellence Award Gala #50",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-54.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-132",
-    "title": "Leadership Summit & Executive Panel Host #51",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-55.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-133",
-    "title": "Annual Dealer Meet & Product Launch #52",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-56.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-134",
-    "title": "Brand Launch & VIP Stage Moderation #53",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-57.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-135",
-    "title": "Corporate Recognition Gala \u2014 Mumbai #54",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-58.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-136",
-    "title": "Town Hall & Strategy Summit Host #55",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-59.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-137",
-    "title": "Executive Evening & Speaker Introductions #56",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-6.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-138",
-    "title": "Global Tech Summit & Keynote Moderation #57",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-60.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-139",
-    "title": "Corporate Excellence Award Gala #58",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-61.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-140",
-    "title": "Leadership Summit & Executive Panel Host #59",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-62.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-141",
-    "title": "Annual Dealer Meet & Product Launch #60",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-63.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-142",
-    "title": "Brand Launch & VIP Stage Moderation #61",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-64.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-143",
-    "title": "Corporate Recognition Gala \u2014 Mumbai #62",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-65.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-144",
-    "title": "Town Hall & Strategy Summit Host #63",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-66.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-145",
-    "title": "Executive Evening & Speaker Introductions #64",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-67.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-146",
-    "title": "Global Tech Summit & Keynote Moderation #65",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-68.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-147",
-    "title": "Corporate Excellence Award Gala #66",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-69.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-148",
-    "title": "Leadership Summit & Executive Panel Host #67",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-7.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-149",
-    "title": "Annual Dealer Meet & Product Launch #68",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-70.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-150",
-    "title": "Brand Launch & VIP Stage Moderation #69",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-71.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-151",
-    "title": "Corporate Recognition Gala \u2014 Mumbai #70",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-72.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-152",
-    "title": "Town Hall & Strategy Summit Host #71",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-73.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-153",
-    "title": "Executive Evening & Speaker Introductions #72",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-74.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-154",
-    "title": "Global Tech Summit & Keynote Moderation #73",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-75.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-155",
-    "title": "Corporate Excellence Award Gala #74",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-76.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-156",
-    "title": "Leadership Summit & Executive Panel Host #75",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-77.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-157",
-    "title": "Annual Dealer Meet & Product Launch #76",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-8.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2024"
-  },
-  {
-    "id": "g-158",
-    "title": "Brand Launch & VIP Stage Moderation #77",
-    "category": "corporate",
-    "image": "/images/gallery/corporate/corporate-9.jpg",
-    "location": "Mumbai / Delhi NCR",
-    "year": "2025"
-  },
-  {
-    "id": "g-159",
-    "title": "Grand Diwali Cultural Night Hosting #1",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-1.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-160",
-    "title": "Navratri Dandiya & Garba Festivity Host #2",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-10.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-161",
-    "title": "Onam & Eid Multicultural Gala #3",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-11.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-162",
-    "title": "Diaspora Community Festival Evening #4",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-12.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-163",
-    "title": "Public Cultural Event & Festive Celebration #5",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-13.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-164",
-    "title": "Festival Gala \u2014 Dubai & Singapore #6",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-14.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-165",
-    "title": "Grand Diwali Cultural Night Hosting #7",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-15.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-166",
-    "title": "Navratri Dandiya & Garba Festivity Host #8",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-16.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-167",
-    "title": "Onam & Eid Multicultural Gala #9",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-17.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-168",
-    "title": "Diaspora Community Festival Evening #10",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-18.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-169",
-    "title": "Public Cultural Event & Festive Celebration #11",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-19.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-170",
-    "title": "Festival Gala \u2014 Dubai & Singapore #12",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-2.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-171",
-    "title": "Grand Diwali Cultural Night Hosting #13",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-20.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-172",
-    "title": "Navratri Dandiya & Garba Festivity Host #14",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-21.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-173",
-    "title": "Onam & Eid Multicultural Gala #15",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-3.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-174",
-    "title": "Diaspora Community Festival Evening #16",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-4.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-175",
-    "title": "Public Cultural Event & Festive Celebration #17",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-5.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-176",
-    "title": "Festival Gala \u2014 Dubai & Singapore #18",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-6.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-177",
-    "title": "Grand Diwali Cultural Night Hosting #19",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-7.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-178",
-    "title": "Navratri Dandiya & Garba Festivity Host #20",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-8.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-179",
-    "title": "Onam & Eid Multicultural Gala #21",
-    "category": "festival",
-    "image": "/images/gallery/festival/festival-9.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-180",
-    "title": "High-Energy Navratri Dandiya Night Host #1",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-1.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-181",
-    "title": "Garba Celebration Stage Command #2",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-10.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-182",
-    "title": "Festive Raas-Garba Gala Anchor #3",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-11.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-183",
-    "title": "Traditional Navratri Celebration #4",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-12.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-184",
-    "title": "High-Energy Navratri Dandiya Night Host #5",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-13.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-185",
-    "title": "Garba Celebration Stage Command #6",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-14.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-186",
-    "title": "Festive Raas-Garba Gala Anchor #7",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-15.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-187",
-    "title": "Traditional Navratri Celebration #8",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-16.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-188",
-    "title": "High-Energy Navratri Dandiya Night Host #9",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-17.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-189",
-    "title": "Garba Celebration Stage Command #10",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-2.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-190",
-    "title": "Festive Raas-Garba Gala Anchor #11",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-3.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-191",
-    "title": "Traditional Navratri Celebration #12",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-4.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-192",
-    "title": "High-Energy Navratri Dandiya Night Host #13",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-5.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-193",
-    "title": "Garba Celebration Stage Command #14",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-6.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-194",
-    "title": "Festive Raas-Garba Gala Anchor #15",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-7.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-195",
-    "title": "Traditional Navratri Celebration #16",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-8.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-196",
-    "title": "High-Energy Navratri Dandiya Night Host #17",
-    "category": "festival",
-    "image": "/images/gallery/navratri/navratri-9.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-197",
-    "title": "Dubai Leadership Gala Keynote Anchor #1",
-    "category": "international",
-    "image": "/images/gallery/international/international-1.jpg",
-    "location": "Dubai / Singapore",
-    "year": "2025"
-  },
-  {
-    "id": "g-198",
-    "title": "Singapore International Expo Host #2",
-    "category": "international",
-    "image": "/images/gallery/international/international-2.jpg",
-    "location": "Dubai / Singapore",
-    "year": "2024"
-  },
-  {
-    "id": "g-199",
-    "title": "Malaysia Pan-Asia Summit Moderator #3",
-    "category": "international",
-    "image": "/images/gallery/international/international-3.jpg",
-    "location": "Dubai / Singapore",
-    "year": "2025"
-  },
-  {
-    "id": "g-200",
-    "title": "International Global Summit Host #4",
-    "category": "international",
-    "image": "/images/gallery/international/international-4.jpg",
-    "location": "Dubai / Singapore",
-    "year": "2024"
-  },
-  {
-    "id": "g-201",
-    "title": "Dubai Leadership Gala Keynote Anchor #5",
-    "category": "international",
-    "image": "/images/gallery/international/international-5.jpg",
-    "location": "Dubai / Singapore",
-    "year": "2025"
-  },
-  {
-    "id": "g-202",
-    "title": "Corporate Excellence & Industry Awards Host #1",
-    "category": "award",
-    "image": "/images/gallery/award/award-1.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-203",
-    "title": "Stage Honors & Podium Presentation #2",
-    "category": "award",
-    "image": "/images/gallery/award/award-2.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-204",
-    "title": "Gala Award Ceremony Anchor #3",
-    "category": "award",
-    "image": "/images/gallery/award/award-3.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-205",
-    "title": "VIP Recognition Evening Host #4",
-    "category": "award",
-    "image": "/images/gallery/award/award-4.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-206",
-    "title": "Milestone Grand Birthday Celebration #1",
-    "category": "birthday",
-    "image": "/images/gallery/birthday/birthday-1.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-207",
-    "title": "Deepika Jain Live Stage Moments #1",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-1.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-208",
-    "title": "Behind the Mic & VIP Interview #2",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-10.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-209",
-    "title": "Stage Poise & Multilingual Presenter #3",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-11.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-210",
-    "title": "Official Stage Portrait & Anchoring #4",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-12.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-211",
-    "title": "Deepika Jain Live Stage Moments #5",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-13.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-212",
-    "title": "Behind the Mic & VIP Interview #6",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-14.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-213",
-    "title": "Stage Poise & Multilingual Presenter #7",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-15.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-214",
-    "title": "Official Stage Portrait & Anchoring #8",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-16.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-215",
-    "title": "Deepika Jain Live Stage Moments #9",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-17.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-216",
-    "title": "Behind the Mic & VIP Interview #10",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-18.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-217",
-    "title": "Stage Poise & Multilingual Presenter #11",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-19.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-218",
-    "title": "Official Stage Portrait & Anchoring #12",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-2.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-219",
-    "title": "Deepika Jain Live Stage Moments #13",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-3.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-220",
-    "title": "Behind the Mic & VIP Interview #14",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-4.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-221",
-    "title": "Stage Poise & Multilingual Presenter #15",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-5.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-222",
-    "title": "Official Stage Portrait & Anchoring #16",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-6.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-223",
-    "title": "Deepika Jain Live Stage Moments #17",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-7.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
-  },
-  {
-    "id": "g-224",
-    "title": "Behind the Mic & VIP Interview #18",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-8.jpg",
-    "location": "Chennai, India",
-    "year": "2024"
-  },
-  {
-    "id": "g-225",
-    "title": "Stage Poise & Multilingual Presenter #19",
-    "category": "spotlight",
-    "image": "/images/gallery/personal/personal-9.jpg",
-    "location": "Chennai, India",
-    "year": "2025"
   }
 ];

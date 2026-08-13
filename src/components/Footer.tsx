@@ -85,7 +85,7 @@ export const Footer: React.FC = () => {
                 <Phone className="w-4 h-4 text-emerald-400" />
               </a>
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/emceedeepikajain"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-pastel-800 hover:bg-pastel-700 text-pastel-200 hover:text-white flex items-center justify-center transition-all border border-pastel-700 hover:scale-110"
@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
                 <Globe className="w-4 h-4 text-blue-400" />
               </a>
               <a
-                href="https://www.youtube.com"
+                href="https://www.youtube.com/@besteventemceeandanchor"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-pastel-800 hover:bg-pastel-700 text-pastel-200 hover:text-white flex items-center justify-center transition-all border border-pastel-700 hover:scale-110"
@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
                 <Youtube className="w-4 h-4 text-red-400" />
               </a>
               <a
-                href="https://www.linkedin.com"
+                href="https://in.linkedin.com/in/anchor-deepika-jain%F0%9F%8E%A4-4a240b177"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-pastel-800 hover:bg-pastel-700 text-pastel-200 hover:text-white flex items-center justify-center transition-all border border-pastel-700 hover:scale-110"

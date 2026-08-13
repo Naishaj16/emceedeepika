@@ -33,10 +33,10 @@ const HomePage: React.FC = () => {
     },
     areaServed: ['Chennai', 'Mumbai', 'Delhi NCR', 'Udaipur', 'Dubai', 'Singapore', 'Malaysia'],
     sameAs: [
-      'https://www.instagram.com/emcee_deepikajain/?hl=en',
-      'https://in.linkedin.com/in/anchor-deepika-jain%F0%9F%8E%A4-4a240b177',
+      'https://www.instagram.com/emcee_deepikajain/',
       'https://www.facebook.com/emceedeepikajain',
-      'https://www.youtube.com/@besteventemceeandanchor'
+      'https://www.youtube.com/@besteventemceeandanchor',
+      'https://in.linkedin.com/in/anchor-deepika-jain%F0%9F%8E%A4-4a240b177'
     ],
     knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil'],
     aggregateRating: {
