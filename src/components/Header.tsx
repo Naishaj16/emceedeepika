@@ -116,9 +116,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                 </div>
 
                 <div className="border-b border-pastel-100 pb-3">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Government & Protocol</span>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">State & Civic Protocol</span>
                   <div className="space-y-1">
-                    {['State & Ministerial Summits', 'Inaugurations & Foundation Ceremonies', 'Diplomatic Delegations & Expos', 'Government Award Functions'].map((evt) => (
+                    {['State & Ministerial Summits', 'Inaugurations & Foundation Ceremonies', 'Diplomatic Delegations & Expos', 'Civic Award Functions'].map((evt) => (
                       <Link key={evt} to="/services" onClick={() => setServicesOpen(false)} className="block px-2 py-0.5 rounded-lg text-xs font-medium text-pastel-800 hover:bg-pastel-100">• {evt}</Link>
                     ))}
                   </div>
@@ -205,8 +205,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
             </div>
 
             <div>
-              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Government & Protocol</span>
-              {['State Summits', 'Inaugurations', 'Diplomatic Handovers', 'Government Awards'].map((evt) => (
+              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">State & Civic Protocol</span>
+              {['State Summits', 'Inaugurations', 'Diplomatic Handovers', 'Civic Awards'].map((evt) => (
                 <Link key={evt} to="/services" onClick={() => setMobileMenuOpen(false)} className="block text-xs text-pastel-700 hover:text-pastel-900 py-0.5">• {evt}</Link>
               ))}
             </div>

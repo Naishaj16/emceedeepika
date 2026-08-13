@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Award Shows & Recognition Events' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Birthday Party & Celebration Hosting' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Private & Festival Events' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Government & Protocol Event Hosting' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'State & Civic Ceremonies Hosting' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Baby Shower & Milestone Hosting' } },
       ],
     },

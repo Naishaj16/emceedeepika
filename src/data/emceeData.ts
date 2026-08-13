@@ -152,10 +152,10 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: 'government-events',
-    title: 'Government & Protocol Event Hosting',
+    title: 'State & Civic Ceremonies Hosting',
     category: 'government',
     shortDesc: 'Official state ceremonies, diplomatic summits, and public inaugurations with strict protocol.',
-    fullDesc: 'Official state ceremonies, diplomatic summits, public inaugurations, and inter-governmental conferences demand strict adherence to protocol, clear bi/multilingual dignitary announcements, and dignified stage presence. Deepika executes VIP introductions, state anthem protocols, and formal address handovers with supreme decorum.',
+    fullDesc: 'Official civic gatherings, cultural inaugurations, diplomatic summits, and public ceremonies demanding clear bi/multilingual dignitary announcements and dignified stage presence. Deepika executes VIP introductions and formal address handovers with supreme decorum.',
     iconName: 'ShieldCheck',
     image: '/images/deepika/deepika-1.webp',
     features: ['Dignitary Protocol & Etiquette', 'Multilingual Formal Announcements', 'State & Cultural Ceremonies', 'Impeccable Stage Decorum'],
@@ -163,11 +163,11 @@ export const SERVICES: ServiceItem[] = [
       'State & Ministerial Summits',
       'Inaugurations & Foundation Ceremonies',
       'Diplomatic Delegations & Expos',
-      'Government Award Functions',
+      'Civic Award Functions',
       'Public Cultural Festivals & Vigils'
     ],
     link: '/services',
-    linkText: 'Learn more about government event hosting →',
+    linkText: 'Learn more about state & civic event hosting →',
     colSpan: 'md:col-span-6',
   },
   {
@@ -228,16 +228,16 @@ export const GALLERY: GalleryItem[] = [
   {
     "id": "g-226",
     "title": "Live Showcase Event #226",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/gphoto-c2b205def641.jpg",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-c2b205def641.jpg",
     "location": "Udaipur / International",
     "year": "2026"
   },
   {
     "id": "g-227",
     "title": "Live Showcase Event #227",
-    "category": "wedding",
-    "image": "/images/gallery/wedding/gphoto-a3245987f055.jpg",
+    "category": "corporate",
+    "image": "/images/gallery/corporate/gphoto-a3245987f055.jpg",
     "location": "Udaipur / International",
     "year": "2026"
   },
