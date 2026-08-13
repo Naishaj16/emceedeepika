@@ -226,6 +226,14 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const GALLERY: GalleryItem[] = [
   {
+    "id": "g-228",
+    "title": "Live Showcase Event #228",
+    "category": "award",
+    "image": "/images/gallery/award/gphoto-656563a63c0a.jpg",
+    "location": "Udaipur / International",
+    "year": "2026"
+  },
+  {
     "id": "g-226",
     "title": "Live Showcase Event #226",
     "category": "corporate",

@@ -38,7 +38,7 @@ export const StatsSection: React.FC = () => {
         {/* Languages Banner */}
         <div className="mt-12 pt-8 border-t border-pastel-700/80 flex flex-wrap justify-center items-center gap-8 sm:gap-12">
           <span className="text-xs uppercase tracking-widest text-pastel-400 font-bold">Fluency in:</span>
-          {['ENGLISH', 'HINDI', 'MARWARI', 'TAMIL'].map((lang) => (
+          {['ENGLISH', 'HINDI', 'MARWARI', 'TAMIL', 'TELUGU'].map((lang) => (
             <span
               key={lang}
               className="text-sm font-semibold tracking-widest text-gold-light/90 px-4 py-1.5 rounded-full bg-pastel-900/60 border border-pastel-700"
