@@ -103,31 +103,17 @@ export const GallerySection: React.FC = () => {
           ))}
         </div>
 
-        {/* Load More Button & Google Photos Shared Album CTA */}
-        <div className="mt-12 text-center space-y-6">
-          {visibleCount < filteredGallery.length && (
-            <div>
-              <button
-                onClick={() => setVisibleCount((prev) => prev + 12)}
-                className="inline-flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-3.5 rounded-full font-bold text-sm transition-all shadow-md"
-              >
-                <span>Load More Photos</span>
-              </button>
-            </div>
-          )}
-
-          <div className="pt-6 border-t border-pastel-200 max-w-xl mx-auto">
-            <a
-              href="https://photos.google.com/share/AF1QipMWlLHZnV7WbHnJ6x7aPRRHz2CYxCY2HSvDvFVzYh_cRlFdK6FuC4VGcm3vR2bRmA?key=bjhYTUFmamZQUTJZX3BLMFI0X3R2dGhTU2p4cmV3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-white hover:bg-pastel-100 text-pastel-900 px-6 py-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all border border-pastel-300 shadow-sm hover:shadow-md hover:scale-105"
+        {/* Load More Button */}
+        {visibleCount < filteredGallery.length && (
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setVisibleCount((prev) => prev + 12)}
+              className="inline-flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-3.5 rounded-full font-bold text-sm transition-all shadow-md"
             >
-              <ImageIcon className="w-5 h-5 text-gold-DEFAULT shrink-0" />
-              <span>View Full Google Photos Shared Album</span>
-            </a>
+              <span>Load More Photos</span>
+            </button>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Lightbox Modal */}
