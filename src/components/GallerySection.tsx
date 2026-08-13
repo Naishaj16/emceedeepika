@@ -40,6 +40,33 @@ export const GallerySection: React.FC = () => {
           </p>
         </div>
 
+        {/* Google Photos Album Direct View Banner */}
+        <div className="mb-10 p-6 rounded-3xl bg-gradient-to-r from-pastel-800 via-pastel-900 to-pastel-800 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border border-gold-DEFAULT/30">
+          <div className="space-y-2 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-DEFAULT/20 border border-gold-DEFAULT/40 text-gold-light text-xs font-semibold">
+              <ImageIcon className="w-3.5 h-3.5" />
+              <span>Full High-Res Album</span>
+            </div>
+            <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
+              Explore Official Live Google Photos Album
+            </h3>
+            <p className="text-sm text-pastel-200/90 max-w-xl">
+              Browse 100+ live event photos, stage highlights, and royal entry moments directly on Google Photos without any bandwidth cost.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <a
+              href="https://photos.app.goo.gl/uFJeLfBgQYUQYXoFA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-gold-DEFAULT to-gold-light hover:from-gold-dark hover:to-gold-DEFAULT text-pastel-950 font-bold px-6 py-3.5 rounded-full text-sm transition-all shadow-lg hover:shadow-gold-DEFAULT/30 hover:scale-105"
+            >
+              <span>View Full Google Photos Album</span>
+              <Maximize2 className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+
         {/* Filter Category Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {categories.map((cat) => (
@@ -126,7 +153,7 @@ export const GallerySection: React.FC = () => {
             >
               <X className="w-5 h-5" />
             </button>
-            <div className="max-h-[75vh] bg-pastel-900">
+            <div className="max-h-[75vh] bg-pastel-900 flex items-center justify-center">
               <img
                 src={selectedItem.image}
                 alt={selectedItem.title}
