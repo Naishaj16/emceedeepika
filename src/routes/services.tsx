@@ -10,7 +10,7 @@ const ServicesPage: React.FC = () => {
   const { openBooking } = useBooking();
 
   // Interactive Package Estimator State
-  const [eventType, setEventType] = useState<'wedding' | 'corporate' | 'celebrity' | 'virtual' | 'award' | 'birthday' | 'private' | 'government' | 'family'>('wedding');
+  const [eventType, setEventType] = useState<'wedding' | 'corporate' | 'celebrity' | 'virtual' | 'award' | 'birthday' | 'private' | 'state-civic' | 'family'>('wedding');
   const [days, setDays] = useState<number>(1);
   const [locationType, setLocationType] = useState<'domestic' | 'international'>('domestic');
 
@@ -24,7 +24,7 @@ const ServicesPage: React.FC = () => {
       case 'award': base = 110000; break;
       case 'birthday': base = 75000; break;
       case 'private': base = 85000; break;
-      case 'government': base = 125000; break;
+      case 'state-civic': base = 125000; break;
       case 'family': base = 70000; break;
     }
     const locationMultiplier = locationType === 'international' ? 1.5 : 1.0;
@@ -176,7 +176,7 @@ const ServicesPage: React.FC = () => {
             Why Work With Deepika
           </h2>
           <p className="text-base text-pastel-800 leading-relaxed font-normal">
-            15+ years of experience, 2,500+ shows across 15+ countries, and fluency in five languages mean one host can cover a genuinely mixed guest list without a translator or a second act. Every engagement starts with a discovery call to understand your event, your audience, and the tone you want on stage — not a generic script dropped into a new venue.
+            12+ years of experience, 100+ shows across 15+ countries, and fluency in four languages mean one host can cover a genuinely mixed guest list without a translator or a second act. Every engagement starts with a discovery call to understand your event, your audience, and the tone you want on stage — not a generic script dropped into a new venue.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-pastel-200">
             <div className="flex items-start gap-3">
@@ -193,8 +193,8 @@ const ServicesPage: React.FC = () => {
                 <Languages className="w-5 h-5 text-pastel-800" />
               </div>
               <div>
-                <h4 className="font-bold text-sm text-pastel-900">5 Languages</h4>
-                <p className="text-xs text-pastel-700">English, Hindi, Telugu, Tamil, Marwari</p>
+                <h4 className="font-bold text-sm text-pastel-900">4 Languages</h4>
+                <p className="text-xs text-pastel-700">English, Hindi, Marwari, Tamil</p>
               </div>
             </div>
             <div className="flex items-start gap-3">

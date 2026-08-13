@@ -98,12 +98,12 @@ export const ServicesBento: React.FC<ServicesBentoProps> = ({ onOpenBooking }) =
                   to="/portfolio"
                   className="inline-flex items-center gap-2 font-bold text-xs uppercase tracking-wider text-pastel-800 hover:text-pastel-600 gold-underline group"
                 >
-                  <span>View {service.category} Portfolio</span>
+                  <span>View {service.category === 'state-civic' ? 'State & Civic' : service.category} Portfolio</span>
                   <ArrowRight className="w-4 h-4 text-gold-DEFAULT group-hover:translate-x-1 transition-transform" />
                 </Link>
 
                 <span className="text-xs font-semibold text-pastel-500 uppercase tracking-widest">
-                  {service.category}
+                  {service.category === 'state-civic' ? 'State & Civic' : service.category}
                 </span>
               </div>
             </div>

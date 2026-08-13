@@ -1,7 +1,7 @@
 export interface ServiceItem {
   id: string;
   title: string;
-  category: 'wedding' | 'corporate' | 'celebrity' | 'virtual' | 'award' | 'birthday' | 'private' | 'government' | 'family';
+  category: 'wedding' | 'corporate' | 'celebrity' | 'virtual' | 'award' | 'birthday' | 'private' | 'state-civic' | 'family';
   shortDesc: string;
   fullDesc: string;
   iconName: string;

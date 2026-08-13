@@ -153,7 +153,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'government-events',
     title: 'State & Civic Ceremonies Hosting',
-    category: 'government',
+    category: 'state-civic',
     shortDesc: 'Official state ceremonies, diplomatic summits, and public inaugurations with strict protocol.',
     fullDesc: 'Official civic gatherings, cultural inaugurations, diplomatic summits, and public ceremonies demanding clear bi/multilingual dignitary announcements and dignified stage presence. Deepika executes VIP introductions and formal address handovers with supreme decorum.',
     iconName: 'ShieldCheck',

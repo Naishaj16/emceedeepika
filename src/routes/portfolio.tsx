@@ -48,7 +48,7 @@ const PortfolioPage: React.FC = () => {
     {
       title: 'Excellence in Stage Anchoring & Protocol',
       issuer: 'National Live Media & Stage Guild',
-      desc: 'Honored for 15+ years of unscripted poise, VIP guest interviews, and faultless timing.',
+      desc: 'Honored for 12+ years of unscripted poise, VIP guest interviews, and faultless timing.',
     },
   ];
 
