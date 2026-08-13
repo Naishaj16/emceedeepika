@@ -63,7 +63,28 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     }
     canonicalLink.setAttribute('href', canonicalUrl);
 
-    // 6. Inject JSON-LD Schema
+    // 6. Hreflang Tags (Regional English targeting for main market nodes)
+    const hreflangTags = [
+      { lang: 'en', href: 'https://emceedeepika.com/' },
+      { lang: 'en-IN', href: 'https://emceedeepika.com/locations/chennai' },
+      { lang: 'en-AE', href: 'https://emceedeepika.com/locations/dubai' },
+      { lang: 'en-SG', href: 'https://emceedeepika.com/locations/singapore' },
+      { lang: 'en-MY', href: 'https://emceedeepika.com/locations/malaysia' },
+      { lang: 'x-default', href: 'https://emceedeepika.com/' },
+    ];
+
+    hreflangTags.forEach(({ lang, href }) => {
+      let linkTag = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`) as HTMLLinkElement;
+      if (!linkTag) {
+        linkTag = document.createElement('link');
+        linkTag.setAttribute('rel', 'alternate');
+        linkTag.setAttribute('hreflang', lang);
+        document.head.appendChild(linkTag);
+      }
+      linkTag.setAttribute('href', href);
+    });
+
+    // 7. Inject JSON-LD Schema
     if (schemaJson) {
       const scriptId = 'json-ld-schema';
       let script = document.getElementById(scriptId) as HTMLScriptElement;
