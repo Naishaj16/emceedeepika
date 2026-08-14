@@ -74,16 +74,18 @@ const ServicesPage: React.FC = () => {
   return (
     <div className="pt-28 pb-24 bg-pastel-50">
       <SEOHead
-        title="Emcee & Event Hosting Services | Deepika Jain"
-        description="Book a multilingual emcee for weddings, corporate galas, award nights, birthdays, and private events across India, the UAE, and Asia."
+        title="Professional Emcee for Hire & Event Hosting Services | Deepika Jain"
+        description="Hire a professional bilingual emcee for luxury destination weddings, corporate galas, award nights, and international events across India, UAE, and Asia."
         keywords={[
+          'professional emcee for hire',
+          'bilingual emcee for hire',
+          'corporate emcee for international events',
+          'destination wedding emcee Asia Middle East',
           'Emcee & Event Hosting Services',
           'multilingual wedding emcee',
           'corporate gala host',
           'celebrity red carpet host',
           'award show emcee',
-          'birthday party emcee',
-          'diaspora festival event host',
         ]}
         canonicalUrl="https://emceedeepika.com/services"
         schemaJson={servicesSchema}
@@ -173,10 +175,10 @@ const ServicesPage: React.FC = () => {
             <span>Unmatched Experience & Cultural Versatility</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-pastel-900">
-            Why Work With Deepika
+            Why Work With Deepika — Your Premier Bilingual Emcee for Hire
           </h2>
           <p className="text-base text-pastel-800 leading-relaxed font-normal">
-            12+ years of experience, 100+ shows across 15+ countries, and fluency in four languages mean one host can cover a genuinely mixed guest list without a translator or a second act. Every engagement starts with a discovery call to understand your event, your audience, and the tone you want on stage — not a generic script dropped into a new venue.
+            When event planners search for a <strong>bilingual emcee for hire</strong> or a <strong>corporate emcee for international events</strong>, versatility and stage poise are paramount. With 12+ years of experience, over 2,500 shows hosted across 15+ countries, and fluency in 5 languages (English, Hindi, Marwari, Tamil, and Telugu), Deepika ensures no guest or delegate is left out of the moment.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-pastel-200">
             <div className="flex items-start gap-3">
@@ -193,8 +195,8 @@ const ServicesPage: React.FC = () => {
                 <Languages className="w-5 h-5 text-pastel-800" />
               </div>
               <div>
-                <h4 className="font-bold text-sm text-pastel-900">4 Languages</h4>
-                <p className="text-xs text-pastel-700">English, Hindi, Marwari, Tamil</p>
+                <h4 className="font-bold text-sm text-pastel-900">5 Languages</h4>
+                <p className="text-xs text-pastel-700">English, Hindi, Marwari, Tamil, Telugu</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -207,6 +209,28 @@ const ServicesPage: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Dedicated Destination Wedding Spotlight Banner */}
+        <div className="bg-gradient-to-r from-pastel-800 to-pastel-900 text-pastel-50 rounded-3xl p-8 sm:p-10 shadow-lg max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 border border-pastel-700">
+          <div className="space-y-3 text-left">
+            <span className="text-xs font-bold uppercase tracking-widest text-gold-light bg-white/10 px-3.5 py-1 rounded-full border border-white/20">
+              Specialized Regional Offering
+            </span>
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+              Destination Wedding Emcee — Asia & Middle East
+            </h3>
+            <p className="text-pastel-200 text-sm max-w-2xl leading-relaxed">
+              Hosting royal palace celebrations in Udaipur, luxury ballroom galas in Dubai & RAK, Sentosa celebrations in Singapore, and island vows across Bali, Phuket & Maldives.
+            </p>
+          </div>
+          <Link
+            to="/destination-wedding"
+            className="shrink-0 bg-gold-DEFAULT hover:bg-gold-light text-pastel-900 px-8 py-4 rounded-full font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-2"
+          >
+            <span>Explore Destination Page</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
         {/* Interactive Package Estimator Box */}

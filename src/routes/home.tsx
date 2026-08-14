@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <SEOHead
-        title="Emcee & Event Host in India, UAE, Singapore & International | Deepika Jain"
+        title="Professional Emcee for Hire | International & Multilingual Event Host | Deepika Jain"
         description="Deepika Jain has hosted 2,500+ shows across 15+ countries including Singapore, Dubai, Bali, Phuket, and Maldives in 5 languages (English, Hindi, Marwari, Tamil, Telugu)."
         keywords={[
           'professional emcee for hire',

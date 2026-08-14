@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             </h1>
 
             <p className="text-base sm:text-lg text-pastel-700 leading-relaxed max-w-2xl font-normal">
-              12+ years on stage, over 2,500 shows across 15+ countries (Singapore, Dubai, Bali, Phuket, Maldives & beyond), and 5 languages ready for whatever the room needs — English, Hindi, Marwari, Tamil, and Telugu. Deepika brings poise, warmth, and real command of a room to weddings, corporate galas, and global summits.
+              As a premier <strong>international emcee</strong> and <strong>multilingual event host</strong> with 12+ years on stage, Deepika Jain has hosted over 2,500 shows across 15+ countries — including Singapore, Dubai, Bali, Phuket, and Maldives. Fluent in 5 languages (English, Hindi, Marwari, Tamil, and Telugu), she brings poise, cultural versatility, and stage authority to luxury destination weddings, corporate galas, and global summits.
             </p>
 
             {/* CTAs */}
@@ -38,15 +38,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 className="flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-4 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 group"
               >
                 <Mic className="w-4 h-4 text-gold-light" />
-                <span>Get in Touch with Deepika</span>
+                <span>Hire Professional Emcee — Inquire Now</span>
                 <ArrowRight className="w-4 h-4 text-gold-light group-hover:translate-x-1 transition-transform" />
               </Link>
 
               <Link
-                to="/gallery"
+                to="/destination-wedding"
                 className="flex items-center gap-2 border border-pastel-400 bg-white/60 hover:bg-pastel-100 text-pastel-800 px-7 py-4 rounded-full font-semibold text-sm transition-all shadow-xs"
               >
-                View Media Portfolio
+                Destination Wedding Page
               </Link>
             </div>
 

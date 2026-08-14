@@ -39,6 +39,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-3">
             <h4 className="font-serif text-lg font-semibold text-pastel-50">Global Markets</h4>
             <ul className="space-y-2 text-sm text-pastel-300">
+              <li><Link to="/destination-wedding" className="hover:text-pastel-50 font-semibold text-gold-light">Destination Wedding Emcee (Asia & ME)</Link></li>
               <li><Link to="/locations/chennai" className="hover:text-pastel-50">Wedding Anchor Chennai</Link></li>
               <li><Link to="/locations/dubai" className="hover:text-pastel-50">Corporate Emcee Dubai</Link></li>
               <li><Link to="/locations/malaysia" className="hover:text-pastel-50">D&D Emcee Malaysia (KL)</Link></li>

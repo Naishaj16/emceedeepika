@@ -92,6 +92,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               <div className="absolute top-full left-0 w-80 max-h-[75vh] overflow-y-auto bg-white border border-pastel-200 rounded-2xl shadow-2xl p-4 z-50 space-y-4">
                 <div className="border-b border-pastel-100 pb-3">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Luxury Weddings</span>
+                  <Link
+                    to="/destination-wedding"
+                    onClick={() => setServicesOpen(false)}
+                    className="block px-2 py-1 rounded-lg text-xs font-bold text-pastel-900 bg-pastel-100 hover:bg-pastel-200 hover:text-gold-dark transition-colors mb-1"
+                  >
+                    ★ Destination Weddings (Asia & Middle East)
+                  </Link>
                   <div className="space-y-1">
                     {weddingSubEvents.map((event) => (
                       <Link
@@ -199,6 +206,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
           <div className="pl-3 border-l-2 border-gold-DEFAULT space-y-3 my-2">
             <div>
               <span className="text-[11px] font-bold uppercase tracking-wider text-gold-dark block mb-1">Luxury Wedding Events</span>
+              <Link to="/destination-wedding" onClick={() => setMobileMenuOpen(false)} className="block text-xs font-bold text-pastel-900 hover:text-gold-dark py-1">★ Destination Weddings (Asia & Middle East)</Link>
               {weddingSubEvents.map((evt) => (
                 <Link key={evt} to="/services" onClick={() => setMobileMenuOpen(false)} className="block text-xs text-pastel-700 hover:text-pastel-900 py-0.5">• {evt}</Link>
               ))}

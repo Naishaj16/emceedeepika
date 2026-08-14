@@ -38,7 +38,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Corporate Event Hosting',
     category: 'corporate',
     shortDesc: 'Galas, award nights, product launches, and tech summits all run on sharp timing.',
-    fullDesc: 'Galas, award nights, product launches, and tech summits all run on the same thing: sharp timing and a host who won\'t let the agenda drift. Deepika handles brand storytelling, panel moderation, and live Q&A with the protocol and polish a corporate stage demands, keeping sponsors, speakers, and schedules aligned.',
+    fullDesc: 'As a seasoned corporate emcee for international events, Deepika brings sharp timing, brand storytelling, panel moderation, and live Q&A handling to galas, product launches, and tech summits across Singapore, Dubai, and India — keeping sponsors, C-suite speakers, and schedules perfectly aligned.',
     iconName: 'Briefcase',
     image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800',
     features: ['Brand Storytelling', 'Panel Moderation', 'Live Q&A Management', 'Executive & Sponsor Protocol'],

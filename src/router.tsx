@@ -7,11 +7,13 @@ import { galleryRoute } from './routes/gallery';
 import { contactRoute } from './routes/contact';
 import { chennaiRoute, dubaiRoute, malaysiaRoute, singaporeRoute } from './routes/locations';
 import { portfolioRoute } from './routes/portfolio';
+import { destinationWeddingRoute } from './routes/destination-wedding';
 
 const routeTree = rootRoute.addChildren([
   homeRoute,
   aboutRoute,
   servicesRoute,
+  destinationWeddingRoute,
   galleryRoute,
   contactRoute,
   portfolioRoute,

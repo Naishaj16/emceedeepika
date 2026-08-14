@@ -1,5 +1,5 @@
 import React from 'react';
-import { createRoute } from '@tanstack/react-router';
+import { createRoute, Link } from '@tanstack/react-router';
 import { rootRoute } from './root';
 import { locationSeoMap } from '../data/seoKeywords';
 import { SEOHead } from '../components/SEOHead';
@@ -132,6 +132,28 @@ const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locationKey })
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Destination Wedding Regional Banner */}
+      <section className="py-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-r from-pastel-800 to-pastel-900 text-pastel-50 p-8 rounded-3xl shadow-lg flex flex-col md:flex-row items-center justify-between gap-6 border border-pastel-700">
+          <div className="space-y-2">
+            <span className="text-xs font-bold uppercase tracking-widest text-gold-light bg-white/10 px-3 py-1 rounded-full border border-white/20">
+              Regional Destination Wedding Hub
+            </span>
+            <h3 className="font-serif text-2xl font-bold">Planning a Destination Wedding across Asia or the Middle East?</h3>
+            <p className="text-pastel-200 text-sm max-w-2xl">
+              Explore Deepika’s regional destination wedding hosting covering Udaipur royal palaces, Dubai & Gulf luxury resorts, Singapore Sentosa galas, and tropical island vows in Bali & Phuket.
+            </p>
+          </div>
+          <Link
+            to="/destination-wedding"
+            className="shrink-0 bg-gold-DEFAULT hover:bg-gold-light text-pastel-900 px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-2"
+          >
+            <span>Explore Destination Page</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 
