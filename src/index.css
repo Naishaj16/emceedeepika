@@ -4,14 +4,16 @@
 
 @layer base {
   :root {
-    color-scheme: light;
+    color-scheme: light only;
+    supported-color-schemes: light;
   }
 
   html, body {
     background-color: #F6FAF7 !important;
     color: #13281D !important;
     font-family: 'Montserrat', sans-serif;
-    color-scheme: light !important;
+    color-scheme: light only !important;
+    forced-color-adjust: none;
   }
 
   html, body, button, a, input, select, textarea, [role="button"], * {
@@ -66,11 +68,31 @@
 .pastel-gradient-text {
   background: linear-gradient(135deg, #1C3B2B 0%, #437A5B 50%, #5E9B79 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, #B89228 0%, #D4AF37 50%, #947214 100%);
+  background: linear-gradient(135deg, #C59B27 0%, #E6C65A 45%, #D4AF37 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #D4AF37;
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
+}
+
+/* Device Dark Mode overrides to maintain flawless contrast if auto-dark mode is forced */
+@media (prefers-color-scheme: dark) {
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #F3E087 0%, #E6C65A 50%, #F5D77F 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #F3E087;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
 }
