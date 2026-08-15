@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoute } from '@tanstack/react-router';
 import { rootRoute } from './root';
 import { SEOHead } from '../components/SEOHead';
-import { Mail, Phone, MapPin, Sparkles, Clock, Globe, Instagram, Linkedin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Sparkles, Clock, Globe, Instagram, Linkedin, Youtube, ArrowRight } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   return (
@@ -97,7 +97,7 @@ const ContactPage: React.FC = () => {
                   <span>WhatsApp</span>
                 </a>
                 <a
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/emceedeepikajain"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-pastel-50 hover:bg-pastel-100 text-pastel-800 px-4 py-2.5 rounded-2xl font-bold text-xs transition-all border border-pastel-200 shadow-xs"
@@ -106,16 +106,16 @@ const ContactPage: React.FC = () => {
                   <span>Facebook</span>
                 </a>
                 <a
-                  href="https://www.youtube.com"
+                  href="https://www.youtube.com/@besteventemceeandanchor"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-pastel-50 hover:bg-pastel-100 text-pastel-800 px-4 py-2.5 rounded-2xl font-bold text-xs transition-all border border-pastel-200 shadow-xs"
                 >
-                  <Globe className="w-4 h-4 text-red-600" />
+                  <Youtube className="w-4 h-4 text-red-600" />
                   <span>YouTube</span>
                 </a>
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://in.linkedin.com/in/anchor-deepika-jain%F0%9F%8E%A4-4a240b177"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-pastel-50 hover:bg-pastel-100 text-pastel-800 px-4 py-2.5 rounded-2xl font-bold text-xs transition-all border border-pastel-200 shadow-xs"
