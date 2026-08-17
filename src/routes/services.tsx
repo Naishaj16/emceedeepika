@@ -102,7 +102,7 @@ const ServicesPage: React.FC = () => {
             Emcee & Event Hosting Services
           </h1>
           <p className="text-base sm:text-lg text-pastel-700 leading-relaxed max-w-3xl mx-auto font-normal">
-            Deepika Jain is a multilingual emcee and event host with 12+ years of experience and 100+ shows hosted across 15+ countries. Fluent in English, Hindi, Marwari, and Tamil, she brings the same preparation, stage presence, and cultural fluency to every kind of event — from a two-day destination wedding to a 90-minute corporate keynote. Below is the full range of hosting services, each tailored to the pace and tone the event actually needs.
+            Deepika Jain is a multilingual emcee and event host with 12+ years of experience and 2,500+ shows hosted across 15+ countries. Fluent in English, Hindi, Marwari, and Tamil, she brings the same preparation, stage presence, and cultural fluency to every kind of event — from a two-day destination wedding to a 90-minute corporate keynote. Below is the full range of hosting services, each tailored to the pace and tone the event actually needs.
           </p>
         </div>
       </div>

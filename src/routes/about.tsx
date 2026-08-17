@@ -79,7 +79,7 @@ const AboutPage: React.FC = () => {
 
           <div className="lg:col-span-7 space-y-6">
             <p className="text-base sm:text-lg text-pastel-800 leading-relaxed font-medium">
-              Deepika Jain has spent 12+ years turning rooms full of strangers into audiences that feel like family. Over 100 shows across 15+ countries later, her approach hasn't changed much: read the room, meet it where it is, and never let the crowd feel like an afterthought — no matter how big the stage or how mixed the guest list.
+              Deepika Jain has spent 12+ years turning rooms full of strangers into audiences that feel like family. Over 2,500 shows across 15+ countries later, her approach hasn't changed much: read the room, meet it where it is, and never let the crowd feel like an afterthought — no matter how big the stage or how mixed the guest list.
             </p>
 
             {/* How it started */}
@@ -141,7 +141,7 @@ const AboutPage: React.FC = () => {
               <p className="text-[11px] text-pastel-600">On stage commanding live audiences</p>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-pastel-200 text-center space-y-2 shadow-xs">
-              <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">100+</span>
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">2,500+</span>
               <span className="text-xs font-bold uppercase tracking-wider text-pastel-800 block">Shows Hosted</span>
               <p className="text-[11px] text-pastel-600">Internationally executed</p>
             </div>
