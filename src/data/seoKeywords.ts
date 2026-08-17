@@ -58,7 +58,7 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
   dubai: {
     slug: 'dubai',
     city: 'Dubai',
-    country: 'UAE & Middle East',
+    country: 'United Arab Emirates',
     dominantTerm: 'Corporate Emcee / Luxury Event Host',
     metaTitle: 'Corporate Emcee Dubai | Gala Dinner & Event Host | Deepika Jain',
     metaDescription: 'Hire top corporate emcee in Dubai & UAE. Deepika Jain delivers world-class event hosting, gala dinner emcee services, trade shows & product launch hosting.',
