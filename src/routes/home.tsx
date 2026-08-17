@@ -78,6 +78,7 @@ const HomePage: React.FC = () => {
         ]}
         canonicalUrl="https://emceedeepika.com/"
         schemaJson={homepageSchema}
+        showHreflang={true}
       />
       <Hero onOpenBooking={openBooking} />
       <StatsSection />

@@ -8,6 +8,7 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   schemaJson?: object;
+  showHreflang?: boolean;
 }
 
 export const SEOHead: React.FC<SEOHeadProps> = ({
@@ -18,6 +19,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   ogImage = 'https://emceedeepika.com/images/deepika/deepika-5.webp',
   ogType = 'website',
   schemaJson,
+  showHreflang = false,
 }) => {
   useEffect(() => {
     // 1. Update Title
@@ -63,26 +65,28 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     }
     canonicalLink.setAttribute('href', canonicalUrl);
 
-    // 6. Hreflang Tags (Regional English targeting for main market nodes)
-    const hreflangTags = [
-      { lang: 'en', href: 'https://emceedeepika.com/' },
-      { lang: 'en-IN', href: 'https://emceedeepika.com/locations/chennai' },
-      { lang: 'en-AE', href: 'https://emceedeepika.com/locations/dubai' },
-      { lang: 'en-SG', href: 'https://emceedeepika.com/locations/singapore' },
-      { lang: 'en-MY', href: 'https://emceedeepika.com/locations/malaysia' },
-      { lang: 'x-default', href: 'https://emceedeepika.com/' },
-    ];
+    // 6. Hreflang Tags (Scoped only to regional pages: homepage + locations)
+    const existingHreflangs = document.querySelectorAll('link[rel="alternate"][hreflang]');
+    existingHreflangs.forEach((el) => el.remove());
 
-    hreflangTags.forEach(({ lang, href }) => {
-      let linkTag = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`) as HTMLLinkElement;
-      if (!linkTag) {
-        linkTag = document.createElement('link');
+    if (showHreflang) {
+      const hreflangTags = [
+        { lang: 'en', href: 'https://emceedeepika.com/' },
+        { lang: 'en-IN', href: 'https://emceedeepika.com/locations/chennai' },
+        { lang: 'en-AE', href: 'https://emceedeepika.com/locations/dubai' },
+        { lang: 'en-SG', href: 'https://emceedeepika.com/locations/singapore' },
+        { lang: 'en-MY', href: 'https://emceedeepika.com/locations/malaysia' },
+        { lang: 'x-default', href: 'https://emceedeepika.com/' },
+      ];
+
+      hreflangTags.forEach(({ lang, href }) => {
+        const linkTag = document.createElement('link');
         linkTag.setAttribute('rel', 'alternate');
         linkTag.setAttribute('hreflang', lang);
+        linkTag.setAttribute('href', href);
         document.head.appendChild(linkTag);
-      }
-      linkTag.setAttribute('href', href);
-    });
+      });
+    }
 
     // 7. Inject JSON-LD Schema
     if (schemaJson) {
@@ -96,7 +100,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       }
       script.text = JSON.stringify(schemaJson);
     }
-  }, [title, description, keywords, canonicalUrl, ogImage, ogType, schemaJson]);
+  }, [title, description, keywords, canonicalUrl, ogImage, ogType, schemaJson, showHreflang]);
 
   return null;
 };

@@ -53,6 +53,7 @@ const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locationKey })
         keywords={[...data.primaryKeywords, ...data.secondaryKeywords]}
         canonicalUrl={`https://emceedeepika.com/locations/${locationKey}`}
         schemaJson={[schemaJson, faqSchema]}
+        showHreflang={true}
       />
 
       {/* Hero Section */}
