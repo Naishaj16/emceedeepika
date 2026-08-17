@@ -71,6 +71,19 @@ const ServicesPage: React.FC = () => {
     },
   ];
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  };
+
   return (
     <div className="pt-28 pb-24 bg-pastel-50">
       <SEOHead
@@ -88,7 +101,7 @@ const ServicesPage: React.FC = () => {
           'award show emcee',
         ]}
         canonicalUrl="https://emceedeepika.com/services"
-        schemaJson={servicesSchema}
+        schemaJson={[servicesSchema, faqSchema]}
       />
 
       {/* Hero / Header Section */}
