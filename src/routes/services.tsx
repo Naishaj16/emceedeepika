@@ -42,6 +42,13 @@ const ServicesPage: React.FC = () => {
     },
     description: 'Book a multilingual emcee for weddings, corporate galas, award nights, birthdays, and private events across India, the UAE, and Asia.',
     areaServed: ['India', 'United Arab Emirates', 'Singapore', 'Malaysia', 'Indonesia (Bali)', 'Thailand (Phuket)', 'Maldives', 'Asia'],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '150',
+      bestRating: '5',
+      worstRating: '1',
+    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Hosting Services',
