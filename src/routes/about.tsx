@@ -151,9 +151,9 @@ const AboutPage: React.FC = () => {
               <p className="text-[11px] text-pastel-600">Cross-cultural stage mastery</p>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-pastel-200 text-center space-y-2 shadow-xs">
-              <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">4</span>
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">5</span>
               <span className="text-xs font-bold uppercase tracking-wider text-pastel-800 block">Languages</span>
-              <p className="text-[11px] text-pastel-600">English, Hindi, Marwari, Tamil</p>
+              <p className="text-[11px] text-pastel-600">English, Hindi, Marwari, Tamil, Telugu</p>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-pastel-200 text-center space-y-2 shadow-xs sm:col-span-2 lg:col-span-1">
               <span className="font-serif text-3xl sm:text-4xl font-bold text-gold-dark block">500K+</span>
