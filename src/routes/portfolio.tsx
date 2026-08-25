@@ -204,20 +204,26 @@ const PortfolioPage: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-pastel-100">
-                  <button
-                    onClick={() => setActiveProof({
-                      title: award.title,
-                      issuer: award.issuer,
-                      image: award.proofUrl,
-                      alt: award.proofAlt,
-                    })}
+                <div className="pt-4 border-t border-pastel-100 flex items-center gap-2">
+                  <a
+                    href={award.proofUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setActiveProof({
+                        title: award.title,
+                        issuer: award.issuer,
+                        image: award.proofUrl,
+                        alt: award.proofAlt,
+                      });
+                    }}
                     className="inline-flex items-center gap-2 text-xs font-bold text-gold-dark hover:text-pastel-900 bg-pastel-50 hover:bg-pastel-100 border border-pastel-200 px-3.5 py-2 rounded-xl transition-all shadow-2xs group"
                   >
                     <Award className="w-4 h-4 text-gold-DEFAULT group-hover:scale-110 transition-transform" />
                     <span>{award.proofLabel}</span>
                     <ExternalLink className="w-3.5 h-3.5 text-pastel-400 group-hover:text-pastel-700 ml-0.5" />
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}

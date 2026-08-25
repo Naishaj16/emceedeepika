@@ -45,8 +45,13 @@ const ContactPage: React.FC = () => {
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-pastel-900 text-base">Official Email</h4>
-                    <p className="text-pastel-700 font-medium">dishajain395@gmail.com</p>
+                    <h4 className="font-bold text-pastel-900 text-base">Official Email (Management)</h4>
+                    <a
+                      href="mailto:dishajain395@gmail.com"
+                      className="text-pastel-700 hover:text-pastel-900 font-medium underline decoration-pastel-300 hover:decoration-pastel-700 transition-colors"
+                    >
+                      dishajain395@gmail.com
+                    </a>
                   </div>
                 </div>
 
