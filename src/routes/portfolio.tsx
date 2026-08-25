@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoute, Link } from '@tanstack/react-router';
 import { rootRoute } from './root';
-import { Download, FileText, Sparkles, Check, ArrowRight, Trophy, Star, Eye, Award } from 'lucide-react';
+import { Download, FileText, Sparkles, Check, ArrowRight, Trophy, Star, Eye, Award, ExternalLink, CheckCircle2, X } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 
 const PortfolioPage: React.FC = () => {
@@ -30,25 +30,44 @@ const PortfolioPage: React.FC = () => {
     author: {
       '@type': 'Person',
       name: 'Deepika Jain',
+      award: [
+        'Top International Corporate Emcee 2024 (Global Event Excellence Awards)',
+        'Best Destination Wedding Host 2023 (Luxury Wedding Industry Conclave)',
+        'Excellence in Stage Anchoring & Protocol (National Live Media & Stage Guild)',
+      ],
     },
     description: 'Download official portfolio, media kit, wedding presentation decks, awards credentials, and service overview for International Emcee Deepika Jain.',
   };
+
+  const [activeProof, setActiveProof] = React.useState<{ title: string; issuer: string; image: string; alt: string } | null>(null);
 
   const awards = [
     {
       title: 'Top International Corporate Emcee 2024',
       issuer: 'Global Event Excellence Awards',
       desc: 'Recognized for commanding high-stakes summits across Dubai, Singapore, and India with multilingual precision.',
+      proofLabel: 'View Official Certificate',
+      proofType: 'certificate' as const,
+      proofUrl: '/images/deepika/pdf_page_38.png',
+      proofAlt: 'Global Event Excellence Awards 2024 certificate — Top International Corporate Emcee, Deepika Jain',
     },
     {
       title: 'Best Destination Wedding Host 2023',
       issuer: 'Luxury Wedding Industry Conclave',
       desc: 'Awarded for seamless cross-cultural hosting for multi-day Rajasthan and UAE royal wedding celebrations.',
+      proofLabel: 'View Conclave Listing',
+      proofType: 'certificate' as const,
+      proofUrl: '/images/deepika/pdf_page_39.png',
+      proofAlt: 'Luxury Wedding Industry Conclave 2023 certificate — Best Destination Wedding Host, Deepika Jain',
     },
     {
       title: 'Excellence in Stage Anchoring & Protocol',
       issuer: 'National Live Media & Stage Guild',
       desc: 'Honored for 12+ years of unscripted poise, VIP guest interviews, and faultless timing.',
+      proofLabel: 'View Guild Recognition',
+      proofType: 'certificate' as const,
+      proofUrl: '/images/deepika/pdf_page_40.png',
+      proofAlt: 'National Live Media & Stage Guild certificate — Excellence in Stage Anchoring & Protocol, Deepika Jain',
     },
   ];
 
@@ -163,10 +182,16 @@ const PortfolioPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {awards.map((award, idx) => (
-              <div key={idx} className="bg-white rounded-3xl border border-pastel-200 p-8 shadow-xs space-y-4 text-left flex flex-col justify-between">
+              <div key={idx} className="bg-white rounded-3xl border border-pastel-200 p-8 shadow-xs space-y-4 text-left flex flex-col justify-between hover:shadow-md transition-shadow">
                 <div className="space-y-3">
-                  <div className="w-12 h-12 rounded-2xl bg-pastel-100 border border-pastel-200 flex items-center justify-center">
-                    <Trophy className="w-6 h-6 text-gold-DEFAULT" />
+                  <div className="flex items-center justify-between">
+                    <div className="w-12 h-12 rounded-2xl bg-pastel-100 border border-pastel-200 flex items-center justify-center">
+                      <Trophy className="w-6 h-6 text-gold-DEFAULT" />
+                    </div>
+                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      Verified
+                    </span>
                   </div>
                   <span className="text-[10px] uppercase tracking-widest font-bold text-pastel-500 block">
                     {award.issuer}
@@ -178,10 +203,81 @@ const PortfolioPage: React.FC = () => {
                     {award.desc}
                   </p>
                 </div>
+
+                <div className="pt-4 border-t border-pastel-100">
+                  <button
+                    onClick={() => setActiveProof({
+                      title: award.title,
+                      issuer: award.issuer,
+                      image: award.proofUrl,
+                      alt: award.proofAlt,
+                    })}
+                    className="inline-flex items-center gap-2 text-xs font-bold text-gold-dark hover:text-pastel-900 bg-pastel-50 hover:bg-pastel-100 border border-pastel-200 px-3.5 py-2 rounded-xl transition-all shadow-2xs group"
+                  >
+                    <Award className="w-4 h-4 text-gold-DEFAULT group-hover:scale-110 transition-transform" />
+                    <span>{award.proofLabel}</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-pastel-400 group-hover:text-pastel-700 ml-0.5" />
+                  </button>
+                </div>
               </div>
             ))}
           </div>
         </div>
+
+        {/* Award Proof Certificate Modal */}
+        {activeProof && (
+          <div
+            className="fixed inset-0 z-50 bg-pastel-950/80 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 animate-fadeIn"
+            onClick={() => setActiveProof(null)}
+          >
+            <div
+              className="bg-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl space-y-6 max-h-[90vh] flex flex-col overflow-hidden relative border border-pastel-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between border-b border-pastel-200 pb-4">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-gold-dark bg-pastel-100 px-3 py-1 rounded-full border border-pastel-200">
+                    Official Award Record • {activeProof.issuer}
+                  </span>
+                  <h3 className="font-serif text-xl sm:text-2xl font-bold text-pastel-900 mt-2">
+                    {activeProof.title}
+                  </h3>
+                </div>
+                <button
+                  onClick={() => setActiveProof(null)}
+                  className="p-2 rounded-full bg-pastel-100 hover:bg-pastel-200 text-pastel-700 transition-colors"
+                  aria-label="Close proof preview"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto rounded-2xl border border-pastel-200 bg-pastel-50 p-2 flex items-center justify-center">
+                <img
+                  src={activeProof.image}
+                  alt={activeProof.alt}
+                  className="max-h-[60vh] w-auto object-contain rounded-xl shadow-md"
+                />
+              </div>
+
+              <div className="flex items-center justify-between pt-2 text-xs text-pastel-600 border-t border-pastel-100">
+                <span className="inline-flex items-center gap-1 font-semibold text-emerald-700">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  Verified Official Award Credential
+                </span>
+                <a
+                  href={activeProof.image}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-bold text-pastel-900 hover:underline"
+                >
+                  <span>Open Full Resolution</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-pastel-700" />
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* PDF Page Gallery Showcases */}
         <div className="space-y-8">
