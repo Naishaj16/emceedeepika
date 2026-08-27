@@ -11,7 +11,7 @@ const ContactPage: React.FC = () => {
         title="Contact Emcee Deepika Jain | Event Booking & Inquiries"
         description="Connect directly with Emcee Deepika Jain's management for wedding, corporate gala, award show, and international event date inquiries."
         keywords={['contact Deepika Jain', 'book emcee Deepika', 'wedding anchor contact Chennai Dubai', 'corporate host inquiry']}
-        canonicalUrl="https://emceedeepika.com/contact"
+        canonicalUrl="https://www.emceedeepika.com/contact"
       />
       <div className="bg-gradient-to-b from-pastel-100 to-pastel-50 py-16 border-b border-pastel-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">

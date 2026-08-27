@@ -17,7 +17,7 @@ const DestinationWeddingPage: React.FC = () => {
       '@type': 'Person',
       name: 'Deepika Jain',
       jobTitle: 'International Destination Wedding Emcee & Host',
-      url: 'https://emceedeepika.com',
+      url: 'https://www.emceedeepika.com',
     },
     description: 'Deepika Jain is a premier destination wedding emcee hosting royal palace weddings in Udaipur, luxury resort celebrations in Dubai, Sentosa galas in Singapore, and island vows across Bali, Phuket, and Maldives.',
     areaServed: [
@@ -150,7 +150,7 @@ const DestinationWeddingPage: React.FC = () => {
           'NRI wedding emcee Bali Phuket',
           'professional emcee for hire'
         ]}
-        canonicalUrl="https://emceedeepika.com/destination-wedding"
+        canonicalUrl="https://www.emceedeepika.com/destination-wedding"
         schemaJson={[destinationSchema, faqSchema]}
       />
 

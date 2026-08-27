@@ -107,7 +107,7 @@ const ServicesPage: React.FC = () => {
           'celebrity red carpet host',
           'award show emcee',
         ]}
-        canonicalUrl="https://emceedeepika.com/services"
+        canonicalUrl="https://www.emceedeepika.com/services"
         schemaJson={[servicesSchema, faqSchema]}
       />
 

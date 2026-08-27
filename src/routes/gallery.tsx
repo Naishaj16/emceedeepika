@@ -12,7 +12,7 @@ const GalleryPage: React.FC = () => {
         title="Event Gallery & Stage Highlights | Deepika Jain Emcee"
         description="Explore live event photos, royal entries, corporate summits, and destination wedding hosting moments by Emcee Deepika Jain."
         keywords={['Deepika Jain photo gallery', 'wedding emcee photos', 'stage host event gallery', 'corporate event host pictures']}
-        canonicalUrl="https://emceedeepika.com/gallery"
+        canonicalUrl="https://www.emceedeepika.com/gallery"
       />
       <div className="bg-gradient-to-b from-pastel-100 to-pastel-50 py-16 border-b border-pastel-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">

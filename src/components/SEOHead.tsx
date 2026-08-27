@@ -15,8 +15,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
   keywords,
-  canonicalUrl = 'https://emceedeepika.com',
-  ogImage = 'https://emceedeepika.com/images/deepika/deepika-5.webp',
+  canonicalUrl = 'https://www.emceedeepika.com/',
+  ogImage = 'https://www.emceedeepika.com/images/deepika/deepika-5.webp',
   ogType = 'website',
   schemaJson,
   showHreflang = false,
@@ -71,12 +71,12 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
 
     if (showHreflang) {
       const hreflangTags = [
-        { lang: 'en', href: 'https://emceedeepika.com/' },
-        { lang: 'en-IN', href: 'https://emceedeepika.com/locations/chennai' },
-        { lang: 'en-AE', href: 'https://emceedeepika.com/locations/dubai' },
-        { lang: 'en-SG', href: 'https://emceedeepika.com/locations/singapore' },
-        { lang: 'en-MY', href: 'https://emceedeepika.com/locations/malaysia' },
-        { lang: 'x-default', href: 'https://emceedeepika.com/' },
+        { lang: 'en', href: 'https://www.emceedeepika.com/' },
+        { lang: 'en-IN', href: 'https://www.emceedeepika.com/locations/chennai' },
+        { lang: 'en-AE', href: 'https://www.emceedeepika.com/locations/dubai' },
+        { lang: 'en-SG', href: 'https://www.emceedeepika.com/locations/singapore' },
+        { lang: 'en-MY', href: 'https://www.emceedeepika.com/locations/malaysia' },
+        { lang: 'x-default', href: 'https://www.emceedeepika.com/' },
       ];
 
       hreflangTags.forEach(({ lang, href }) => {

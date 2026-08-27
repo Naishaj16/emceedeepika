@@ -15,7 +15,7 @@ const AboutPage: React.FC = () => {
     name: 'Deepika Jain',
     jobTitle: 'International Multilingual Emcee & Event Host',
     description: 'Deepika Jain is a multilingual emcee with 12+ years and 2,500+ shows across 15+ countries including Singapore, Dubai, Bali, Phuket, and Maldives.',
-    url: 'https://emceedeepika.com/about',
+    url: 'https://www.emceedeepika.com/about',
     sameAs: [
       'https://www.instagram.com/emcee_deepikajain/',
       'https://www.facebook.com/emceedeepikajain',
@@ -38,7 +38,7 @@ const AboutPage: React.FC = () => {
           'wedding and corporate emcee India UAE Asia',
           'bilingual event presenter',
         ]}
-        canonicalUrl="https://emceedeepika.com/about"
+        canonicalUrl="https://www.emceedeepika.com/about"
         schemaJson={aboutSchema}
       />
 

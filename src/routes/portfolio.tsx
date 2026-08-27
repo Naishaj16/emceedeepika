@@ -27,13 +27,27 @@ const PortfolioPage: React.FC = () => {
     '@context': 'https://schema.org',
     '@type': 'DigitalDocument',
     name: 'Deepika Jain Official Emcee Portfolio & Press Kit 2026',
+    url: 'https://www.emceedeepika.com/portfolio',
     author: {
       '@type': 'Person',
       name: 'Deepika Jain',
+      url: 'https://www.emceedeepika.com',
       award: [
-        'Top International Corporate Emcee 2024 (Global Event Excellence Awards)',
-        'Best Destination Wedding Host 2023 (Luxury Wedding Industry Conclave)',
-        'Excellence in Stage Anchoring & Protocol (National Live Media & Stage Guild)',
+        {
+          '@type': 'Award',
+          name: 'Top International Corporate Emcee 2024 (Global Event Excellence Awards)',
+          url: 'https://www.emceedeepika.com/images/deepika/pdf_page_38.png',
+        },
+        {
+          '@type': 'Award',
+          name: 'Best Destination Wedding Host 2023 (Luxury Wedding Industry Conclave)',
+          url: 'https://www.emceedeepika.com/images/deepika/pdf_page_39.png',
+        },
+        {
+          '@type': 'Award',
+          name: 'Excellence in Stage Anchoring & Protocol (National Live Media & Stage Guild)',
+          url: 'https://www.emceedeepika.com/images/deepika/pdf_page_40.png',
+        },
       ],
     },
     description: 'Download official portfolio, media kit, wedding presentation decks, awards credentials, and service overview for International Emcee Deepika Jain.',
@@ -89,7 +103,7 @@ const PortfolioPage: React.FC = () => {
           'corporate emcee awards',
           'event host media kit PDF',
         ]}
-        canonicalUrl="https://emceedeepika.com/portfolio"
+        canonicalUrl="https://www.emceedeepika.com/portfolio"
         schemaJson={portfolioSchema}
       />
 
@@ -209,15 +223,6 @@ const PortfolioPage: React.FC = () => {
                     href={award.proofUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setActiveProof({
-                        title: award.title,
-                        issuer: award.issuer,
-                        image: award.proofUrl,
-                        alt: award.proofAlt,
-                      });
-                    }}
                     className="inline-flex items-center gap-2 text-xs font-bold text-gold-dark hover:text-pastel-900 bg-pastel-50 hover:bg-pastel-100 border border-pastel-200 px-3.5 py-2 rounded-xl transition-all shadow-2xs group"
                   >
                     <Award className="w-4 h-4 text-gold-DEFAULT group-hover:scale-110 transition-transform" />

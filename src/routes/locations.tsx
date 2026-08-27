@@ -51,7 +51,7 @@ const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locationKey })
         title={data.metaTitle}
         description={data.metaDescription}
         keywords={[...data.primaryKeywords, ...data.secondaryKeywords]}
-        canonicalUrl={`https://emceedeepika.com/locations/${locationKey}`}
+        canonicalUrl={`https://www.emceedeepika.com/locations/${locationKey}`}
         schemaJson={[schemaJson, faqSchema]}
         showHreflang={true}
       />

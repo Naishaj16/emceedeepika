@@ -19,10 +19,10 @@ const HomePage: React.FC = () => {
     '@context': 'https://schema.org',
     '@type': ['Person', 'LocalBusiness'],
     name: 'Deepika Jain',
-    image: 'https://emceedeepika.com/images/deepika/deepika-5.webp',
+    image: 'https://www.emceedeepika.com/images/deepika/deepika-5.webp',
     jobTitle: 'International Multilingual Emcee & Event Host',
     description: 'Deepika Jain hosts weddings, corporate galas, award nights, summits, government ceremonies, and family milestones in four languages across India, UAE, and Asia.',
-    url: 'https://emceedeepika.com',
+    url: 'https://www.emceedeepika.com',
     telephone: '+918056958856',
     email: 'dishajain395@gmail.com',
     address: {
@@ -76,7 +76,7 @@ const HomePage: React.FC = () => {
           'destination wedding emcee Asia Middle East',
           'multilingual event host',
         ]}
-        canonicalUrl="https://emceedeepika.com/"
+        canonicalUrl="https://www.emceedeepika.com/"
         schemaJson={homepageSchema}
         showHreflang={true}
       />
