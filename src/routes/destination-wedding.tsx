@@ -14,10 +14,34 @@ const DestinationWeddingPage: React.FC = () => {
     '@type': 'Service',
     name: 'Destination Wedding Emcee — Asia & Middle East',
     provider: {
-      '@type': 'Person',
+      '@type': ['Person', 'LocalBusiness'],
       name: 'Deepika Jain',
       jobTitle: 'International Destination Wedding Emcee & Host',
       url: 'https://www.emceedeepika.com',
+      telephone: '+918056958856',
+      email: 'dishajain395@gmail.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Chennai',
+        addressRegion: 'Tamil Nadu',
+        addressCountry: 'India',
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '9',
+        bestRating: '5',
+        worstRating: '1',
+      },
+      review: [
+        {
+          '@type': 'Review',
+          author: { '@type': 'Person', name: 'Rajiv & Ananya Malhotra' },
+          datePublished: '2026-08-15',
+          reviewBody: 'Deepika made our 3-day destination wedding in Udaipur feel like a fairytale. Her multilingual fluency in Marwari and English bridged all our international guests effortlessly!',
+          reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        },
+      ],
     },
     description: 'Deepika Jain is a premier destination wedding emcee hosting royal palace weddings in Udaipur, luxury resort celebrations in Dubai, Sentosa galas in Singapore, and island vows across Bali, Phuket, and Maldives.',
     areaServed: [
@@ -33,22 +57,6 @@ const DestinationWeddingPage: React.FC = () => {
     ],
     knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil', 'Telugu'],
     serviceType: 'Luxury Destination Wedding Anchor & Host',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '9',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Rajiv & Ananya Malhotra' },
-        datePublished: '2026-08-15',
-        reviewBody: 'Deepika made our 3-day destination wedding in Udaipur feel like a fairytale. Her multilingual fluency in Marwari and English bridged all our international guests effortlessly!',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      },
-    ],
   };
 
   const faqSchema = {

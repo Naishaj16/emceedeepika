@@ -13,21 +13,45 @@ const GalleryPage: React.FC = () => {
     description: 'Live event photos, royal entries, corporate summits, and destination wedding hosting moments by Emcee Deepika Jain.',
     url: 'https://www.emceedeepika.com/gallery',
     author: {
-      '@type': 'Person',
+      '@type': ['Person', 'LocalBusiness'],
       name: 'Deepika Jain',
       jobTitle: 'International Emcee & Event Host',
       url: 'https://www.emceedeepika.com',
+      telephone: '+918056958856',
+      email: 'dishajain395@gmail.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Chennai',
+        addressRegion: 'Tamil Nadu',
+        addressCountry: 'India',
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '9',
+        bestRating: '5',
+        worstRating: '1',
+      },
+      review: [
+        {
+          '@type': 'Review',
+          author: { '@type': 'Person', name: 'Sarah Mitchell' },
+          datePublished: '2026-08-20',
+          reviewBody: "Deepika's energy is infectious! She didn't just host our gala; she orchestrated an unforgettable experience for over 1,200 attendees in Dubai.",
+          reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        },
+        {
+          '@type': 'Review',
+          author: { '@type': 'Person', name: 'Rajiv & Ananya Malhotra' },
+          datePublished: '2026-08-15',
+          reviewBody: 'Deepika made our 3-day destination wedding in Udaipur feel like a fairytale. Her multilingual fluency in Marwari and English bridged all our international guests effortlessly!',
+          reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        },
+      ],
     },
     about: {
       '@type': 'Thing',
       name: 'Multilingual Emcee & Live Event Hosting Credentials',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '9',
-      bestRating: '5',
-      worstRating: '1',
     },
   };
 
