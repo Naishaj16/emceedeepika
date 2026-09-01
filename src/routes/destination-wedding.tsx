@@ -33,6 +33,22 @@ const DestinationWeddingPage: React.FC = () => {
     ],
     knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil', 'Telugu'],
     serviceType: 'Luxury Destination Wedding Anchor & Host',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '9',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Rajiv & Ananya Malhotra' },
+        datePublished: '2026-08-15',
+        reviewBody: 'Deepika made our 3-day destination wedding in Udaipur feel like a fairytale. Her multilingual fluency in Marwari and English bridged all our international guests effortlessly!',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      },
+    ],
   };
 
   const faqSchema = {

@@ -41,11 +41,34 @@ const HomePage: React.FC = () => {
     knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil', 'Telugu'],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '150',
+      ratingValue: '4.9',
+      reviewCount: '9',
       bestRating: '5',
-      worstRating: '1'
+      worstRating: '1',
     },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Sarah Mitchell' },
+        datePublished: '2026-08-20',
+        reviewBody: "Deepika's energy is infectious! She didn't just host our gala; she orchestrated an unforgettable experience for over 1,200 attendees in Dubai.",
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Rajiv & Ananya Malhotra' },
+        datePublished: '2026-08-15',
+        reviewBody: 'Deepika made our 3-day destination wedding in Udaipur feel like a fairytale. Her multilingual fluency in Marwari and English bridged all our international guests effortlessly!',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Karthik Subramanian' },
+        datePublished: '2026-08-10',
+        reviewBody: 'Outstanding stage presence and seamless bilingual Tamil & English anchoring for our tech summit in Chennai.',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      },
+    ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Emcee & Hosting Services',

@@ -5,6 +5,47 @@ import { SEOHead } from '../components/SEOHead';
 import { Mail, Phone, MapPin, Sparkles, Clock, Globe, Instagram, Linkedin, Youtube, ArrowRight } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
+  const contactSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Emcee Deepika Jain',
+    url: 'https://www.emceedeepika.com/contact',
+    mainEntity: {
+      '@type': ['Person', 'LocalBusiness'],
+      name: 'Deepika Jain',
+      url: 'https://www.emceedeepika.com',
+      telephone: '+918056958856',
+      email: 'dishajain395@gmail.com',
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+918056958856',
+          contactType: 'booking & management',
+          contactOption: 'WhatsAppAvailable',
+          availableLanguage: ['English', 'Hindi', 'Marwari', 'Tamil', 'Telugu'],
+        },
+        {
+          '@type': 'ContactPoint',
+          email: 'dishajain395@gmail.com',
+          contactType: 'management desk (Disha Jain)',
+        },
+      ],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Chennai',
+        addressRegion: 'Tamil Nadu',
+        addressCountry: 'India',
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '9',
+        bestRating: '5',
+        worstRating: '1',
+      },
+    },
+  };
+
   return (
     <div className="pt-28 pb-24 bg-pastel-50">
       <SEOHead
@@ -12,6 +53,7 @@ const ContactPage: React.FC = () => {
         description="Connect directly with Emcee Deepika Jain's management for wedding, corporate gala, award show, and international event date inquiries."
         keywords={['contact Deepika Jain', 'book emcee Deepika', 'wedding anchor contact Chennai Dubai', 'corporate host inquiry']}
         canonicalUrl="https://www.emceedeepika.com/contact"
+        schemaJson={contactSchema}
       />
       <div className="bg-gradient-to-b from-pastel-100 to-pastel-50 py-16 border-b border-pastel-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
@@ -45,13 +87,14 @@ const ContactPage: React.FC = () => {
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-pastel-900 text-base">Official Email (Management)</h4>
+                    <h4 className="font-bold text-pastel-900 text-base">Management Inbox (Disha Jain)</h4>
                     <a
                       href="mailto:dishajain395@gmail.com"
                       className="text-pastel-700 hover:text-pastel-900 font-medium underline decoration-pastel-300 hover:decoration-pastel-700 transition-colors"
                     >
                       dishajain395@gmail.com
                     </a>
+                    <span className="block text-xs text-pastel-500 font-normal mt-0.5">Business Manager: Disha Jain</span>
                   </div>
                 </div>
 

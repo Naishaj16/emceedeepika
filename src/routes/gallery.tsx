@@ -6,6 +6,31 @@ import { SEOHead } from '../components/SEOHead';
 import { Sparkles } from 'lucide-react';
 
 const GalleryPage: React.FC = () => {
+  const gallerySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageGallery',
+    name: 'Deepika Jain Event Gallery & Stage Highlights',
+    description: 'Live event photos, royal entries, corporate summits, and destination wedding hosting moments by Emcee Deepika Jain.',
+    url: 'https://www.emceedeepika.com/gallery',
+    author: {
+      '@type': 'Person',
+      name: 'Deepika Jain',
+      jobTitle: 'International Emcee & Event Host',
+      url: 'https://www.emceedeepika.com',
+    },
+    about: {
+      '@type': 'Thing',
+      name: 'Multilingual Emcee & Live Event Hosting Credentials',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '9',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  };
+
   return (
     <div className="pt-28 pb-24 bg-pastel-50">
       <SEOHead
@@ -13,6 +38,7 @@ const GalleryPage: React.FC = () => {
         description="Explore live event photos, royal entries, corporate summits, and destination wedding hosting moments by Emcee Deepika Jain."
         keywords={['Deepika Jain photo gallery', 'wedding emcee photos', 'stage host event gallery', 'corporate event host pictures']}
         canonicalUrl="https://www.emceedeepika.com/gallery"
+        schemaJson={gallerySchema}
       />
       <div className="bg-gradient-to-b from-pastel-100 to-pastel-50 py-16 border-b border-pastel-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
