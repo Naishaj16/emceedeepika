@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node prerender-routes.js",
     "preview": "vite preview",
     "sync-photos": "python3 ../sync-google-photos.py"
   },
