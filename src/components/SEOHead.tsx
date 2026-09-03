@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from '@tanstack/react-router';
 
 interface SEOHeadProps {
   title: string;
@@ -15,12 +16,17 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
   keywords,
-  canonicalUrl = 'https://www.emceedeepika.com/',
+  canonicalUrl,
   ogImage = 'https://www.emceedeepika.com/images/deepika/deepika-5.webp',
   ogType = 'website',
   schemaJson,
   showHreflang = false,
 }) => {
+  const location = useLocation();
+  const pathname = location ? location.pathname : '';
+  const defaultCanonical = `https://www.emceedeepika.com${pathname === '/' ? '/' : pathname}`;
+  const targetCanonicalUrl = canonicalUrl || defaultCanonical;
+
   useEffect(() => {
     // 1. Update Title
     document.title = title;
@@ -46,7 +52,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     setMetaTag('meta[property="og:title"]', 'property', 'og:title', title);
     setMetaTag('meta[property="og:description"]', 'property', 'og:description', description);
     setMetaTag('meta[property="og:type"]', 'property', 'og:type', ogType);
-    setMetaTag('meta[property="og:url"]', 'property', 'og:url', canonicalUrl);
+    setMetaTag('meta[property="og:url"]', 'property', 'og:url', targetCanonicalUrl);
     setMetaTag('meta[property="og:image"]', 'property', 'og:image', ogImage);
     setMetaTag('meta[property="og:site_name"]', 'property', 'og:site_name', 'Emcee Deepika Jain');
 
@@ -63,7 +69,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       canonicalLink.setAttribute('rel', 'canonical');
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.setAttribute('href', canonicalUrl);
+    canonicalLink.setAttribute('href', targetCanonicalUrl);
 
     // 6. Hreflang Tags (Scoped only to regional pages: homepage + locations)
     const existingHreflangs = document.querySelectorAll('link[rel="alternate"][hreflang]');
@@ -100,7 +106,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       }
       script.text = JSON.stringify(schemaJson);
     }
-  }, [title, description, keywords, canonicalUrl, ogImage, ogType, schemaJson, showHreflang]);
+  }, [title, description, keywords, targetCanonicalUrl, ogImage, ogType, schemaJson, showHreflang]);
 
   return null;
 };
