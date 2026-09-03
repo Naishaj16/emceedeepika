@@ -1,10 +1,9 @@
 import React from 'react';
-import { createRoute } from '@tanstack/react-router';
 import { rootRoute } from './root';
 import { SEOHead } from '../components/SEOHead';
 import { Mail, Phone, MapPin, Sparkles, Clock, Globe, Instagram, Linkedin, Youtube, ArrowRight } from 'lucide-react';
 
-const ContactPage: React.FC = () => {
+export const ContactPage: React.FC = () => {
   const contactSchema = {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
@@ -221,8 +220,4 @@ const ContactPage: React.FC = () => {
   );
 };
 
-export const contactRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/contact',
-  component: ContactPage,
-});
+

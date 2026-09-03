@@ -77,6 +77,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 <img
                   src="/images/deepika/deepika-5.webp"
                   alt="Deepika Jain - Premium Wedding Emcee"
+                  width="400"
+                  height="500"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
                 />
                 

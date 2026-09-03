@@ -1,12 +1,12 @@
 import React from 'react';
-import { createRoute, Link } from '@tanstack/react-router';
+import { Link } from '@tanstack/react-router';
 import { rootRoute } from './root';
 import { Sparkles, Calendar, ArrowRight, Quote, Mic, Globe, Languages, Users, Award, ShieldCheck } from 'lucide-react';
 import { useBooking } from '../context/BookingContext';
 import { SEOHead } from '../components/SEOHead';
 import { STATS, TESTIMONIALS } from '../data/emceeData';
 
-const AboutPage: React.FC = () => {
+export const AboutPage: React.FC = () => {
   const { openBooking } = useBooking();
 
   const aboutSchema = {
@@ -268,8 +268,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export const aboutRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/about',
-  component: AboutPage,
-});
+

@@ -1,11 +1,10 @@
 import React from 'react';
-import { createRoute } from '@tanstack/react-router';
 import { rootRoute } from './root';
 import { GallerySection } from '../components/GallerySection';
 import { SEOHead } from '../components/SEOHead';
 import { Sparkles } from 'lucide-react';
 
-const GalleryPage: React.FC = () => {
+export const GalleryPage: React.FC = () => {
   const gallerySchema = {
     '@context': 'https://schema.org',
     '@type': 'ImageGallery',
@@ -84,8 +83,4 @@ const GalleryPage: React.FC = () => {
   );
 };
 
-export const galleryRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/gallery',
-  component: GalleryPage,
-});
+

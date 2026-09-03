@@ -1,10 +1,10 @@
 import React from 'react';
-import { createRoute, Link } from '@tanstack/react-router';
+import { Link } from '@tanstack/react-router';
 import { rootRoute } from './root';
 import { Download, FileText, Sparkles, Check, ArrowRight, Trophy, Star, Eye, Award, ExternalLink, CheckCircle2, X } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 
-const PortfolioPage: React.FC = () => {
+export const PortfolioPage: React.FC = () => {
   const handleDownloadMain = () => {
     const link = document.createElement('a');
     link.href = '/Deepika_Jain_Official_Emcee_Portfolio_2026.pdf';
@@ -321,8 +321,4 @@ const PortfolioPage: React.FC = () => {
   );
 };
 
-export const portfolioRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/portfolio',
-  component: PortfolioPage,
-});
+

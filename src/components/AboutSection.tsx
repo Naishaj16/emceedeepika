@@ -14,6 +14,10 @@ export const AboutSection: React.FC = () => {
                 <img
                   src="/images/deepika/deepika-2.webp"
                   alt="Deepika Jain - Stage Master"
+                  width="300"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>

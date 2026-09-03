@@ -98,7 +98,10 @@ export const GallerySection: React.FC = () => {
               <img
                 src={item.image}
                 alt={item.title}
+                width="400"
+                height="300"
                 loading="lazy"
+                decoding="async"
                 className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700 rounded-xl"
               />
 

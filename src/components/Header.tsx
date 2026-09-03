@@ -52,6 +52,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
           <img
             src="/logo.png"
             alt="Emcee Deepika Jain Logo"
+            width="80"
+            height="80"
+            decoding="async"
             className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain drop-shadow-sm group-hover:scale-105 transition-transform"
           />
           <div>

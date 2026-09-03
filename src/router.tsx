@@ -1,13 +1,67 @@
-import { createRouter } from '@tanstack/react-router';
+import React from 'react';
+import { createRoute, createRouter } from '@tanstack/react-router';
 import { rootRoute } from './routes/root';
 import { homeRoute } from './routes/home';
-import { aboutRoute } from './routes/about';
-import { servicesRoute } from './routes/services';
-import { galleryRoute } from './routes/gallery';
-import { contactRoute } from './routes/contact';
-import { chennaiRoute, dubaiRoute, malaysiaRoute, singaporeRoute } from './routes/locations';
-import { portfolioRoute } from './routes/portfolio';
-import { destinationWeddingRoute } from './routes/destination-wedding';
+
+const aboutRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/about',
+  component: React.lazy(() => import('./routes/about').then((m) => ({ default: m.AboutPage }))),
+});
+
+const servicesRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/services',
+  component: React.lazy(() => import('./routes/services').then((m) => ({ default: m.ServicesPage }))),
+});
+
+const destinationWeddingRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/destination-wedding',
+  component: React.lazy(() => import('./routes/destination-wedding').then((m) => ({ default: m.DestinationWeddingPage }))),
+});
+
+const galleryRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/gallery',
+  component: React.lazy(() => import('./routes/gallery').then((m) => ({ default: m.GalleryPage }))),
+});
+
+const contactRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/contact',
+  component: React.lazy(() => import('./routes/contact').then((m) => ({ default: m.ContactPage }))),
+});
+
+const portfolioRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/portfolio',
+  component: React.lazy(() => import('./routes/portfolio').then((m) => ({ default: m.PortfolioPage }))),
+});
+
+const chennaiRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/locations/chennai',
+  component: React.lazy(() => import('./routes/locations').then((m) => ({ default: () => <m.LocationLandingPage locationKey="chennai" /> }))),
+});
+
+const dubaiRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/locations/dubai',
+  component: React.lazy(() => import('./routes/locations').then((m) => ({ default: () => <m.LocationLandingPage locationKey="dubai" /> }))),
+});
+
+const malaysiaRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/locations/malaysia',
+  component: React.lazy(() => import('./routes/locations').then((m) => ({ default: () => <m.LocationLandingPage locationKey="malaysia" /> }))),
+});
+
+const singaporeRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/locations/singapore',
+  component: React.lazy(() => import('./routes/locations').then((m) => ({ default: () => <m.LocationLandingPage locationKey="singapore" /> }))),
+});
 
 const routeTree = rootRoute.addChildren([
   homeRoute,

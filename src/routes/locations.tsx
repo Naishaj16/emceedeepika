@@ -1,5 +1,5 @@
 import React from 'react';
-import { createRoute, Link } from '@tanstack/react-router';
+import { Link } from '@tanstack/react-router';
 import { rootRoute } from './root';
 import { locationSeoMap } from '../data/seoKeywords';
 import { SEOHead } from '../components/SEOHead';
@@ -7,7 +7,7 @@ import { Sparkles, MapPin, CheckCircle, HelpCircle, ArrowRight, Award, Globe, Mi
 import { useBooking } from '../context/BookingContext';
 import { BookingForm } from '../components/BookingForm';
 
-const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locationKey }) => {
+export const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locationKey }) => {
   const data = locationSeoMap[locationKey];
   const { openBooking } = useBooking();
 
@@ -211,26 +211,4 @@ const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locationKey })
   );
 };
 
-export const chennaiRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/locations/chennai',
-  component: () => <LocationLandingPage locationKey="chennai" />,
-});
 
-export const dubaiRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/locations/dubai',
-  component: () => <LocationLandingPage locationKey="dubai" />,
-});
-
-export const malaysiaRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/locations/malaysia',
-  component: () => <LocationLandingPage locationKey="malaysia" />,
-});
-
-export const singaporeRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/locations/singapore',
-  component: () => <LocationLandingPage locationKey="singapore" />,
-});

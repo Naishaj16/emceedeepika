@@ -48,6 +48,10 @@ export const ServicesBento: React.FC<ServicesBentoProps> = ({ onOpenBooking }) =
                 <img
                   src={service.image}
                   alt={service.title}
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>

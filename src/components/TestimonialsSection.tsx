@@ -47,6 +47,10 @@ export const TestimonialsSection: React.FC = () => {
                   <img
                     src={item.image}
                     alt={item.name}
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    decoding="async"
                     className="w-11 h-11 rounded-full object-cover border-2 border-pastel-300"
                   />
                   <div>

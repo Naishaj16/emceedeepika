@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { createRoute, Link } from '@tanstack/react-router';
+import { Link } from '@tanstack/react-router';
 import { rootRoute } from './root';
 import { SERVICES } from '../data/emceeData';
 import { Check, Sparkles, Calculator, ArrowRight, HelpCircle, Calendar, ShieldCheck, Globe, Languages } from 'lucide-react';
 import { useBooking } from '../context/BookingContext';
 import { SEOHead } from '../components/SEOHead';
 
-const ServicesPage: React.FC = () => {
+export const ServicesPage: React.FC = () => {
   const { openBooking } = useBooking();
 
   // Interactive Package Estimator State
@@ -395,8 +395,4 @@ const ServicesPage: React.FC = () => {
   );
 };
 
-export const servicesRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/services',
-  component: ServicesPage,
-});
+
