@@ -53,6 +53,12 @@ const routes = [
     canonicalUrl: 'https://www.emceedeepika.com/contact',
   },
   {
+    path: '/shorts',
+    title: 'Watch YouTube Shorts & Live Stage Videos | Emcee Deepika Jain',
+    description: 'Watch official YouTube Shorts, live stage hosting clips, crowd interactions, and wedding highlights by International Emcee Deepika Jain.',
+    canonicalUrl: 'https://www.emceedeepika.com/shorts',
+  },
+  {
     path: '/locations/chennai',
     title: 'Best Wedding Anchor in Chennai | Corporate Event Emcee Deepika',
     description: 'Looking for the best wedding anchor in Chennai? Deepika Jain is a leading Tamil-English bilingual corporate emcee and event host in Chennai & Tamil Nadu.',

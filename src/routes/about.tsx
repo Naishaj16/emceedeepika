@@ -11,42 +11,55 @@ export const AboutPage: React.FC = () => {
 
   const aboutSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Deepika Jain',
-    jobTitle: 'International Multilingual Emcee & Event Host',
-    description: 'Deepika Jain is a multilingual emcee with 12+ years and 2,500+ shows across 15+ countries including Singapore, Dubai, Bali, Phuket, and Maldives.',
+    '@type': 'AboutPage',
+    name: 'About Deepika Jain | International Emcee & Event Host',
     url: 'https://www.emceedeepika.com/about',
-    sameAs: [
-      'https://www.instagram.com/emcee_deepikajain/',
-      'https://www.facebook.com/emceedeepikajain',
-      'https://www.youtube.com/@besteventemceeandanchor',
-      'https://in.linkedin.com/in/anchor-deepika-jain%F0%9F%8E%A4-4a240b177',
-    ],
-    knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil', 'Telugu'],
-    workLocation: ['Chennai', 'Mumbai', 'Delhi NCR', 'Udaipur', 'Dubai', 'Singapore', 'Malaysia', 'Bali', 'Phuket', 'Maldives'],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '9',
-      bestRating: '5',
-      worstRating: '1',
+    mainEntity: {
+      '@type': ['Person', 'LocalBusiness'],
+      name: 'Deepika Jain',
+      jobTitle: 'International Multilingual Emcee & Event Host',
+      description: 'Deepika Jain is a multilingual emcee with 12+ years and 2,500+ shows across 15+ countries including Singapore, Dubai, Bali, Phuket, and Maldives.',
+      url: 'https://www.emceedeepika.com',
+      telephone: '+918056958856',
+      email: 'dishajain395@gmail.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Chennai',
+        addressRegion: 'Tamil Nadu',
+        addressCountry: 'India',
+      },
+      sameAs: [
+        'https://www.instagram.com/emcee_deepikajain/',
+        'https://www.facebook.com/emceedeepikajain',
+        'https://www.youtube.com/@besteventemceeandanchor',
+        'https://in.linkedin.com/in/anchor-deepika-jain%F0%9F%8E%A4-4a240b177',
+      ],
+      knowsLanguage: ['English', 'Hindi', 'Marwari', 'Tamil', 'Telugu'],
+      workLocation: ['Chennai', 'Mumbai', 'Delhi NCR', 'Udaipur', 'Dubai', 'Singapore', 'Malaysia', 'Bali', 'Phuket', 'Maldives'],
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '9',
+        bestRating: '5',
+        worstRating: '1',
+      },
+      review: [
+        {
+          '@type': 'Review',
+          author: { '@type': 'Person', name: 'Sarah Mitchell' },
+          datePublished: '2026-08-20',
+          reviewBody: "Deepika's energy is infectious! She didn't just host our gala; she orchestrated an unforgettable experience for over 1,200 attendees in Dubai.",
+          reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        },
+        {
+          '@type': 'Review',
+          author: { '@type': 'Person', name: 'Rajiv & Ananya Malhotra' },
+          datePublished: '2026-08-15',
+          reviewBody: 'Deepika made our 3-day destination wedding in Udaipur feel like a fairytale. Her multilingual fluency in Marwari and English bridged all our international guests effortlessly!',
+          reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        },
+      ],
     },
-    review: [
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Sarah Mitchell' },
-        datePublished: '2026-08-20',
-        reviewBody: "Deepika's energy is infectious! She didn't just host our gala; she orchestrated an unforgettable experience for over 1,200 attendees in Dubai.",
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Rajiv & Ananya Malhotra' },
-        datePublished: '2026-08-15',
-        reviewBody: 'Deepika made our 3-day destination wedding in Udaipur feel like a fairytale. Her multilingual fluency in Marwari and English bridged all our international guests effortlessly!',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      },
-    ],
   };
 
   return (

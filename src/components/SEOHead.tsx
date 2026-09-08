@@ -95,9 +95,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     }
 
     // 7. Inject JSON-LD Schema
+    const scriptId = 'json-ld-schema';
+    let script = document.getElementById(scriptId) as HTMLScriptElement;
     if (schemaJson) {
-      const scriptId = 'json-ld-schema';
-      let script = document.getElementById(scriptId) as HTMLScriptElement;
       if (!script) {
         script = document.createElement('script');
         script.id = scriptId;
@@ -105,6 +105,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
         document.head.appendChild(script);
       }
       script.text = JSON.stringify(schemaJson);
+    } else if (script) {
+      script.remove();
     }
   }, [title, description, keywords, targetCanonicalUrl, ogImage, ogType, schemaJson, showHreflang]);
 

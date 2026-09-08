@@ -96,3 +96,49 @@
     -webkit-forced-color-adjust: none;
   }
 }
+
+/* Ambient Lighting Glows (Inspired by naishajain.me) */
+.glow-gold {
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, rgba(212, 175, 55, 0) 70%);
+}
+
+.glow-rose {
+  background: radial-gradient(circle, rgba(225, 140, 150, 0.15) 0%, rgba(225, 140, 150, 0) 70%);
+}
+
+.glow-pastel {
+  background: radial-gradient(circle, rgba(94, 155, 121, 0.16) 0%, rgba(94, 155, 121, 0) 70%);
+}
+
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float-subtle {
+  animation: float-subtle 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-subtle 6s ease-in-out infinite 2s;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+

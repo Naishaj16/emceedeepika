@@ -157,6 +157,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
 
           <Link to="/portfolio" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">Portfolio</Link>
           <Link to="/gallery" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">Gallery</Link>
+          <Link to="/shorts" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            <span>Shorts</span>
+          </Link>
           <Link to="/contact" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">Contact</Link>
 
           {/* Locations Dropdown */}

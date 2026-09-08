@@ -63,12 +63,19 @@ const singaporeRoute = createRoute({
   component: React.lazy(() => import('./routes/locations').then((m) => ({ default: () => <m.LocationLandingPage locationKey="singapore" /> }))),
 });
 
+const shortsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/shorts',
+  component: React.lazy(() => import('./routes/shorts').then((m) => ({ default: m.ShortsPage }))),
+});
+
 const routeTree = rootRoute.addChildren([
   homeRoute,
   aboutRoute,
   servicesRoute,
   destinationWeddingRoute,
   galleryRoute,
+  shortsRoute,
   contactRoute,
   portfolioRoute,
   chennaiRoute,

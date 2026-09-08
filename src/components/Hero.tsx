@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, CheckCircle2, Globe2, Sparkles, Mic } from 'lucide-react';
+import { ArrowRight, Award, CheckCircle2, Globe2, Sparkles, Mic, Star, Calendar } from 'lucide-react';
 import { Link } from '@tanstack/react-router';
 
 interface HeroProps {
@@ -8,98 +8,103 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-28 pb-16 overflow-hidden bg-gradient-to-br from-pastel-100 via-pastel-50 to-sage-light/30">
-      {/* Background Decorative Ambient Pastel Glows */}
-      <div className="absolute top-10 left-1/4 w-96 h-96 bg-pastel-200/50 rounded-full blur-3xl -z-0 pointer-events-none"></div>
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-sage-light/60 rounded-full blur-3xl -z-0 pointer-events-none"></div>
+    <section className="relative min-h-[92vh] flex items-center pt-28 pb-16 overflow-hidden bg-[#F6FAF7]">
+      {/* 1. Exact naishajain.me Background Photo Effect (Seamless grand stage fade) */}
+      <div className="absolute top-0 right-0 w-full md:w-[70%] lg:w-[65%] h-full pointer-events-none overflow-hidden z-0 select-none opacity-30 sm:opacity-35 md:opacity-40">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F6FAF7] via-[#F6FAF7]/80 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#F6FAF7] via-transparent to-[#F6FAF7]/40 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F6FAF7]/50 via-transparent to-[#F6FAF7] z-10" />
+        <div
+          className="w-full h-full bg-cover bg-center scale-105 md:scale-[1.18] transition-transform duration-1000 ease-out"
+          style={{
+            backgroundImage: `url('/images/deepika/deepika-hero-bg.webp')`,
+            filter: 'contrast(1.15) brightness(1.02)',
+          }}
+        />
+      </div>
 
+      {/* 2. Ambient Lighting Glows */}
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+        <div className="absolute -top-[10%] -left-[10%] w-[45%] h-[45%] glow-gold rounded-full blur-3xl opacity-70 animate-pulse-glow" />
+        <div className="absolute top-[20%] -right-[10%] w-[40%] h-[40%] glow-pastel rounded-full blur-3xl opacity-60 animate-float-subtle" />
+        <div className="absolute -bottom-[10%] left-[25%] w-[40%] h-[40%] glow-rose rounded-full blur-3xl opacity-40 animate-float-delayed" />
+      </div>
+
+      {/* 3. Hero Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Text Content */}
-          <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pastel-200/70 border border-pastel-300 text-pastel-800 text-xs font-semibold uppercase tracking-wider shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-gold-dark" />
-              <span>International Multilingual Emcee & Event Host</span>
-            </div>
-
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-pastel-900">
-              Deepika Jain: The Voice of Your Most{' '}
-              <span className="italic font-normal gold-gradient-text">Memorable Moments</span>
-            </h1>
-
-            <p className="text-base sm:text-lg text-pastel-700 leading-relaxed max-w-2xl font-normal">
-              As a premier <strong>international emcee</strong> and <strong>multilingual event host</strong> with 12+ years on stage, Deepika Jain has hosted over 2,500 shows across 15+ countries — including Singapore, Dubai, Bali, Phuket, and Maldives. Fluent in 5 languages (English, Hindi, Marwari, Tamil, and Telugu), she brings poise, cultural versatility, and stage authority to luxury destination weddings, corporate galas, and global summits.
-            </p>
-
-            {/* CTAs */}
-            <div className="pt-2 flex flex-wrap items-center gap-4">
-              <Link
-                to="/contact"
-                className="flex items-center gap-2 bg-pastel-700 hover:bg-pastel-800 text-pastel-50 px-8 py-4 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 group"
-              >
-                <Mic className="w-4 h-4 text-gold-light" />
-                <span>Hire Professional Emcee — Inquire Now</span>
-                <ArrowRight className="w-4 h-4 text-gold-light group-hover:translate-x-1 transition-transform" />
-              </Link>
-
-              <Link
-                to="/destination-wedding"
-                className="flex items-center gap-2 border border-pastel-400 bg-white/60 hover:bg-pastel-100 text-pastel-800 px-7 py-4 rounded-full font-semibold text-sm transition-all shadow-xs"
-              >
-                Destination Wedding Page
-              </Link>
-            </div>
-
-            {/* Badges */}
-            <div className="pt-6 flex flex-wrap items-center gap-6 border-t border-pastel-200/80">
-              <div className="flex items-center gap-2 text-pastel-800 text-xs font-semibold">
-                <CheckCircle2 className="w-4 h-4 text-pastel-600" />
-                <span>12+ Years Stage Mastery</span>
-              </div>
-              <div className="flex items-center gap-2 text-pastel-800 text-xs font-semibold">
-                <Award className="w-4 h-4 text-gold-DEFAULT" />
-                <span>100+ Global Events</span>
-              </div>
-              <div className="flex items-center gap-2 text-pastel-800 text-xs font-semibold">
-                <Globe2 className="w-4 h-4 text-pastel-600" />
-                <span>15+ Countries Covered</span>
-              </div>
-            </div>
+        <div className="max-w-3xl space-y-7 text-left">
+          {/* Top Pill */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-md border border-pastel-200 text-pastel-900 text-xs font-semibold uppercase tracking-wider shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-gold-DEFAULT" />
+            <span>International Multilingual Emcee & Event Host</span>
           </div>
 
-          {/* Hero Portrait in Pastel Frame */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Outer decorative ring */}
-              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-pastel-300 via-sage-DEFAULT/30 to-gold-light/40 blur-lg opacity-70"></div>
-              
-              <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl bg-pastel-200 aspect-[4/5]">
-                <img
-                  src="/images/deepika/deepika-5.webp"
-                  alt="Deepika Jain - Premium Wedding Emcee"
-                  width="400"
-                  height="500"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-                />
-                
-                {/* Floating Pastel Badge */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl pastel-glass-card border border-white/60">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-xs uppercase tracking-wider text-pastel-700 font-bold">Upcoming Season</p>
-                      <p className="text-sm font-serif font-bold text-pastel-900">2026-2027 Inquiries Open</p>
-                    </div>
-                    <span className="w-3 h-3 rounded-full bg-pastel-500 animate-pulse"></span>
-                  </div>
-                </div>
-              </div>
+          {/* Main Headline */}
+          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] text-pastel-950 tracking-tight">
+            Deepika Jain:{' '}
+            <span className="italic font-normal gold-gradient-text block sm:inline">The Voice</span>{' '}
+            of Your Most Memorable Moments
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-base sm:text-xl text-pastel-750 leading-relaxed max-w-2xl font-normal">
+            Premier <strong>international emcee</strong> and <strong>multilingual event host</strong> with 12+ years on stage, 2,500+ shows hosted across 15+ countries, and fluency in 5 languages — bringing magnetic energy, cultural versatility, and stage authority to luxury destination weddings, global summits, and celebrity galas.
+          </p>
+
+          {/* CTAs */}
+          <div className="pt-2 flex flex-wrap items-center gap-4">
+            <Link
+              to="/contact"
+              className="flex items-center gap-2.5 bg-[#13281D] hover:bg-[#1C3B2B] text-white px-8 py-4 rounded-full font-semibold text-sm sm:text-base transition-all shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-95 group cursor-pointer"
+            >
+              <Mic className="w-4 h-4 text-gold-DEFAULT" />
+              <span className="text-white">Hire Professional Emcee — Inquire Now</span>
+              <ArrowRight className="w-4 h-4 text-gold-DEFAULT group-hover:translate-x-1 transition-transform" />
+            </Link>
+
+            <Link
+              to="/destination-wedding"
+              className="flex items-center gap-2 border border-pastel-400 bg-white/90 hover:bg-pastel-100 text-pastel-900 px-7 py-4 rounded-full font-semibold text-sm sm:text-base transition-all shadow-sm backdrop-blur-sm cursor-pointer"
+            >
+              Destination Wedding Page
+            </Link>
+          </div>
+
+          {/* Quick Metrics Bar (naishajain.me style) */}
+          <div className="pt-8 flex flex-wrap items-center gap-6 sm:gap-8 border-t border-pastel-200/80">
+            <div className="flex items-center gap-2.5 text-pastel-900 text-xs sm:text-sm font-semibold">
+              <CheckCircle2 className="w-4 h-4 text-pastel-600" />
+              <span>12+ Years Stage Mastery</span>
+            </div>
+            <div className="flex items-center gap-2.5 text-pastel-900 text-xs sm:text-sm font-semibold">
+              <Award className="w-4 h-4 text-gold-DEFAULT" />
+              <span>2,500+ Stage Shows</span>
+            </div>
+            <div className="flex items-center gap-2.5 text-pastel-900 text-xs sm:text-sm font-semibold">
+              <Globe2 className="w-4 h-4 text-pastel-600" />
+              <span>15+ Countries Covered</span>
+            </div>
+            <div className="flex items-center gap-2 text-pastel-700 text-xs sm:text-sm font-medium">
+              <span className="flex h-2.5 w-2.5 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              <span>2026–2027 Inquiries Open</span>
             </div>
           </div>
         </div>
       </div>
+
+      {/* 4. Vertical "SCROLL TO DISCOVER" Indicator (Exact naishajain.me feature) */}
+      <div className="hidden lg:flex absolute right-8 bottom-12 items-center gap-3 rotate-90 origin-right pointer-events-none select-none opacity-60">
+        <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-pastel-600 whitespace-nowrap">
+          Scroll to Discover
+        </span>
+        <div className="w-12 h-[1.5px] bg-pastel-400"></div>
+      </div>
     </section>
   );
 };
+
+
+
