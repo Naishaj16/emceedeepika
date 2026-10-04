@@ -33,11 +33,19 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
       {/* 3. Hero Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="max-w-3xl space-y-7 text-left">
-          {/* Top Pill */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-md border border-pastel-200 text-pastel-900 text-xs font-semibold uppercase tracking-wider shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-gold-DEFAULT" />
-            <span>International Multilingual Emcee & Event Host</span>
-          </div>
+          {/* Top Pill - Workshop Alert */}
+          <Link
+            to="/workshop"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/15 via-gold-DEFAULT/20 to-emerald-500/15 backdrop-blur-md border border-gold-DEFAULT/50 text-pastel-950 text-xs font-bold uppercase tracking-wider shadow-sm hover:border-gold-DEFAULT transition-all group"
+          >
+            <span className="flex h-2 w-2 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+            </span>
+            <Sparkles className="w-3.5 h-3.5 text-gold-dark" />
+            <span>1-Day Emcee/Anchor Workshop • 7th November (Chennai)</span>
+            <ArrowRight className="w-3 h-3 text-gold-dark group-hover:translate-x-0.5 transition-transform" />
+          </Link>
 
           {/* Main Headline */}
           <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] text-pastel-950 tracking-tight">
@@ -54,19 +62,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
           {/* CTAs */}
           <div className="pt-2 flex flex-wrap items-center gap-4">
             <Link
-              to="/contact"
-              className="flex items-center gap-2.5 bg-[#13281D] hover:bg-[#1C3B2B] text-white px-8 py-4 rounded-full font-semibold text-sm sm:text-base transition-all shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-95 group cursor-pointer"
+              to="/workshop"
+              className="flex items-center gap-2.5 bg-gradient-to-r from-[#13281D] via-[#1C3B2B] to-[#13281D] hover:from-[#1C3B2B] hover:to-[#2E5941] text-white px-8 py-4 rounded-full font-semibold text-sm sm:text-base transition-all shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-95 group cursor-pointer border border-gold-DEFAULT/40"
             >
-              <Mic className="w-4 h-4 text-gold-DEFAULT" />
-              <span className="text-white">Hire Professional Emcee — Inquire Now</span>
+              <Sparkles className="w-4 h-4 text-gold-DEFAULT animate-pulse" />
+              <span className="text-white">Join 1-Day Workshop (7th Nov)</span>
               <ArrowRight className="w-4 h-4 text-gold-DEFAULT group-hover:translate-x-1 transition-transform" />
             </Link>
 
             <Link
-              to="/destination-wedding"
+              to="/contact"
               className="flex items-center gap-2 border border-pastel-400 bg-white/90 hover:bg-pastel-100 text-pastel-900 px-7 py-4 rounded-full font-semibold text-sm sm:text-base transition-all shadow-sm backdrop-blur-sm cursor-pointer"
             >
-              Destination Wedding Page
+              <Mic className="w-4 h-4 text-pastel-700" />
+              <span>Hire For Events</span>
             </Link>
           </div>
 

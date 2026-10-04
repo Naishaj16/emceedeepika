@@ -59,6 +59,12 @@ const routes = [
     canonicalUrl: 'https://www.emceedeepika.com/shorts',
   },
   {
+    path: '/workshop',
+    title: '1-Day Emcee & Anchor Masterclass Workshop | 7th November | Deepika Jain',
+    description: 'Join Deepika Jain for a 1-day immersive in-person Emcee & Anchor workshop in Chennai on 7th November 2026. Learn stage presence, scriptwriting, and crowd engagement. Limited seats!',
+    canonicalUrl: 'https://www.emceedeepika.com/workshop',
+  },
+  {
     path: '/locations/chennai',
     title: 'Best Wedding Anchor in Chennai | Corporate Event Emcee Deepika',
     description: 'Looking for the best wedding anchor in Chennai? Deepika Jain is a leading Tamil-English bilingual corporate emcee and event host in Chennai & Tamil Nadu.',

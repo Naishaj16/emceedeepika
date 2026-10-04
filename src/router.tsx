@@ -69,6 +69,12 @@ const shortsRoute = createRoute({
   component: React.lazy(() => import('./routes/shorts').then((m) => ({ default: m.ShortsPage }))),
 });
 
+const workshopRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/workshop',
+  component: React.lazy(() => import('./routes/workshop').then((m) => ({ default: m.WorkshopPage }))),
+});
+
 const routeTree = rootRoute.addChildren([
   homeRoute,
   aboutRoute,
@@ -76,6 +82,7 @@ const routeTree = rootRoute.addChildren([
   destinationWeddingRoute,
   galleryRoute,
   shortsRoute,
+  workshopRoute,
   contactRoute,
   portfolioRoute,
   chennaiRoute,

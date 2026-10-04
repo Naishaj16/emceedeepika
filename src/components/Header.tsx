@@ -68,13 +68,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-5 whitespace-nowrap text-sm">
           <Link to="/" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">Home</Link>
           <Link to="/about" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">About</Link>
 
           {/* Event & Services Dropdown */}
           <div className="relative" onMouseLeave={() => setServicesOpen(false)}>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-0.5">
               <Link
                 to="/services"
                 onMouseEnter={() => setServicesOpen(true)}
@@ -87,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="text-pastel-700 hover:text-pastel-900 focus:outline-none"
               >
-                <ChevronDown className="w-4 h-4 text-pastel-500" />
+                <ChevronDown className="w-3.5 h-3.5 text-pastel-500" />
               </button>
             </div>
 
@@ -155,6 +155,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
             )}
           </div>
 
+          <Link to="/workshop" className="text-pastel-800 hover:text-pastel-950 font-semibold gold-underline transition-colors flex items-center gap-1">
+            <Sparkles className="w-3.5 h-3.5 text-gold-dark" />
+            <span>Workshop</span>
+          </Link>
           <Link to="/portfolio" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">Portfolio</Link>
           <Link to="/gallery" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">Gallery</Link>
           <Link to="/shorts" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors flex items-center gap-1.5">
@@ -170,13 +174,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
               onClick={() => setLocationsOpen(!locationsOpen)}
               className="flex items-center gap-1 text-pastel-700 hover:text-pastel-900 font-medium transition-colors cursor-pointer py-1"
             >
-              <Globe className="w-4 h-4 text-pastel-600" />
+              <Globe className="w-3.5 h-3.5 text-pastel-600" />
               <span>Locations</span>
-              <ChevronDown className="w-4 h-4 text-pastel-500" />
+              <ChevronDown className="w-3.5 h-3.5 text-pastel-500" />
             </button>
 
             {locationsOpen && (
-              <div className="absolute top-full left-0 w-48 bg-pastel-50 border border-pastel-200 rounded-2xl shadow-xl py-2 z-50">
+              <div className="absolute top-full right-0 w-48 bg-pastel-50 border border-pastel-200 rounded-2xl shadow-xl py-2 z-50">
                 {locations.map((loc) => (
                   <Link
                     key={loc.to}
@@ -193,7 +197,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
         </nav>
 
         {/* Mobile Hamburger */}
-        <div className="md:hidden flex items-center gap-2">
+        <div className="lg:hidden flex items-center gap-2">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-pastel-800 hover:text-pastel-900 rounded-lg"
@@ -205,7 +209,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#EBF5EE] border-b border-pastel-200 px-6 py-6 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto text-pastel-900">
+        <div className="lg:hidden bg-[#EBF5EE] border-b border-pastel-200 px-6 py-6 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto text-pastel-900">
           <Link to="/" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Home</Link>
           <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">About</Link>
           <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Events & Services</Link>
@@ -241,8 +245,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
             </div>
           </div>
 
+          <Link to="/workshop" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 text-base font-bold text-gold-dark bg-gold-DEFAULT/15 px-3 py-2 rounded-xl border border-gold-DEFAULT/40 my-1">
+            <Sparkles className="w-4 h-4 text-gold-DEFAULT" />
+            <span>1-Day Workshop (7th Nov)</span>
+          </Link>
           <Link to="/portfolio" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Portfolio</Link>
           <Link to="/gallery" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Gallery</Link>
+          <Link to="/shorts" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Shorts</Link>
           <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Contact</Link>
 
           <div className="pt-2 border-t border-pastel-200">
