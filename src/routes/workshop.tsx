@@ -11,17 +11,20 @@ import {
   BookOpen,
   ArrowRight,
   ShieldCheck,
-  Send,
-  MessageCircle,
   CreditCard,
   Target,
   FileText,
   HelpCircle,
   Share2,
-  ChevronDown
+  ChevronDown,
+  Lock,
+  Building,
+  Navigation
 } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 import { Link } from '@tanstack/react-router';
+import { saveRegistration } from '../data/workshopStorage';
+import { HeroWorkshopPoster } from '../components/HeroWorkshopPoster';
 
 export const WorkshopPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -35,20 +38,23 @@ export const WorkshopPage: React.FC = () => {
 
   const [paymentStep, setPaymentStep] = useState<'form' | 'payment' | 'success'>('form');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [selectedMethod, setSelectedMethod] = useState<'upi' | 'card' | 'whatsapp'>('upi');
+  const [selectedMethod, setSelectedMethod] = useState<'upi' | 'card'>('upi');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [registeredId, setRegisteredId] = useState<string>('');
 
   const workshopDetails = {
     date: '7th November 2026',
     time: '10:00 AM – 5:30 PM (Full-Day Intensive)',
-    venue: 'Grand Ball Room / Studio Hub, Chennai (Exact venue communicated to registered attendees)',
+    venueName: 'E Hotel Chennai (Express Avenue)',
+    venueAddress: 'Express Avenue Mall, Ground Floor, Gate No. 1, Patullos Road, Royapettah, Chennai, Tamil Nadu 600002',
+    mapLink: 'https://maps.google.com/?q=E+Hotel+Express+Avenue+Royapettah+Chennai',
     investment: {
-      earlyBird: '₹3,499',
-      original: '₹6,999',
-      discount: '50% OFF (Limited First 25 Seats)',
-      upiId: 'deepikajain@upi', // standard display
+      price: '₹4,999',
+      original: '₹8,999',
+      discount: '45% OFF Early Bird',
+      upiId: '8056958856@okbizaxis',
     },
-    seatsRemaining: 7,
+    seatsRemaining: 6,
   };
 
   const curriculum = [
@@ -107,6 +113,10 @@ export const WorkshopPage: React.FC = () => {
       a: 'Not at all! This masterclass is designed for all levels — from complete beginners who have never held a mic to working anchors looking to polish their craft for luxury weddings and corporate summits.',
     },
     {
+      q: 'Where exactly is the venue in Chennai?',
+      a: 'The workshop takes place at the luxurious E Hotel located inside Express Avenue Mall, Ground Floor, Gate No. 1, Patullos Road, Royapettah, Chennai (Pincode: 600002). Easy valet parking and metro connectivity.',
+    },
+    {
       q: 'Will I get practical stage time during the workshop?',
       a: 'Yes! Unlike theoretical webinars, this is a hands-on offline workshop. You will step onto the stage, practice live speaking prompts, and receive direct, constructive feedback from Deepika Jain.',
     },
@@ -116,7 +126,7 @@ export const WorkshopPage: React.FC = () => {
     },
     {
       q: 'How do I confirm my seat after payment?',
-      a: 'Once you fill out the registration form and complete payment (or ping us on WhatsApp), you will immediately receive an official email & WhatsApp confirmation with your seat pass and venue details.',
+      a: 'Once you fill out the registration form and complete your payment, your pass is instantly registered in our system and an official confirmation email is sent with your badge details.',
     },
   ];
 
@@ -127,34 +137,43 @@ export const WorkshopPage: React.FC = () => {
       setIsSubmitting(false);
       setPaymentStep('payment');
       window.scrollTo({ top: document.getElementById('booking-section')?.offsetTop || 0, behavior: 'smooth' });
-    }, 800);
+    }, 600);
   };
 
-  const handleCompleteRegistration = (method: string) => {
+  const handleCompleteRegistration = (method: 'Instant UPI / QR' | 'Card / Gateway') => {
     setIsSubmitting(true);
+    
+    // Save to local backend storage
+    const saved = saveRegistration({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      experience: formData.experience,
+      goals: formData.goals,
+      amount: 4999,
+      paymentMethod: method,
+    });
+
     setTimeout(() => {
       setIsSubmitting(false);
+      setRegisteredId(saved.id);
       setPaymentStep('success');
-    }, 1200);
+    }, 1000);
   };
-
-  const whatsappMessage = encodeURIComponent(
-    `Hi Deepika! I am interested in joining the 1-Day Emcee/Anchor Workshop on 7th November in Chennai. Here are my details:\nName: ${formData.name || 'Interested Attendee'}\nEmail: ${formData.email || 'N/A'}\nPhone: ${formData.phone || 'N/A'}\nExperience: ${formData.experience}\nPlease share booking & payment confirmation details!`
-  );
 
   return (
     <div className="bg-pastel-50 text-pastel-950 min-h-screen">
       <SEOHead
-        title="1-Day Emcee & Anchor Masterclass Workshop | Deepika Jain"
-        description="Join Deepika Jain's exclusive 1-Day Emcee/Anchor Workshop on 7th November in Chennai. Learn public speaking, stage presence, scriptwriting & audience control. Limited seats!"
+        title="1-Day Emcee & Anchor Masterclass Workshop | 7th November | Deepika Jain"
+        description="Join Deepika Jain's exclusive 1-Day Emcee/Anchor Workshop on 7th November at E Hotel Chennai (Express Avenue Mall). Learn public speaking, stage presence, scriptwriting & audience control. Limited seats!"
         keywords={[
-          'emcee workshop',
+          'emcee workshop chennai',
           'anchor training class chennai',
-          'public speaking workshop',
+          'e hotel express avenue workshop',
           'deepika jain workshop',
           'emcee masterclass',
           'how to become an anchor',
-          'stage anchoring training',
+          'stage anchoring training chennai',
         ]}
         canonicalUrl="https://www.emceedeepika.com/workshop"
       />
@@ -173,7 +192,7 @@ export const WorkshopPage: React.FC = () => {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-DEFAULT/20 border border-gold-DEFAULT/40 text-gold-light text-xs font-bold uppercase tracking-widest">
                 <Sparkles className="w-3.5 h-3.5 text-gold-DEFAULT" />
-                <span>Exclusive In-Person Masterclass • Chennai</span>
+                <span>Exclusive In-Person Masterclass • E Hotel Chennai</span>
               </div>
 
               {/* Main Headline */}
@@ -190,38 +209,41 @@ export const WorkshopPage: React.FC = () => {
               </p>
 
               {/* Key Quick Info Badges */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
                 <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-3.5">
                   <div className="flex items-center gap-2 text-gold-DEFAULT text-xs font-bold uppercase tracking-wider mb-1">
                     <Calendar className="w-4 h-4" />
-                    <span>Date</span>
+                    <span>Date & Time</span>
                   </div>
                   <div className="font-serif text-base sm:text-lg font-bold text-white">
                     7th November 2026
                   </div>
-                  <div className="text-[11px] text-pastel-300">Full Day (10 AM - 5:30 PM)</div>
+                  <div className="text-[11px] text-pastel-300">10:00 AM – 5:30 PM</div>
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-3.5">
                   <div className="flex items-center gap-2 text-gold-DEFAULT text-xs font-bold uppercase tracking-wider mb-1">
-                    <MapPin className="w-4 h-4" />
-                    <span>Location</span>
+                    <Building className="w-4 h-4" />
+                    <span>Venue</span>
                   </div>
                   <div className="font-serif text-base sm:text-lg font-bold text-white">
-                    Chennai
+                    E Hotel Chennai
                   </div>
-                  <div className="text-[11px] text-pastel-300">Prime Stage Hub</div>
+                  <div className="text-[11px] text-pastel-300 truncate" title="Express Avenue Mall, Royapettah">
+                    Express Avenue Mall
+                  </div>
                 </div>
 
-                <div className="col-span-2 sm:col-span-1 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-3.5">
+                <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-3.5">
                   <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-1">
                     <Users className="w-4 h-4" />
-                    <span>Seats Status</span>
+                    <span>Investment</span>
                   </div>
                   <div className="font-serif text-base sm:text-lg font-bold text-emerald-300">
-                    Only {workshopDetails.seatsRemaining} Left!
+                    {workshopDetails.investment.price}{' '}
+                    <span className="text-xs text-pastel-400 line-through font-normal">{workshopDetails.investment.original}</span>
                   </div>
-                  <div className="text-[11px] text-pastel-300">Small Batch for Live Practice</div>
+                  <div className="text-[11px] text-pastel-300">Limited to 25 Seats</div>
                 </div>
               </div>
 
@@ -229,57 +251,36 @@ export const WorkshopPage: React.FC = () => {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <a
                   href="#booking-section"
-                  className="flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-full font-bold text-base transition-all shadow-xl hover:shadow-emerald-600/30 hover:shadow-2xl hover:scale-105 active:scale-95 group border border-emerald-400/40"
+                  className="flex items-center gap-3 bg-gradient-to-r from-gold-DEFAULT via-amber-500 to-amber-600 hover:from-amber-500 hover:to-gold-DEFAULT text-pastel-950 px-8 py-4 rounded-full font-bold text-base transition-all shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 group"
                 >
-                  <Sparkles className="w-5 h-5 text-emerald-100" />
-                  <span>Book Your Seat Now ({workshopDetails.investment.earlyBird})</span>
-                  <ArrowRight className="w-4 h-4 text-emerald-100 group-hover:translate-x-1 transition-transform" />
+                  <Sparkles className="w-5 h-5 text-pastel-950" />
+                  <span>Reserve Your Seat ({workshopDetails.investment.price})</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
 
                 <a
-                  href={`https://wa.me/918056958856?text=${whatsappMessage}`}
+                  href={workshopDetails.mapLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 bg-emerald-700/80 hover:bg-emerald-700 text-white px-6 py-4 rounded-full font-semibold text-sm transition-all shadow-md backdrop-blur-md border border-emerald-500/50 hover:scale-105"
+                  className="flex items-center gap-2 border border-pastel-400 bg-white/10 hover:bg-white/20 text-pastel-100 px-6 py-4 rounded-full font-semibold text-sm transition-all backdrop-blur-sm"
                 >
-                  <MessageCircle className="w-5 h-5 text-white" />
-                  <span>Chat on WhatsApp</span>
+                  <MapPin className="w-4 h-4 text-gold-DEFAULT" />
+                  <span>View Venue on Google Maps</span>
                 </a>
               </div>
 
-              {/* Micro Trust Proof */}
-              <div className="pt-4 flex items-center gap-4 text-xs text-pastel-300">
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-gold-DEFAULT" />
-                  <span>No Prior Experience Needed</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-gold-DEFAULT" />
-                  <span>Includes Certificate & Mentorship</span>
-                </div>
+              {/* Venue Full Address Banner */}
+              <div className="pt-3 border-t border-white/10 flex items-start gap-2 text-xs text-pastel-300">
+                <MapPin className="w-4 h-4 text-gold-DEFAULT shrink-0 mt-0.5" />
+                <span>
+                  <strong>Venue Address:</strong> {workshopDetails.venueAddress}
+                </span>
               </div>
             </div>
 
             {/* Right Poster Column */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative group max-w-md w-full">
-                {/* Glowing border backdrop */}
-                <div className="absolute -inset-1.5 bg-gradient-to-r from-gold-DEFAULT via-amber-400 to-pastel-400 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-                
-                <div className="relative rounded-3xl overflow-hidden bg-pastel-900 border-2 border-gold-DEFAULT/40 shadow-2xl">
-                  <img
-                    src="/images/workshop-poster.jpg"
-                    alt="1 Day Emcee/Anchor Workshop with Deepika Jain - 7th November"
-                    className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-500"
-                  />
-                  
-                  {/* Floating Date Badge on Poster */}
-                  <div className="absolute top-4 right-4 bg-[#13281D]/90 backdrop-blur-md border border-gold-DEFAULT/60 text-white px-4 py-2 rounded-2xl shadow-lg flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-gold-DEFAULT" />
-                    <span className="font-bold text-xs tracking-wider uppercase text-gold-light">7th Nov 2026</span>
-                  </div>
-                </div>
-              </div>
+              <HeroWorkshopPoster />
             </div>
 
           </div>
@@ -435,19 +436,52 @@ export const WorkshopPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Venue Spotlight Card */}
+      <section className="py-12 bg-white border-t border-b border-pastel-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-pastel-900 to-[#1C3B2B] text-white rounded-3xl p-8 sm:p-10 shadow-xl border border-gold-DEFAULT/40 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="space-y-3 text-left">
+              <div className="inline-flex items-center gap-2 text-gold-DEFAULT text-xs font-bold uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full">
+                <MapPin className="w-3.5 h-3.5" />
+                <span>Prime Workshop Venue</span>
+              </div>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+                E Hotel, Express Avenue Mall
+              </h3>
+              <p className="text-sm text-pastel-200 max-w-xl leading-relaxed">
+                Ground Floor, Gate No. 1, Patullos Road, Express Estate, Royapettah, Chennai, Tamil Nadu - 600002.
+              </p>
+              <div className="text-xs text-pastel-300">
+                ✓ State-of-the-art stage acoustics • Valet Parking • Centrally Located
+              </div>
+            </div>
+
+            <a
+              href={workshopDetails.mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gold-DEFAULT hover:bg-amber-400 text-pastel-950 px-6 py-3.5 rounded-full font-bold text-sm shadow-lg transition-all shrink-0 hover:scale-105"
+            >
+              <Navigation className="w-4 h-4" />
+              <span>Get Directions</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Booking Form & Payment Section */}
-      <section id="booking-section" className="py-20 bg-pastel-100 border-t border-b border-pastel-300">
+      <section id="booking-section" className="py-20 bg-pastel-100 border-b border-pastel-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-3 mb-10">
             <span className="text-xs font-bold uppercase tracking-widest text-gold-dark bg-white px-4 py-1.5 rounded-full border border-pastel-300">
-              Reserve Your Pass
+              Official Registration
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-pastel-950">
-              Workshop Registration & Confirmation
+              Reserve Your Masterclass Seat
             </h2>
             <p className="text-pastel-750 text-sm sm:text-base max-w-xl mx-auto">
-              Seats are strictly limited to maintain an intimate cohort with live individual mic practice.
+              Fill out your details to receive immediate seat confirmation and registration ID.
             </p>
           </div>
 
@@ -462,7 +496,7 @@ export const WorkshopPage: React.FC = () => {
               </div>
               <div className={`space-y-1 ${paymentStep === 'payment' ? 'text-gold-DEFAULT font-bold' : 'text-pastel-400'}`}>
                 <div className="text-xs uppercase tracking-wider">Step 2</div>
-                <div className="text-sm">Seat Investment</div>
+                <div className="text-sm">Seat Investment ({workshopDetails.investment.price})</div>
               </div>
               <div className={`space-y-1 ${paymentStep === 'success' ? 'text-gold-DEFAULT font-bold' : 'text-pastel-400'}`}>
                 <div className="text-xs uppercase tracking-wider">Step 3</div>
@@ -510,7 +544,7 @@ export const WorkshopPage: React.FC = () => {
                     {/* Phone Number */}
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-pastel-800 mb-2">
-                        WhatsApp / Phone Number *
+                        Phone Number / Mobile *
                       </label>
                       <input
                         type="tel"
@@ -560,7 +594,7 @@ export const WorkshopPage: React.FC = () => {
                   <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="text-xs text-pastel-600 flex items-center gap-1.5">
                       <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                      <span>Zero spam. Instant WhatsApp pass receipt.</span>
+                      <span>Direct admin verified registration & instant pass generation.</span>
                     </div>
 
                     <button
@@ -572,7 +606,7 @@ export const WorkshopPage: React.FC = () => {
                         <span>Processing...</span>
                       ) : (
                         <>
-                          <span>Proceed to Seat Selection</span>
+                          <span>Proceed to Payment ({workshopDetails.investment.price})</span>
                           <ArrowRight className="w-4 h-4 text-gold-DEFAULT" />
                         </>
                       )}
@@ -595,84 +629,65 @@ export const WorkshopPage: React.FC = () => {
                         1-Day In-Person Workshop Pass
                       </h4>
                       <p className="text-xs text-pastel-600">
-                        Date: <strong>7th Nov 2026</strong> • Venue: <strong>Chennai</strong>
+                        Date: <strong>7th Nov 2026</strong> • Venue: <strong>E Hotel Chennai (Express Avenue)</strong>
                       </p>
                     </div>
 
-                    <div className="text-right sm:text-right">
+                    <div className="text-left sm:text-right">
                       <div className="text-xs text-pastel-400 line-through">
                         {workshopDetails.investment.original}
                       </div>
                       <div className="font-serif text-3xl font-extrabold text-pastel-950">
-                        {workshopDetails.investment.earlyBird}
+                        {workshopDetails.investment.price}
                       </div>
-                      <div className="text-[11px] text-pastel-500 font-medium">Inclusive of all materials & certificate</div>
+                      <div className="text-[11px] text-pastel-500 font-medium">Inclusive of mentorship, kit & certificate</div>
                     </div>
                   </div>
 
                   {/* Payment Gateway Options Tabs */}
                   <div className="space-y-4">
                     <label className="block text-xs font-bold uppercase tracking-wider text-pastel-800">
-                      Select Payment Method
+                      Select Payment Mode
                     </label>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       
                       {/* UPI Option */}
                       <button
                         type="button"
                         onClick={() => setSelectedMethod('upi')}
-                        className={`p-4 rounded-xl border text-left transition-all ${
+                        className={`p-5 rounded-2xl border text-left transition-all ${
                           selectedMethod === 'upi'
-                            ? 'border-pastel-800 bg-pastel-100 ring-2 ring-pastel-700'
+                            ? 'border-pastel-800 bg-pastel-100 ring-2 ring-pastel-700 shadow-sm'
                             : 'border-pastel-200 bg-white hover:bg-pastel-50'
                         }`}
                       >
                         <div className="flex items-center justify-between mb-2">
-                          <span className="font-bold text-sm text-pastel-900">Instant UPI / QR</span>
-                          <span className="w-3 h-3 rounded-full border border-pastel-400 flex items-center justify-center">
+                          <span className="font-bold text-sm text-pastel-900">Instant UPI Transfer / QR</span>
+                          <span className="w-3.5 h-3.5 rounded-full border border-pastel-400 flex items-center justify-center">
                             {selectedMethod === 'upi' && <span className="w-2 h-2 rounded-full bg-pastel-800"></span>}
                           </span>
                         </div>
-                        <p className="text-xs text-pastel-600">GPay, PhonePe, Paytm, BHIM</p>
+                        <p className="text-xs text-pastel-600">Google Pay, PhonePe, Paytm, BHIM</p>
                       </button>
 
                       {/* Card / Netbanking Option */}
                       <button
                         type="button"
                         onClick={() => setSelectedMethod('card')}
-                        className={`p-4 rounded-xl border text-left transition-all ${
+                        className={`p-5 rounded-2xl border text-left transition-all ${
                           selectedMethod === 'card'
-                            ? 'border-pastel-800 bg-pastel-100 ring-2 ring-pastel-700'
+                            ? 'border-pastel-800 bg-pastel-100 ring-2 ring-pastel-700 shadow-sm'
                             : 'border-pastel-200 bg-white hover:bg-pastel-50'
                         }`}
                       >
                         <div className="flex items-center justify-between mb-2">
-                          <span className="font-bold text-sm text-pastel-900">Card / Gateway</span>
-                          <span className="w-3 h-3 rounded-full border border-pastel-400 flex items-center justify-center">
+                          <span className="font-bold text-sm text-pastel-900">Card / Netbanking</span>
+                          <span className="w-3.5 h-3.5 rounded-full border border-pastel-400 flex items-center justify-center">
                             {selectedMethod === 'card' && <span className="w-2 h-2 rounded-full bg-pastel-800"></span>}
                           </span>
                         </div>
-                        <p className="text-xs text-pastel-600">Credit, Debit & Netbanking</p>
-                      </button>
-
-                      {/* Direct WhatsApp Confirmation */}
-                      <button
-                        type="button"
-                        onClick={() => setSelectedMethod('whatsapp')}
-                        className={`p-4 rounded-xl border text-left transition-all ${
-                          selectedMethod === 'whatsapp'
-                            ? 'border-pastel-800 bg-pastel-100 ring-2 ring-pastel-700'
-                            : 'border-pastel-200 bg-white hover:bg-pastel-50'
-                        }`}
-                      >
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="font-bold text-sm text-pastel-900">WhatsApp Pay</span>
-                          <span className="w-3 h-3 rounded-full border border-pastel-400 flex items-center justify-center">
-                            {selectedMethod === 'whatsapp' && <span className="w-2 h-2 rounded-full bg-pastel-800"></span>}
-                          </span>
-                        </div>
-                        <p className="text-xs text-pastel-600">Confirm directly with team</p>
+                        <p className="text-xs text-pastel-600">Credit card, Debit card & Online Banking</p>
                       </button>
 
                     </div>
@@ -680,46 +695,40 @@ export const WorkshopPage: React.FC = () => {
 
                   {/* Payment Details Container based on selection */}
                   {selectedMethod === 'upi' && (
-                    <div className="bg-pastel-50 p-6 rounded-2xl border border-pastel-200 space-y-4">
+                    <div className="bg-pastel-50 p-6 rounded-2xl border border-pastel-200 space-y-5">
                       <div className="flex flex-col sm:flex-row items-center gap-6 justify-between">
                         <div className="space-y-2 text-center sm:text-left">
-                          <div className="text-xs uppercase font-bold text-pastel-600">Official UPI ID for Booking:</div>
-                          <div className="font-mono text-lg font-bold bg-white px-4 py-2 rounded-lg border border-pastel-300 text-pastel-900 select-all">
-                            8056958856@okbizaxis
+                          <div className="text-xs uppercase font-bold text-pastel-600">Official UPI ID for Payment:</div>
+                          <div className="font-mono text-lg font-bold bg-white px-4 py-2.5 rounded-xl border border-pastel-300 text-pastel-900 select-all shadow-xs">
+                            {workshopDetails.investment.upiId}
                           </div>
-                          <p className="text-xs text-pastel-600">
-                            Or scan UPI QR code on Google Pay / PhonePe / Paytm to transfer {workshopDetails.investment.earlyBird}.
+                          <p className="text-xs text-pastel-600 max-w-sm">
+                            Scan the QR code or transfer <strong>{workshopDetails.investment.price}</strong> using Google Pay / PhonePe / Paytm / CRED.
                           </p>
                         </div>
                         
-                        <div className="bg-white p-3 rounded-xl border border-pastel-300 shadow-sm text-center">
-                          {/* Mock Visual QR representation for rapid conversion */}
-                          <div className="w-28 h-28 bg-pastel-900 text-white flex flex-col items-center justify-center rounded-lg text-xs font-mono p-2">
+                        <div className="bg-white p-3.5 rounded-2xl border border-pastel-300 shadow-sm text-center">
+                          <div className="w-32 h-32 bg-pastel-900 text-white flex flex-col items-center justify-center rounded-xl text-xs font-mono p-2">
                             <span className="text-[10px] text-gold-DEFAULT mb-1">SCAN & PAY</span>
-                            <span className="font-bold text-sm">{workshopDetails.investment.earlyBird}</span>
+                            <span className="font-bold text-base">{workshopDetails.investment.price}</span>
                             <span className="text-[8px] text-pastel-300 mt-1">EMCEE DEEPIKA</span>
                           </div>
                           <span className="text-[10px] text-pastel-500 font-bold block mt-1">UPI Verified</span>
                         </div>
                       </div>
 
-                      <div className="pt-2 border-t border-pastel-200 flex flex-wrap items-center justify-between gap-3">
+                      <div className="pt-3 border-t border-pastel-200 flex flex-col sm:flex-row items-center justify-between gap-3">
                         <button
-                          onClick={() => handleCompleteRegistration('upi')}
-                          className="w-full sm:w-auto bg-pastel-800 hover:bg-pastel-900 text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all cursor-pointer"
+                          onClick={() => handleCompleteRegistration('Instant UPI / QR')}
+                          disabled={isSubmitting}
+                          className="w-full sm:w-auto bg-pastel-800 hover:bg-pastel-900 text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all cursor-pointer disabled:opacity-50"
                         >
-                          I Have Transferred {workshopDetails.investment.earlyBird} — Confirm My Seat
+                          {isSubmitting ? 'Recording Registration...' : `I Have Paid ${workshopDetails.investment.price} — Confirm My Seat`}
                         </button>
 
-                        <a
-                          href={`https://wa.me/918056958856?text=${encodeURIComponent(`Hi Deepika! I just initiated payment for the 7th Nov Workshop for ${formData.name}. Please confirm my booking.`)}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1.5"
-                        >
-                          <MessageCircle className="w-4 h-4" />
-                          <span>Send Screenshot on WhatsApp</span>
-                        </a>
+                        <div className="text-xs text-pastel-500">
+                          Instant database recording
+                        </div>
                       </div>
                     </div>
                   )}
@@ -727,32 +736,16 @@ export const WorkshopPage: React.FC = () => {
                   {selectedMethod === 'card' && (
                     <div className="bg-pastel-50 p-6 rounded-2xl border border-pastel-200 space-y-4">
                       <p className="text-xs text-pastel-700">
-                        You will be redirected to the secure Razorpay / Card gateway to process <strong>{workshopDetails.investment.earlyBird}</strong>.
+                        Secure gateway checkout for <strong>{workshopDetails.investment.price}</strong>.
                       </p>
                       <button
-                        onClick={() => handleCompleteRegistration('card')}
-                        className="w-full bg-pastel-800 hover:bg-pastel-900 text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+                        onClick={() => handleCompleteRegistration('Card / Gateway')}
+                        disabled={isSubmitting}
+                        className="w-full bg-pastel-800 hover:bg-pastel-900 text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                       >
                         <CreditCard className="w-4 h-4 text-gold-DEFAULT" />
-                        <span>Pay {workshopDetails.investment.earlyBird} via Secure Gateway</span>
+                        <span>{isSubmitting ? 'Processing...' : `Pay ${workshopDetails.investment.price} via Secure Gateway`}</span>
                       </button>
-                    </div>
-                  )}
-
-                  {selectedMethod === 'whatsapp' && (
-                    <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-200 space-y-4 text-emerald-950">
-                      <p className="text-xs leading-relaxed">
-                        Prefer personal assistance or corporate invoice transfer? Reach out directly to Deepika's coordination desk:
-                      </p>
-                      <a
-                        href={`https://wa.me/918056958856?text=${whatsappMessage}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full inline-flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all"
-                      >
-                        <MessageCircle className="w-5 h-5" />
-                        <span>Complete Booking on WhatsApp (+91 8056958856)</span>
-                      </a>
                     </div>
                   )}
 
@@ -777,46 +770,52 @@ export const WorkshopPage: React.FC = () => {
                   </div>
                   
                   <h3 className="font-serif text-3xl font-bold text-pastel-950">
-                    Registration Successfully Logged!
+                    Registration Successfully Confirmed!
                   </h3>
 
                   <p className="text-sm text-pastel-700 max-w-md mx-auto leading-relaxed">
-                    Thank you, <strong>{formData.name || 'Speaker'}</strong>! Your seat registration for the <strong>7th November Chennai Workshop</strong> has been recorded.
+                    Thank you, <strong>{formData.name || 'Speaker'}</strong>! Your seat registration has been recorded in our backend database.
                   </p>
 
-                  <div className="bg-pastel-50 p-5 rounded-2xl border border-pastel-200 max-w-md mx-auto text-left space-y-2 text-xs text-pastel-800">
+                  <div className="bg-pastel-50 p-6 rounded-2xl border border-pastel-200 max-w-md mx-auto text-left space-y-2.5 text-xs text-pastel-800">
+                    <div className="flex justify-between border-b border-pastel-200 pb-2">
+                      <span className="text-pastel-500">Registration ID:</span>
+                      <span className="font-bold font-mono text-pastel-950">{registeredId || 'REG-SUCCESS'}</span>
+                    </div>
                     <div className="flex justify-between">
                       <span className="text-pastel-500">Event:</span>
                       <span className="font-bold">1-Day Emcee & Anchor Masterclass</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-pastel-500">Date:</span>
-                      <span className="font-bold">7th November 2026 (10 AM)</span>
+                      <span className="font-bold">7th November 2026 (10 AM - 5:30 PM)</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-pastel-500">Location:</span>
-                      <span className="font-bold">Chennai Stage Hub</span>
+                      <span className="text-pastel-500">Venue:</span>
+                      <span className="font-bold">E Hotel, Express Avenue, Chennai</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-pastel-500">Registered Name:</span>
+                      <span className="text-pastel-500">Registered Attendee:</span>
                       <span className="font-bold">{formData.name}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-pastel-500">Amount Paid:</span>
+                      <span className="font-bold font-mono text-emerald-700">{workshopDetails.investment.price}</span>
                     </div>
                   </div>
 
                   <div className="pt-4 flex flex-wrap justify-center gap-4">
-                    <a
-                      href={`https://wa.me/918056958856?text=${encodeURIComponent(`Hi Deepika! I registered for the 7th Nov Workshop. My name is ${formData.name}. Looking forward to the stage session!`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-7 py-3.5 rounded-full font-bold text-sm shadow-md transition-all"
+                    <Link
+                      to="/workshop-admin"
+                      className="inline-flex items-center gap-2 bg-[#13281D] hover:bg-[#1C3B2B] text-white px-6 py-3 rounded-full font-bold text-xs shadow-md transition-all"
                     >
-                      <MessageCircle className="w-4 h-4" />
-                      <span>Open WhatsApp for Instant Pass Delivery</span>
-                    </a>
+                      <Lock className="w-3.5 h-3.5 text-gold-DEFAULT" />
+                      <span>View in Admin Dashboard</span>
+                    </Link>
 
                     <Link
                       to="/"
-                      className="inline-flex items-center gap-2 bg-pastel-200 hover:bg-pastel-300 text-pastel-900 px-6 py-3.5 rounded-full font-bold text-sm transition-all"
+                      className="inline-flex items-center gap-2 bg-pastel-200 hover:bg-pastel-300 text-pastel-900 px-6 py-3 rounded-full font-bold text-xs transition-all"
                     >
                       Return to Home
                     </Link>
@@ -874,23 +873,6 @@ export const WorkshopPage: React.FC = () => {
             ))}
           </div>
 
-          {/* Quick Help Card */}
-          <div className="bg-pastel-100 rounded-2xl p-6 border border-pastel-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-            <div>
-              <h4 className="font-serif text-lg font-bold text-pastel-950">Have a specific question or bulk corporate team?</h4>
-              <p className="text-xs text-pastel-600">Chat directly with Deepika's team on WhatsApp for instant guidance.</p>
-            </div>
-            <a
-              href={`https://wa.me/918056958856?text=${encodeURIComponent('Hi Deepika, I have a question regarding the 7th Nov Workshop.')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#13281D] hover:bg-[#1C3B2B] text-white px-6 py-3 rounded-full text-xs font-bold transition-all shadow-md shrink-0"
-            >
-              <MessageCircle className="w-4 h-4 text-gold-DEFAULT" />
-              <span>Ask on WhatsApp</span>
-            </a>
-          </div>
-
         </div>
       </section>
 
@@ -898,12 +880,12 @@ export const WorkshopPage: React.FC = () => {
       <div className="fixed bottom-4 left-4 right-4 z-40 sm:hidden">
         <div className="bg-[#13281D]/95 backdrop-blur-md border border-gold-DEFAULT/40 p-3 rounded-2xl shadow-2xl flex items-center justify-between">
           <div>
-            <div className="text-[10px] text-gold-DEFAULT font-bold uppercase">7th Nov • Chennai</div>
-            <div className="text-sm font-bold text-white">{workshopDetails.investment.earlyBird} <span className="text-[10px] line-through text-pastel-400 font-normal">{workshopDetails.investment.original}</span></div>
+            <div className="text-[10px] text-gold-DEFAULT font-bold uppercase">7th Nov • E Hotel Chennai</div>
+            <div className="text-sm font-bold text-white">{workshopDetails.investment.price} <span className="text-[10px] line-through text-pastel-400 font-normal">{workshopDetails.investment.original}</span></div>
           </div>
           <a
             href="#booking-section"
-            className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md transition-all"
+            className="bg-gold-DEFAULT hover:bg-amber-400 text-pastel-950 px-5 py-2.5 rounded-xl font-bold text-xs shadow-md transition-all"
           >
             Register Now
           </a>
