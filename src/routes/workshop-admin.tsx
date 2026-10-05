@@ -17,34 +17,71 @@ import {
   Filter,
   RefreshCw,
   Eye,
-  X
+  X,
+  Lock,
+  LogOut,
+  KeyRound,
+  ShieldCheck,
+  AlertCircle
 } from 'lucide-react';
 import { getRegistrations, updateRegistrationStatus, deleteRegistration, WorkshopRegistration } from '../data/workshopStorage';
 import { SEOHead } from '../components/SEOHead';
 import { Link } from '@tanstack/react-router';
 
+const ADMIN_STORAGE_KEY = 'emcee_deepika_admin_auth';
+const ADMIN_PASSWORD = 'Deepika@2026';
+
 export const WorkshopAdminPage: React.FC = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem(ADMIN_STORAGE_KEY) === 'true';
+    }
+    return false;
+  });
+  const [inputPassword, setInputPassword] = useState('');
+  const [loginError, setLoginError] = useState('');
+
   const [registrations, setRegistrations] = useState<WorkshopRegistration[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterStatus, setFilterStatus] = useState<'all' | 'confirmed' | 'pending'>('all');
   const [selectedAttendee, setSelectedAttendee] = useState<WorkshopRegistration | null>(null);
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (inputPassword === ADMIN_PASSWORD) {
+      setIsAuthenticated(true);
+      sessionStorage.setItem(ADMIN_STORAGE_KEY, 'true');
+      setLoginError('');
+      setInputPassword('');
+    } else {
+      setLoginError('Incorrect password. Please try again.');
+    }
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    sessionStorage.removeItem(ADMIN_STORAGE_KEY);
+    setSelectedAttendee(null);
+  };
 
   const loadData = () => {
     setRegistrations(getRegistrations());
   };
 
   useEffect(() => {
-    loadData();
+    if (isAuthenticated) {
+      loadData();
 
-    // Listen for real-time updates
-    const handleStorageUpdate = () => loadData();
-    window.addEventListener('workshop_registration_added', handleStorageUpdate);
-    window.addEventListener('storage', handleStorageUpdate);
-    return () => {
-      window.removeEventListener('workshop_registration_added', handleStorageUpdate);
-      window.removeEventListener('storage', handleStorageUpdate);
-    };
-  }, []);
+      // Listen for real-time updates
+      const handleStorageUpdate = () => loadData();
+      window.addEventListener('workshop_registration_added', handleStorageUpdate);
+      window.addEventListener('storage', handleStorageUpdate);
+      return () => {
+        window.removeEventListener('workshop_registration_added', handleStorageUpdate);
+        window.removeEventListener('storage', handleStorageUpdate);
+      };
+    }
+  }, [isAuthenticated]);
 
   const filtered = registrations.filter((reg) => {
     const matchesSearch =
@@ -83,7 +120,7 @@ export const WorkshopAdminPage: React.FC = () => {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `Workshop_Attendees_Chennai_7Nov_${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute('download', `Workshop_Attendees_Chennai_21Nov_${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -103,6 +140,70 @@ export const WorkshopAdminPage: React.FC = () => {
       }
     }
   };
+
+  if (!isAuthenticated) {
+    return (
+      <div className="bg-[#0f2117] min-h-screen pt-36 pb-24 text-white flex items-center justify-center px-4 relative overflow-hidden">
+        {/* Background glow accents */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold-DEFAULT/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
+
+        <div className="w-full max-w-md bg-[#13281D] border-2 border-gold-DEFAULT/40 rounded-3xl p-8 shadow-2xl relative z-10 space-y-6">
+          <div className="text-center space-y-3">
+            <div className="w-16 h-16 rounded-2xl bg-gold-DEFAULT/20 border border-gold-DEFAULT/50 flex items-center justify-center mx-auto text-gold-DEFAULT shadow-inner">
+              <Lock className="w-8 h-8" />
+            </div>
+            <div>
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-gold-light">Internal Access</span>
+              <h2 className="font-serif text-2xl font-bold text-white mt-1">Deepika Workshop Admin</h2>
+              <p className="text-xs text-pastel-300 mt-1">Please enter your administrator password to unlock attendee registrations & data.</p>
+            </div>
+          </div>
+
+          <form onSubmit={handleLogin} className="space-y-4">
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-pastel-200 mb-1.5">
+                Admin Password
+              </label>
+              <div className="relative">
+                <KeyRound className="w-4 h-4 text-pastel-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <input
+                  type="password"
+                  value={inputPassword}
+                  onChange={(e) => {
+                    setInputPassword(e.target.value);
+                    if (loginError) setLoginError('');
+                  }}
+                  placeholder="Enter admin password"
+                  autoFocus
+                  className="w-full pl-10 pr-4 py-3 bg-[#0a1710] border border-gold-DEFAULT/30 rounded-xl text-sm text-white placeholder-pastel-500 focus:outline-none focus:border-gold-DEFAULT transition-colors"
+                />
+              </div>
+              {loginError && (
+                <div className="flex items-center gap-1.5 text-xs text-rose-400 mt-2 font-medium">
+                  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                  <span>{loginError}</span>
+                </div>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-gold-dark via-gold-DEFAULT to-amber-300 hover:brightness-110 text-pastel-950 font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg transition-all cursor-pointer"
+            >
+              Unlock Dashboard
+            </button>
+          </form>
+
+          <div className="text-center pt-2 border-t border-white/10">
+            <Link to="/" className="text-xs text-pastel-300 hover:text-white transition-colors underline">
+              ← Return to Main Website
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-[#F8FAF9] min-h-screen pt-28 pb-20 text-pastel-950">
@@ -125,7 +226,7 @@ export const WorkshopAdminPage: React.FC = () => {
               Workshop Registrations Backend
             </h1>
             <p className="text-sm text-pastel-600 mt-1 flex items-center gap-3">
-              <span>Event: <strong>7th Nov 2026</strong></span>
+              <span>Event: <strong>21st Nov 2026</strong></span>
               <span>•</span>
               <span>Venue: <strong>E Hotel, Express Avenue Mall, Chennai</strong></span>
             </p>
@@ -145,6 +246,14 @@ export const WorkshopAdminPage: React.FC = () => {
             >
               <Download className="w-4 h-4 text-gold-DEFAULT" />
               <span>Export CSV (Excel)</span>
+            </button>
+            <button
+              onClick={handleLogout}
+              className="flex items-center gap-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer"
+              title="Logout from Admin"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              <span>Lock / Exit</span>
             </button>
           </div>
         </div>
@@ -430,7 +539,7 @@ export const WorkshopAdminPage: React.FC = () => {
               {/* Direct Quick Action */}
               <div className="pt-2">
                 <a
-                  href={`mailto:${selectedAttendee.email}?subject=Confirmation:%201-Day%20Emcee%20Masterclass%20Pass%20(Chennai%207th%20Nov)&body=Dear%20${encodeURIComponent(selectedAttendee.name)},%0A%0AWe%20are%20delighted%20to%20confirm%20your%20seat%20for%20the%201-Day%20Emcee%20%26%20Anchor%20Mastery%20Workshop%20with%20Deepika%20Jain!%0A%0ADate:%207th%20November%202026%0ATime:%2010:00%20AM%20-%205:30%20PM%0AVenue:%20E%20Hotel,%20Express%20Avenue%20Mall,%20Royapettah,%20Chennai%0A%0ARegistration%20ID:%20${selectedAttendee.id}%0A%0AWe%20look%20forward%20to%20welcoming%20you%20on%20stage!`}
+                  href={`mailto:${selectedAttendee.email}?subject=Confirmation:%201-Day%20Emcee%20Masterclass%20Pass%20(Chennai%2021st%20Nov)&body=Dear%20${encodeURIComponent(selectedAttendee.name)},%0A%0AWe%20are%20delighted%20to%20confirm%20your%20seat%20for%20the%201-Day%20Emcee%20%26%20Anchor%20Mastery%20Workshop%20with%20Deepika%20Jain!%0A%0ADate:%2021st%20November%202026%0ATime:%2010:00%20AM%20-%205:30%20PM%0AVenue:%20E%20Hotel,%20Express%20Avenue%20Mall,%20Royapettah,%20Chennai%0A%0ARegistration%20ID:%20${selectedAttendee.id}%0A%0AWe%20look%20forward%20to%20welcoming%20you%20on%20stage!`}
                   className="w-full flex items-center justify-center gap-2 bg-pastel-800 hover:bg-pastel-900 text-white py-2.5 rounded-xl text-xs font-bold transition-all shadow-xs"
                 >
                   <Mail className="w-3.5 h-3.5 text-gold-DEFAULT" />

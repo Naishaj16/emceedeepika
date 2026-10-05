@@ -247,7 +247,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
 
           <Link to="/workshop" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 text-base font-bold text-gold-dark bg-gold-DEFAULT/15 px-3 py-2 rounded-xl border border-gold-DEFAULT/40 my-1">
             <Sparkles className="w-4 h-4 text-gold-DEFAULT" />
-            <span>1-Day Workshop (7th Nov)</span>
+            <span>1-Day Workshop (21st Nov)</span>
           </Link>
           <Link to="/portfolio" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Portfolio</Link>
           <Link to="/gallery" onClick={() => setMobileMenuOpen(false)} className="block text-base font-semibold text-pastel-800 hover:text-pastel-600 py-1">Gallery</Link>

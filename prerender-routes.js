@@ -60,8 +60,8 @@ const routes = [
   },
   {
     path: '/workshop',
-    title: '1-Day Emcee & Anchor Masterclass Workshop | 7th November | Deepika Jain',
-    description: 'Join Deepika Jain for a 1-day immersive in-person Emcee & Anchor workshop in Chennai on 7th November 2026. Learn stage presence, scriptwriting, and crowd engagement. Limited seats!',
+    title: '1-Day Emcee & Anchor Masterclass Workshop | 21st November | Deepika Jain',
+    description: 'Join Deepika Jain for a 1-day immersive in-person Emcee & Anchor workshop in Chennai on 21st November 2026. Learn stage presence, scriptwriting, and crowd engagement. Limited seats!',
     canonicalUrl: 'https://www.emceedeepika.com/workshop',
   },
   {

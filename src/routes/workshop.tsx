@@ -43,7 +43,7 @@ export const WorkshopPage: React.FC = () => {
   const [registeredId, setRegisteredId] = useState<string>('');
 
   const workshopDetails = {
-    date: '7th November 2026',
+    date: '21st November 2026',
     time: '10:00 AM – 5:30 PM (Full-Day Intensive)',
     venueName: 'E Hotel Chennai (Express Avenue)',
     venueAddress: 'Express Avenue Mall, Ground Floor, Gate No. 1, Patullos Road, Royapettah, Chennai, Tamil Nadu 600002',
@@ -164,8 +164,8 @@ export const WorkshopPage: React.FC = () => {
   return (
     <div className="bg-pastel-50 text-pastel-950 min-h-screen">
       <SEOHead
-        title="1-Day Emcee & Anchor Masterclass Workshop | 7th November | Deepika Jain"
-        description="Join Deepika Jain's exclusive 1-Day Emcee/Anchor Workshop on 7th November at E Hotel Chennai (Express Avenue Mall). Learn public speaking, stage presence, scriptwriting & audience control. Limited seats!"
+        title="1-Day Emcee & Anchor Masterclass Workshop | 21st November | Deepika Jain"
+        description="Join Deepika Jain's exclusive 1-Day Emcee/Anchor Workshop on 21st November at E Hotel Chennai (Express Avenue Mall). Learn public speaking, stage presence, scriptwriting & audience control. Limited seats!"
         keywords={[
           'emcee workshop chennai',
           'anchor training class chennai',
@@ -216,7 +216,7 @@ export const WorkshopPage: React.FC = () => {
                     <span>Date & Time</span>
                   </div>
                   <div className="font-serif text-base sm:text-lg font-bold text-white">
-                    7th November 2026
+                    21st November 2026
                   </div>
                   <div className="text-[11px] text-pastel-300">10:00 AM – 5:30 PM</div>
                 </div>
@@ -629,7 +629,7 @@ export const WorkshopPage: React.FC = () => {
                         1-Day In-Person Workshop Pass
                       </h4>
                       <p className="text-xs text-pastel-600">
-                        Date: <strong>7th Nov 2026</strong> • Venue: <strong>E Hotel Chennai (Express Avenue)</strong>
+                        Date: <strong>21st Nov 2026</strong> • Venue: <strong>E Hotel Chennai (Express Avenue)</strong>
                       </p>
                     </div>
 
@@ -788,7 +788,7 @@ export const WorkshopPage: React.FC = () => {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-pastel-500">Date:</span>
-                      <span className="font-bold">7th November 2026 (10 AM - 5:30 PM)</span>
+                      <span className="font-bold">21st November 2026 (10 AM - 5:30 PM)</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-pastel-500">Venue:</span>
@@ -880,7 +880,7 @@ export const WorkshopPage: React.FC = () => {
       <div className="fixed bottom-4 left-4 right-4 z-40 sm:hidden">
         <div className="bg-[#13281D]/95 backdrop-blur-md border border-gold-DEFAULT/40 p-3 rounded-2xl shadow-2xl flex items-center justify-between">
           <div>
-            <div className="text-[10px] text-gold-DEFAULT font-bold uppercase">7th Nov • E Hotel Chennai</div>
+            <div className="text-[10px] text-gold-DEFAULT font-bold uppercase">21st Nov • E Hotel Chennai</div>
             <div className="text-sm font-bold text-white">{workshopDetails.investment.price} <span className="text-[10px] line-through text-pastel-400 font-normal">{workshopDetails.investment.original}</span></div>
           </div>
           <a

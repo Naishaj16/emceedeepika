@@ -70,7 +70,7 @@ export const HeroWorkshopPoster: React.FC<HeroWorkshopPosterProps> = ({ classNam
             <div className="flex items-center justify-between text-[11px] font-bold text-gold-DEFAULT uppercase tracking-wider">
               <span className="flex items-center gap-1">
                 <Calendar className="w-3.5 h-3.5" />
-                <span>7th November 2026</span>
+                <span>21st November 2026</span>
               </span>
               <span className="text-[10px] text-pastel-300 font-normal">10 AM – 5:30 PM</span>
             </div>

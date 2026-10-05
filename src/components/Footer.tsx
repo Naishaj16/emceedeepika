@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-serif text-lg font-semibold text-pastel-50">Quick Links</h4>
             <ul className="space-y-2 text-sm text-pastel-300">
               <li><Link to="/" className="hover:text-pastel-50">Home</Link></li>
-              <li><Link to="/workshop" className="hover:text-pastel-50 font-bold text-gold-DEFAULT flex items-center gap-1.5"><span>★ 1-Day Workshop (7th Nov)</span></Link></li>
+              <li><Link to="/workshop" className="hover:text-pastel-50 font-bold text-gold-DEFAULT flex items-center gap-1.5"><span>★ 1-Day Workshop (21st Nov)</span></Link></li>
               <li><Link to="/about" className="hover:text-pastel-50">About Deepika</Link></li>
               <li><Link to="/services" className="hover:text-pastel-50">Emcee Services</Link></li>
               <li><Link to="/portfolio" className="hover:text-pastel-50 font-semibold text-gold-light">Portfolio & Deck</Link></li>

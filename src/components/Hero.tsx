@@ -47,7 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
               </span>
               <Sparkles className="w-3.5 h-3.5 text-gold-dark" />
-              <span>1-Day Masterclass • 7th Nov at E Hotel Chennai</span>
+              <span>1-Day Masterclass • 21st Nov at E Hotel Chennai</span>
               <ArrowRight className="w-3 h-3 text-gold-dark group-hover:translate-x-0.5 transition-transform" />
             </Link>
 
