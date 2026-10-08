@@ -12,6 +12,56 @@
       gtag('config', 'G-7TR7XL5QF0');
       gtag('config', 'AW-18400308150');
     </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2054371805521956');
+    fbq('track', 'PageView');
+
+    /* --- Extra tracking for the React (single-page) site --- */
+    (function () {
+      var lastPath = location.pathname;
+
+      function onRouteChange() {
+        if (location.pathname === lastPath) return;
+        lastPath = location.pathname;
+        fbq('track', 'PageView');
+        if (/^\/contact/i.test(location.pathname)) fbq('track', 'Lead', { content_name: 'Contact page' });
+      }
+
+      // Lead on first load if landing directly on /contact
+      if (/^\/contact/i.test(location.pathname)) fbq('track', 'Lead', { content_name: 'Contact page' });
+
+      // Catch page changes made by React Router
+      ['pushState', 'replaceState'].forEach(function (m) {
+        var orig = history[m];
+        history[m] = function () {
+          var r = orig.apply(this, arguments);
+          setTimeout(onRouteChange, 0);
+          return r;
+        };
+      });
+      window.addEventListener('popstate', onRouteChange);
+
+      // WhatsApp and phone clicks
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        if (/wa\.me|whatsapp/i.test(href)) fbq('track', 'Contact', { content_name: 'WhatsApp click' });
+        else if (/^tel:/i.test(href)) fbq('track', 'Contact', { content_name: 'Phone click' });
+      }, true);
+    })();
+    </script>
+    <!-- End Meta Pixel Code -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light only" />
@@ -48,6 +98,9 @@
     </noscript>
   </head>
   <body class="bg-pastel-50 text-pastel-900 font-sans antialiased selection:bg-pastel-300 selection:text-pastel-900">
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2054371805521956&ev=PageView&noscript=1"
+    /></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
