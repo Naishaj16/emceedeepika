@@ -76,7 +76,7 @@ export const saveRegistration = (data: Omit<WorkshopRegistration, 'id' | 'create
     phone: data.phone,
     experience: data.experience,
     goals: data.goals || '',
-    amount: data.amount || 4999,
+    amount: data.amount || 3999,
     paymentMethod: data.paymentMethod || 'Instant UPI / QR',
     status: 'confirmed',
     createdAt: new Date().toISOString(),

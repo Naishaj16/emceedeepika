@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Calendar,
   Clock,
@@ -17,43 +17,56 @@ import {
   HelpCircle,
   Share2,
   ChevronDown,
-  Lock,
   Building,
-  Navigation
+  Navigation,
+  ExternalLink
 } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
-import { Link } from '@tanstack/react-router';
-import { saveRegistration } from '../data/workshopStorage';
 import { HeroWorkshopPoster } from '../components/HeroWorkshopPoster';
 
 export const WorkshopPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    experience: 'Beginner (No Prior Experience)',
-    goals: '',
-    referral: '',
-  });
-
-  const [paymentStep, setPaymentStep] = useState<'form' | 'payment' | 'success'>('form');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [selectedMethod, setSelectedMethod] = useState<'upi' | 'card'>('upi');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [registeredId, setRegisteredId] = useState<string>('');
+
+  useEffect(() => {
+    const initRazorpay = () => {
+      const rzp = (window as any)['__rzp__'];
+      if (rzp && rzp.init) {
+        try {
+          rzp.init();
+        } catch (e) {
+          console.error('Razorpay init error:', e);
+        }
+      }
+    };
+
+    if (!(window as any)['__rzp__']) {
+      const existingScript = document.getElementById('razorpay-embed-btn-js');
+      if (existingScript) {
+        existingScript.addEventListener('load', initRazorpay);
+      } else {
+        const script = document.createElement('script');
+        script.defer = true;
+        script.id = 'razorpay-embed-btn-js';
+        script.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
+        script.onload = initRazorpay;
+        document.body.appendChild(script);
+      }
+    } else {
+      initRazorpay();
+    }
+  }, []);
 
   const workshopDetails = {
     date: '21st November 2026',
-    time: '10:00 AM – 5:30 PM (Full-Day Intensive)',
     venueName: 'E Hotel Chennai (Express Avenue)',
     venueAddress: 'Express Avenue Mall, Ground Floor, Gate No. 1, Patullos Road, Royapettah, Chennai, Tamil Nadu 600002',
     mapLink: 'https://maps.google.com/?q=E+Hotel+Express+Avenue+Royapettah+Chennai',
     investment: {
-      price: '₹4,999',
-      original: '₹8,999',
-      discount: '45% OFF Early Bird',
-      upiId: '8056958856@okbizaxis',
+      price: '₹3,999',
+      original: '₹4,999',
+      discount: '🔥 Early Bird: ₹3,999 (Regular ₹4,999)',
     },
+    paymentUrl: 'https://pages.razorpay.com/pl_TmyTI6aeo1bdfo/view',
     seatsRemaining: 6,
   };
 
@@ -126,40 +139,9 @@ export const WorkshopPage: React.FC = () => {
     },
     {
       q: 'How do I confirm my seat after payment?',
-      a: 'Once you fill out the registration form and complete your payment, your pass is instantly registered in our system and an official confirmation email is sent with your badge details.',
+      a: 'Simply click "Pay Now" to complete your booking directly via Razorpay. Enter your name, phone number, and email address during checkout. Once payment is complete, you instantly receive an official confirmation receipt and workshop pass on your email and SMS.',
     },
   ];
-
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setPaymentStep('payment');
-      window.scrollTo({ top: document.getElementById('booking-section')?.offsetTop || 0, behavior: 'smooth' });
-    }, 600);
-  };
-
-  const handleCompleteRegistration = (method: 'Instant UPI / QR' | 'Card / Gateway') => {
-    setIsSubmitting(true);
-    
-    // Save to local backend storage
-    const saved = saveRegistration({
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone,
-      experience: formData.experience,
-      goals: formData.goals,
-      amount: 4999,
-      paymentMethod: method,
-    });
-
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setRegisteredId(saved.id);
-      setPaymentStep('success');
-    }, 1000);
-  };
 
   return (
     <div className="bg-pastel-50 text-pastel-950 min-h-screen">
@@ -213,12 +195,12 @@ export const WorkshopPage: React.FC = () => {
                 <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-3.5">
                   <div className="flex items-center gap-2 text-gold-DEFAULT text-xs font-bold uppercase tracking-wider mb-1">
                     <Calendar className="w-4 h-4" />
-                    <span>Date & Time</span>
+                    <span>Workshop Date</span>
                   </div>
                   <div className="font-serif text-base sm:text-lg font-bold text-white">
                     21st November 2026
                   </div>
-                  <div className="text-[11px] text-pastel-300">10:00 AM – 5:30 PM</div>
+                  <div className="text-[11px] text-pastel-300">Offline Masterclass</div>
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-3.5">
@@ -254,7 +236,7 @@ export const WorkshopPage: React.FC = () => {
                   className="flex items-center gap-3 bg-gradient-to-r from-gold-DEFAULT via-amber-500 to-amber-600 hover:from-amber-500 hover:to-gold-DEFAULT text-pastel-950 px-8 py-4 rounded-full font-bold text-base transition-all shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 group"
                 >
                   <Sparkles className="w-5 h-5 text-pastel-950" />
-                  <span>Reserve Your Seat ({workshopDetails.investment.price})</span>
+                  <span>Reserve Your Seat (Early Bird {workshopDetails.investment.price})</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
 
@@ -481,347 +463,108 @@ export const WorkshopPage: React.FC = () => {
               Reserve Your Masterclass Seat
             </h2>
             <p className="text-pastel-750 text-sm sm:text-base max-w-xl mx-auto">
-              Fill out your details to receive immediate seat confirmation and registration ID.
+              Fast 1-minute checkout. Attendee details and instant ticket pass confirmation are handled securely via Razorpay.
             </p>
           </div>
 
-          {/* Multi-step registration & payment box */}
+          {/* Registration & payment card */}
           <div className="bg-white rounded-3xl shadow-xl border border-pastel-300 overflow-hidden">
             
-            {/* Progress Header */}
-            <div className="bg-pastel-900 text-white p-6 grid grid-cols-3 text-center border-b border-pastel-800">
-              <div className={`space-y-1 ${paymentStep === 'form' ? 'text-gold-DEFAULT font-bold' : 'text-pastel-400'}`}>
-                <div className="text-xs uppercase tracking-wider">Step 1</div>
-                <div className="text-sm">Your Details</div>
-              </div>
-              <div className={`space-y-1 ${paymentStep === 'payment' ? 'text-gold-DEFAULT font-bold' : 'text-pastel-400'}`}>
-                <div className="text-xs uppercase tracking-wider">Step 2</div>
-                <div className="text-sm">Seat Investment ({workshopDetails.investment.price})</div>
-              </div>
-              <div className={`space-y-1 ${paymentStep === 'success' ? 'text-gold-DEFAULT font-bold' : 'text-pastel-400'}`}>
-                <div className="text-xs uppercase tracking-wider">Step 3</div>
-                <div className="text-sm">Confirmed Pass</div>
+            {/* Header Banner */}
+            <div className="bg-pastel-900 text-white p-6 sm:p-8 border-b border-pastel-800">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 px-3 py-1 rounded-full">
+                    {workshopDetails.investment.discount}
+                  </span>
+                  <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-2">
+                    1-Day In-Person Workshop Pass
+                  </h3>
+                  <p className="text-xs sm:text-sm text-pastel-300 mt-1">
+                    21st November 2026 • E Hotel Chennai (Express Avenue Mall)
+                  </p>
+                </div>
+
+                <div className="text-left sm:text-right bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5">
+                  <div className="text-xs text-pastel-400 line-through">
+                    Regular: {workshopDetails.investment.original}
+                  </div>
+                  <div className="font-serif text-3xl sm:text-4xl font-extrabold text-gold-light">
+                    {workshopDetails.investment.price}
+                  </div>
+                  <div className="text-[11px] text-pastel-300 font-medium mt-0.5">
+                    All-Inclusive • Limited to 25 Seats
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="p-6 sm:p-10">
-              
-              {/* STEP 1: Details Form */}
-              {paymentStep === 'form' && (
-                <form onSubmit={handleFormSubmit} className="space-y-6 text-left">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    
-                    {/* Full Name */}
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-pastel-800 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="e.g. Priya Sundaram"
-                        className="w-full px-4 py-3 rounded-xl bg-pastel-50 border border-pastel-300 text-pastel-950 text-sm focus:outline-none focus:ring-2 focus:ring-pastel-600"
-                      />
-                    </div>
-
-                    {/* Email */}
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-pastel-800 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="priya@example.com"
-                        className="w-full px-4 py-3 rounded-xl bg-pastel-50 border border-pastel-300 text-pastel-950 text-sm focus:outline-none focus:ring-2 focus:ring-pastel-600"
-                      />
-                    </div>
-
-                    {/* Phone Number */}
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-pastel-800 mb-2">
-                        Phone Number / Mobile *
-                      </label>
-                      <input
-                        type="tel"
-                        required
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+91 98765 43210"
-                        className="w-full px-4 py-3 rounded-xl bg-pastel-50 border border-pastel-300 text-pastel-950 text-sm focus:outline-none focus:ring-2 focus:ring-pastel-600"
-                      />
-                    </div>
-
-                    {/* Experience Level */}
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-pastel-800 mb-2">
-                        Speaking / Anchor Experience *
-                      </label>
-                      <select
-                        value={formData.experience}
-                        onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-pastel-50 border border-pastel-300 text-pastel-950 text-sm focus:outline-none focus:ring-2 focus:ring-pastel-600"
-                      >
-                        <option value="Beginner (No Prior Experience)">Beginner (No Prior Experience)</option>
-                        <option value="College / Club Events Hosted">College / Club Events Hosted</option>
-                        <option value="1-3 Years Amateur Hosting">1-3 Years Amateur Hosting</option>
-                        <option value="Corporate / Working Professional">Corporate / Working Professional</option>
-                        <option value="Professional Anchor Upgrading Skills">Professional Anchor Upgrading Skills</option>
-                      </select>
-                    </div>
-
-                  </div>
-
-                  {/* Primary Goal / What do you want to learn? */}
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-pastel-800 mb-2">
-                      What is your #1 goal from this workshop? (Optional)
-                    </label>
-                    <textarea
-                      rows={2}
-                      value={formData.goals}
-                      onChange={(e) => setFormData({ ...formData, goals: e.target.value })}
-                      placeholder="e.g. Conquer stage fear, learn how to get paid emcee bookings, write better scripts..."
-                      className="w-full px-4 py-3 rounded-xl bg-pastel-50 border border-pastel-300 text-pastel-950 text-sm focus:outline-none focus:ring-2 focus:ring-pastel-600"
-                    />
-                  </div>
-
-                  {/* Submit Button */}
-                  <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="text-xs text-pastel-600 flex items-center gap-1.5">
-                      <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                      <span>Direct admin verified registration & instant pass generation.</span>
-                    </div>
-
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full sm:w-auto flex items-center justify-center gap-3 bg-pastel-800 hover:bg-pastel-900 text-pastel-50 px-8 py-3.5 rounded-xl font-bold text-sm transition-all shadow-md hover:shadow-lg disabled:opacity-50 cursor-pointer"
-                    >
-                      {isSubmitting ? (
-                        <span>Processing...</span>
-                      ) : (
-                        <>
-                          <span>Proceed to Payment ({workshopDetails.investment.price})</span>
-                          <ArrowRight className="w-4 h-4 text-gold-DEFAULT" />
-                        </>
-                      )}
-                    </button>
-                  </div>
-                </form>
-              )}
-
-              {/* STEP 2: Payment Options & Gateways */}
-              {paymentStep === 'payment' && (
-                <div className="space-y-8 text-left">
-                  
-                  {/* Pricing Overview Summary Box */}
-                  <div className="bg-pastel-50 rounded-2xl p-6 border border-pastel-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <div>
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-full">
-                        {workshopDetails.investment.discount}
-                      </span>
-                      <h4 className="font-serif text-xl font-bold text-pastel-950 mt-2">
-                        1-Day In-Person Workshop Pass
-                      </h4>
-                      <p className="text-xs text-pastel-600">
-                        Date: <strong>21st Nov 2026</strong> • Venue: <strong>E Hotel Chennai (Express Avenue)</strong>
-                      </p>
-                    </div>
-
-                    <div className="text-left sm:text-right">
-                      <div className="text-xs text-pastel-400 line-through">
-                        {workshopDetails.investment.original}
-                      </div>
-                      <div className="font-serif text-3xl font-extrabold text-pastel-950">
-                        {workshopDetails.investment.price}
-                      </div>
-                      <div className="text-[11px] text-pastel-500 font-medium">Inclusive of mentorship, kit & certificate</div>
-                    </div>
-                  </div>
-
-                  {/* Payment Gateway Options Tabs */}
-                  <div className="space-y-4">
-                    <label className="block text-xs font-bold uppercase tracking-wider text-pastel-800">
-                      Select Payment Mode
-                    </label>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      
-                      {/* UPI Option */}
-                      <button
-                        type="button"
-                        onClick={() => setSelectedMethod('upi')}
-                        className={`p-5 rounded-2xl border text-left transition-all ${
-                          selectedMethod === 'upi'
-                            ? 'border-pastel-800 bg-pastel-100 ring-2 ring-pastel-700 shadow-sm'
-                            : 'border-pastel-200 bg-white hover:bg-pastel-50'
-                        }`}
-                      >
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="font-bold text-sm text-pastel-900">Instant UPI Transfer / QR</span>
-                          <span className="w-3.5 h-3.5 rounded-full border border-pastel-400 flex items-center justify-center">
-                            {selectedMethod === 'upi' && <span className="w-2 h-2 rounded-full bg-pastel-800"></span>}
-                          </span>
-                        </div>
-                        <p className="text-xs text-pastel-600">Google Pay, PhonePe, Paytm, BHIM</p>
-                      </button>
-
-                      {/* Card / Netbanking Option */}
-                      <button
-                        type="button"
-                        onClick={() => setSelectedMethod('card')}
-                        className={`p-5 rounded-2xl border text-left transition-all ${
-                          selectedMethod === 'card'
-                            ? 'border-pastel-800 bg-pastel-100 ring-2 ring-pastel-700 shadow-sm'
-                            : 'border-pastel-200 bg-white hover:bg-pastel-50'
-                        }`}
-                      >
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="font-bold text-sm text-pastel-900">Card / Netbanking</span>
-                          <span className="w-3.5 h-3.5 rounded-full border border-pastel-400 flex items-center justify-center">
-                            {selectedMethod === 'card' && <span className="w-2 h-2 rounded-full bg-pastel-800"></span>}
-                          </span>
-                        </div>
-                        <p className="text-xs text-pastel-600">Credit card, Debit card & Online Banking</p>
-                      </button>
-
-                    </div>
-                  </div>
-
-                  {/* Payment Details Container based on selection */}
-                  {selectedMethod === 'upi' && (
-                    <div className="bg-pastel-50 p-6 rounded-2xl border border-pastel-200 space-y-5">
-                      <div className="flex flex-col sm:flex-row items-center gap-6 justify-between">
-                        <div className="space-y-2 text-center sm:text-left">
-                          <div className="text-xs uppercase font-bold text-pastel-600">Official UPI ID for Payment:</div>
-                          <div className="font-mono text-lg font-bold bg-white px-4 py-2.5 rounded-xl border border-pastel-300 text-pastel-900 select-all shadow-xs">
-                            {workshopDetails.investment.upiId}
-                          </div>
-                          <p className="text-xs text-pastel-600 max-w-sm">
-                            Scan the QR code or transfer <strong>{workshopDetails.investment.price}</strong> using Google Pay / PhonePe / Paytm / CRED.
-                          </p>
-                        </div>
-                        
-                        <div className="bg-white p-3.5 rounded-2xl border border-pastel-300 shadow-sm text-center">
-                          <div className="w-32 h-32 bg-pastel-900 text-white flex flex-col items-center justify-center rounded-xl text-xs font-mono p-2">
-                            <span className="text-[10px] text-gold-DEFAULT mb-1">SCAN & PAY</span>
-                            <span className="font-bold text-base">{workshopDetails.investment.price}</span>
-                            <span className="text-[8px] text-pastel-300 mt-1">EMCEE DEEPIKA</span>
-                          </div>
-                          <span className="text-[10px] text-pastel-500 font-bold block mt-1">UPI Verified</span>
-                        </div>
-                      </div>
-
-                      <div className="pt-3 border-t border-pastel-200 flex flex-col sm:flex-row items-center justify-between gap-3">
-                        <button
-                          onClick={() => handleCompleteRegistration('Instant UPI / QR')}
-                          disabled={isSubmitting}
-                          className="w-full sm:w-auto bg-pastel-800 hover:bg-pastel-900 text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all cursor-pointer disabled:opacity-50"
-                        >
-                          {isSubmitting ? 'Recording Registration...' : `I Have Paid ${workshopDetails.investment.price} — Confirm My Seat`}
-                        </button>
-
-                        <div className="text-xs text-pastel-500">
-                          Instant database recording
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {selectedMethod === 'card' && (
-                    <div className="bg-pastel-50 p-6 rounded-2xl border border-pastel-200 space-y-4">
-                      <p className="text-xs text-pastel-700">
-                        Secure gateway checkout for <strong>{workshopDetails.investment.price}</strong>.
-                      </p>
-                      <button
-                        onClick={() => handleCompleteRegistration('Card / Gateway')}
-                        disabled={isSubmitting}
-                        className="w-full bg-pastel-800 hover:bg-pastel-900 text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
-                      >
-                        <CreditCard className="w-4 h-4 text-gold-DEFAULT" />
-                        <span>{isSubmitting ? 'Processing...' : `Pay ${workshopDetails.investment.price} via Secure Gateway`}</span>
-                      </button>
-                    </div>
-                  )}
-
-                  <div className="flex justify-between items-center pt-2">
-                    <button
-                      type="button"
-                      onClick={() => setPaymentStep('form')}
-                      className="text-xs font-bold text-pastel-600 hover:text-pastel-900 underline"
-                    >
-                      ← Back to Edit Details
-                    </button>
-                  </div>
-
+            <div className="p-6 sm:p-10 space-y-8">
+              {/* Inclusions summary pills */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="p-3.5 rounded-xl bg-pastel-50 border border-pastel-200 text-xs text-pastel-800 flex items-center gap-2.5">
+                  <Mic className="w-4 h-4 text-gold-dark shrink-0" />
+                  <span>Hands-on stage practice & mic coaching</span>
                 </div>
-              )}
+                <div className="p-3.5 rounded-xl bg-pastel-50 border border-pastel-200 text-xs text-pastel-800 flex items-center gap-2.5">
+                  <Award className="w-4 h-4 text-gold-dark shrink-0" />
+                  <span>Verified completion certificate & templates</span>
+                </div>
+                <div className="p-3.5 rounded-xl bg-pastel-50 border border-pastel-200 text-xs text-pastel-800 flex items-center gap-2.5">
+                  <Users className="w-4 h-4 text-gold-dark shrink-0" />
+                  <span>Networking lunch at E Hotel Chennai</span>
+                </div>
+              </div>
 
-              {/* STEP 3: Success Confirmation State */}
-              {paymentStep === 'success' && (
-                <div className="text-center py-8 space-y-5">
-                  <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 mx-auto flex items-center justify-center shadow-inner">
-                    <CheckCircle2 className="w-10 h-10" />
+              {/* Razorpay Embed Container */}
+              <div className="bg-gradient-to-b from-[#F9FBFA] to-pastel-50 rounded-2xl p-6 sm:p-8 border border-pastel-300 text-center space-y-6">
+                <div className="max-w-md mx-auto space-y-2">
+                  <div className="text-xs uppercase tracking-wider font-bold text-pastel-600">
+                    Direct Razorpay Checkout
                   </div>
-                  
-                  <h3 className="font-serif text-3xl font-bold text-pastel-950">
-                    Registration Successfully Confirmed!
-                  </h3>
-
-                  <p className="text-sm text-pastel-700 max-w-md mx-auto leading-relaxed">
-                    Thank you, <strong>{formData.name || 'Speaker'}</strong>! Your seat registration has been recorded in our backend database.
+                  <p className="text-xs sm:text-sm text-pastel-700">
+                    Click the button below to register and pay securely. Razorpay will collect your name, phone, and email and issue your receipt immediately.
                   </p>
+                </div>
 
-                  <div className="bg-pastel-50 p-6 rounded-2xl border border-pastel-200 max-w-md mx-auto text-left space-y-2.5 text-xs text-pastel-800">
-                    <div className="flex justify-between border-b border-pastel-200 pb-2">
-                      <span className="text-pastel-500">Registration ID:</span>
-                      <span className="font-bold font-mono text-pastel-950">{registeredId || 'REG-SUCCESS'}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-pastel-500">Event:</span>
-                      <span className="font-bold">1-Day Emcee & Anchor Masterclass</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-pastel-500">Date:</span>
-                      <span className="font-bold">21st November 2026 (10 AM - 5:30 PM)</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-pastel-500">Venue:</span>
-                      <span className="font-bold">E Hotel, Express Avenue, Chennai</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-pastel-500">Registered Attendee:</span>
-                      <span className="font-bold">{formData.name}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-pastel-500">Amount Paid:</span>
-                      <span className="font-bold font-mono text-emerald-700">{workshopDetails.investment.price}</span>
-                    </div>
+                {/* Embedded Razorpay Button */}
+                <div className="flex flex-col items-center justify-center min-h-[56px] py-2">
+                  <div
+                    className="razorpay-embed-btn"
+                    data-url="https://pages.razorpay.com/pl_TmyTI6aeo1bdfo/view"
+                    data-text="Pay Now"
+                    data-color="#528FF0"
+                    data-size="large"
+                  />
+
+                  {/* Fallback direct button */}
+                  <a
+                    href="https://pages.razorpay.com/pl_TmyTI6aeo1bdfo/view"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-pastel-600 hover:text-pastel-950 underline transition-colors"
+                  >
+                    <span>Click here to open Razorpay payment page directly</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+
+                {/* Trust Badges */}
+                <div className="pt-6 border-t border-pastel-200 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
+                  <div className="flex items-center gap-2 text-xs text-pastel-700">
+                    <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>256-Bit SSL Encrypted</span>
                   </div>
-
-                  <div className="pt-4 flex flex-wrap justify-center gap-4">
-                    <Link
-                      to="/workshop-admin"
-                      className="inline-flex items-center gap-2 bg-[#13281D] hover:bg-[#1C3B2B] text-white px-6 py-3 rounded-full font-bold text-xs shadow-md transition-all"
-                    >
-                      <Lock className="w-3.5 h-3.5 text-gold-DEFAULT" />
-                      <span>View in Admin Dashboard</span>
-                    </Link>
-
-                    <Link
-                      to="/"
-                      className="inline-flex items-center gap-2 bg-pastel-200 hover:bg-pastel-300 text-pastel-900 px-6 py-3 rounded-full font-bold text-xs transition-all"
-                    >
-                      Return to Home
-                    </Link>
+                  <div className="flex items-center gap-2 text-xs text-pastel-700">
+                    <CreditCard className="w-4 h-4 text-pastel-600 shrink-0" />
+                    <span>UPI, Cards, Netbanking</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-pastel-700">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Instant Pass on Email</span>
                   </div>
                 </div>
-              )}
+              </div>
 
             </div>
 

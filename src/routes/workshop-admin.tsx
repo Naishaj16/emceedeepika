@@ -300,7 +300,7 @@ export const WorkshopAdminPage: React.FC = () => {
               {remainingSeats} Left
             </div>
             <div className="text-xs text-pastel-600 font-medium">
-              Price per seat: <strong>₹4,999</strong>
+              Early Bird: <strong>₹3,999</strong> <span className="line-through text-pastel-400">₹4,999</span>
             </div>
           </div>
 
@@ -539,7 +539,7 @@ export const WorkshopAdminPage: React.FC = () => {
               {/* Direct Quick Action */}
               <div className="pt-2">
                 <a
-                  href={`mailto:${selectedAttendee.email}?subject=Confirmation:%201-Day%20Emcee%20Masterclass%20Pass%20(Chennai%2021st%20Nov)&body=Dear%20${encodeURIComponent(selectedAttendee.name)},%0A%0AWe%20are%20delighted%20to%20confirm%20your%20seat%20for%20the%201-Day%20Emcee%20%26%20Anchor%20Mastery%20Workshop%20with%20Deepika%20Jain!%0A%0ADate:%2021st%20November%202026%0ATime:%2010:00%20AM%20-%205:30%20PM%0AVenue:%20E%20Hotel,%20Express%20Avenue%20Mall,%20Royapettah,%20Chennai%0A%0ARegistration%20ID:%20${selectedAttendee.id}%0A%0AWe%20look%20forward%20to%20welcoming%20you%20on%20stage!`}
+                  href={`mailto:${selectedAttendee.email}?subject=Confirmation:%201-Day%20Emcee%20Masterclass%20Pass%20(Chennai%2021st%20Nov)&body=Dear%20${encodeURIComponent(selectedAttendee.name)},%0A%0AWe%20are%20delighted%20to%20confirm%20your%20seat%20for%20the%201-Day%20Emcee%20%26%20Anchor%20Mastery%20Workshop%20with%20Deepika%20Jain!%0A%0ADate:%2021st%20November%202026%0AVenue:%20E%20Hotel,%20Express%20Avenue%20Mall,%20Royapettah,%20Chennai%0A%0ARegistration%20ID:%20${selectedAttendee.id}%0A%0AWe%20look%20forward%20to%20welcoming%20you%20on%20stage!`}
                   className="w-full flex items-center justify-center gap-2 bg-pastel-800 hover:bg-pastel-900 text-white py-2.5 rounded-xl text-xs font-bold transition-all shadow-xs"
                 >
                   <Mail className="w-3.5 h-3.5 text-gold-DEFAULT" />

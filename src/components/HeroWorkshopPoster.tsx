@@ -37,18 +37,18 @@ export const HeroWorkshopPoster: React.FC<HeroWorkshopPosterProps> = ({ classNam
         </div>
 
         {/* Center Stage & Portrait Visual Showcase */}
-        <div className="relative mx-4 mt-4 rounded-2xl overflow-hidden aspect-[4/4.2] border border-gold-DEFAULT/40 bg-pastel-950 shadow-inner group-hover:border-gold-DEFAULT transition-colors">
+        <div className="relative mx-4 mt-4 rounded-2xl overflow-hidden aspect-[4/4.8] border border-gold-DEFAULT/40 bg-pastel-950 shadow-inner group-hover:border-gold-DEFAULT transition-colors">
           
           {/* Main Photo */}
           <img
             src="/images/deepika/deepika-workshop-portrait.jpg"
             alt="Emcee Deepika Jain Leading the 1-Day Anchor Masterclass"
-            className="w-full h-full object-cover object-top filter contrast-[1.08] brightness-[0.98] group-hover:scale-105 transition-transform duration-700 ease-out"
+            className="w-full h-full object-cover object-[center_36%] filter contrast-[1.08] brightness-[0.98] group-hover:scale-105 transition-transform duration-700 ease-out"
           />
 
           {/* Seamless Gradients & Vignettes */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0e1f16] via-[#0e1f16]/30 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0e1f16]/40 via-transparent to-[#0e1f16]/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0e1f16] via-[#0e1f16]/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0e1f16]/30 via-transparent to-[#0e1f16]/30" />
 
           {/* Top Left Floating Tag: Trainer Credentials */}
           <div className="absolute top-3 left-3 bg-[#13281D]/90 backdrop-blur-md border border-gold-DEFAULT/60 px-3 py-1.5 rounded-xl shadow-lg flex items-center gap-1.5">
@@ -61,8 +61,11 @@ export const HeroWorkshopPoster: React.FC<HeroWorkshopPosterProps> = ({ classNam
 
           {/* Top Right Floating Tag: Early Bird Price */}
           <div className="absolute top-3 right-3 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-3 py-1.5 rounded-xl shadow-lg border border-emerald-400/40 text-right">
-            <div className="text-[8px] uppercase tracking-widest text-emerald-200 font-bold leading-none">Pass Price</div>
-            <div className="text-sm font-black font-mono leading-tight">₹4,999</div>
+            <div className="text-[8px] uppercase tracking-widest text-emerald-200 font-bold leading-none">Early Bird</div>
+            <div className="text-sm font-black font-mono leading-tight flex items-baseline gap-1">
+              <span>₹3,999</span>
+              <span className="text-[9px] line-through text-emerald-300 font-normal">₹4,999</span>
+            </div>
           </div>
 
           {/* Bottom Overlay Info on Photo */}
@@ -72,7 +75,7 @@ export const HeroWorkshopPoster: React.FC<HeroWorkshopPosterProps> = ({ classNam
                 <Calendar className="w-3.5 h-3.5" />
                 <span>21st November 2026</span>
               </span>
-              <span className="text-[10px] text-pastel-300 font-normal">10 AM – 5:30 PM</span>
+              <span className="text-[10px] text-emerald-400 font-semibold">Masterclass Pass</span>
             </div>
 
             <div className="flex items-center gap-1.5 text-xs font-bold text-white">
@@ -109,8 +112,9 @@ export const HeroWorkshopPoster: React.FC<HeroWorkshopPosterProps> = ({ classNam
               <Sparkles className="w-4 h-4 text-pastel-950 animate-bounce" />
               <span className="uppercase tracking-wider">Book Your Seat Now</span>
             </div>
-            <div className="flex items-center gap-1 font-extrabold text-sm">
-              <span>₹4,999</span>
+            <div className="flex items-center gap-1.5 font-extrabold text-sm">
+              <span className="line-through text-pastel-700 text-xs font-normal">₹4,999</span>
+              <span className="text-pastel-950 font-black">₹3,999</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
           </div>

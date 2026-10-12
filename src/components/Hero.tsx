@@ -70,7 +70,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 className="flex items-center gap-2.5 bg-gradient-to-r from-[#13281D] via-[#1C3B2B] to-[#13281D] hover:from-[#1C3B2B] hover:to-[#2E5941] text-white px-8 py-4 rounded-full font-semibold text-sm sm:text-base transition-all shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-95 group cursor-pointer border border-gold-DEFAULT/40"
               >
                 <Sparkles className="w-4 h-4 text-gold-DEFAULT animate-pulse" />
-                <span className="text-white">Join 1-Day Workshop (₹4,999)</span>
+                <span className="text-white">Join 1-Day Workshop (Early Bird ₹3,999)</span>
                 <ArrowRight className="w-4 h-4 text-gold-DEFAULT group-hover:translate-x-1 transition-transform" />
               </Link>
 
