@@ -42,33 +42,37 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled || mobileMenuOpen
-          ? 'bg-pastel-100 border-b border-pastel-200 shadow-sm py-3'
-          : 'bg-pastel-100/90 border-b border-pastel-200/60 py-4 sm:py-5'
+          ? 'bg-pastel-100/95 backdrop-blur-md border-b border-pastel-200 shadow-sm py-2.5 sm:py-3'
+          : 'bg-pastel-100/90 backdrop-blur-sm border-b border-pastel-200/60 py-3.5 sm:py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
+        <Link to="/" className="flex items-center gap-2.5 sm:gap-3.5 group shrink-0">
           <img
             src="/logo.png"
             alt="Emcee Deepika Jain Logo"
-            width="80"
-            height="80"
+            width="55"
+            height="68"
             decoding="async"
-            className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain drop-shadow-sm group-hover:scale-105 transition-transform"
+            className={`object-contain drop-shadow-sm group-hover:scale-105 transition-all duration-300 ${
+              scrolled ? 'h-9 sm:h-10 md:h-11 w-auto' : 'h-11 sm:h-12 md:h-13 w-auto'
+            }`}
           />
-          <div>
-            <span className="font-serif text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-pastel-900 block group-hover:text-pastel-700 transition-colors">
+          <div className="flex flex-col justify-center">
+            <span className={`font-serif font-bold tracking-tight text-pastel-900 block group-hover:text-pastel-700 transition-all duration-300 leading-tight ${
+              scrolled ? 'text-base sm:text-lg md:text-xl' : 'text-lg sm:text-xl md:text-2xl'
+            }`}>
               Deepika Jain
             </span>
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-pastel-600 font-semibold block">
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-pastel-600 font-semibold block leading-tight mt-0.5">
               International Emcee & Host
             </span>
           </div>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-4 xl:gap-5 whitespace-nowrap text-sm">
+        <nav className="hidden lg:flex items-center gap-3.5 xl:gap-5 whitespace-nowrap text-sm">
           <Link to="/" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">Home</Link>
           <Link to="/about" className="text-pastel-700 hover:text-pastel-900 font-medium gold-underline transition-colors">About</Link>
 
