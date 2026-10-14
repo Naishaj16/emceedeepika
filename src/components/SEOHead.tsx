@@ -10,6 +10,7 @@ interface SEOHeadProps {
   ogType?: string;
   schemaJson?: object;
   showHreflang?: boolean;
+  noIndex?: boolean;
 }
 
 export const SEOHead: React.FC<SEOHeadProps> = ({
@@ -21,6 +22,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   ogType = 'website',
   schemaJson,
   showHreflang = false,
+  noIndex = false,
 }) => {
   const location = useLocation();
   const pathname = location ? location.pathname : '';
@@ -43,6 +45,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     };
 
     // 2. Standard Meta Tags
+    setMetaTag('meta[name="robots"]', 'name', 'robots', noIndex ? 'noindex, nofollow' : 'index, follow');
     setMetaTag('meta[name="description"]', 'name', 'description', description);
     if (keywords && keywords.length > 0) {
       setMetaTag('meta[name="keywords"]', 'name', 'keywords', keywords.join(', '));

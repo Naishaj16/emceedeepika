@@ -98,9 +98,12 @@ const routeTree = rootRoute.addChildren([
   singaporeRoute,
 ]);
 
+import { NotFoundPage } from './routes/not-found';
+
 export const router = createRouter({
   routeTree,
   defaultPreload: 'intent',
+  defaultNotFoundComponent: NotFoundPage,
 });
 
 declare module '@tanstack/react-router' {
