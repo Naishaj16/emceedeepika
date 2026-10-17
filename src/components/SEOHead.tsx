@@ -97,10 +97,13 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       });
     }
 
-    // 7. Inject JSON-LD Schema
+    // 7. Inject JSON-LD Schema (reconcile with prerendered schema to prevent duplicates)
     const scriptId = 'json-ld-schema';
-    let script = document.getElementById(scriptId) as HTMLScriptElement;
+    // Remove any existing prerendered scripts that don't match our ID to prevent duplication
+    const existingLdScripts = document.querySelectorAll('script[type="application/ld+json"]:not(#' + scriptId + ')');
     if (schemaJson) {
+      existingLdScripts.forEach((el) => el.remove());
+      let script = document.getElementById(scriptId) as HTMLScriptElement;
       if (!script) {
         script = document.createElement('script');
         script.id = scriptId;
@@ -108,8 +111,10 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
         document.head.appendChild(script);
       }
       script.text = JSON.stringify(schemaJson);
-    } else if (script) {
-      script.remove();
+    } else {
+      existingLdScripts.forEach((el) => el.remove());
+      const script = document.getElementById(scriptId);
+      if (script) script.remove();
     }
   }, [title, description, keywords, targetCanonicalUrl, ogImage, ogType, schemaJson, showHreflang]);
 

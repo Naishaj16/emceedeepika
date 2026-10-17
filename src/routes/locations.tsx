@@ -61,13 +61,6 @@ export const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locatio
       '@type': 'AdministrativeArea',
       name: `${data.city}, ${data.region}`,
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '128',
-      bestRating: '5',
-      worstRating: '1',
-    },
     review: data.testimonials.map((t) => ({
       '@type': 'Review',
       author: {
@@ -110,7 +103,7 @@ export const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locatio
         '@type': 'ListItem',
         position: 2,
         name: 'Locations',
-        item: 'https://www.emceedeepika.com/services',
+        item: 'https://www.emceedeepika.com/locations',
       },
       {
         '@type': 'ListItem',
@@ -122,6 +115,9 @@ export const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locatio
   };
 
   const sisterLocations = Object.values(locationSeoMap).filter((loc) => loc.slug !== locationKey);
+  const whatsappUrl = `https://wa.me/918056958856?text=${encodeURIComponent(
+    `Hi Deepika, I am inquiring about booking you as an event emcee in ${data.city}`
+  )}`;
 
   return (
     <div className="pt-24 pb-16">
@@ -139,7 +135,7 @@ export const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locatio
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-medium text-pastel-600">
           <Link to="/" className="hover:text-pastel-900 transition-colors">Home</Link>
           <ChevronRight className="w-3.5 h-3.5 text-pastel-400" />
-          <Link to="/services" className="hover:text-pastel-900 transition-colors">Locations</Link>
+          <Link to="/locations" className="hover:text-pastel-900 transition-colors">Locations</Link>
           <ChevronRight className="w-3.5 h-3.5 text-pastel-400" />
           <span className="text-pastel-900 font-semibold">{data.city}</span>
         </nav>
@@ -170,7 +166,7 @@ export const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locatio
               <ArrowRight className="w-5 h-5" />
             </button>
             <a
-              href="https://wa.me/918056958856?text=Hi%20Deepika,%20I%20am%20inquiring%20about%20booking%20you%20as%20an%20event%20anchor%20in%20Chennai"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-emerald-700 hover:bg-emerald-800 text-white px-7 py-3.5 rounded-full font-semibold text-base transition-all shadow-md flex items-center gap-2"
@@ -223,9 +219,9 @@ export const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locatio
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-semibold text-pastel-900 text-sm">Bilingual & Multilingual Fluency</h4>
+                  <h4 className="font-semibold text-pastel-900 text-sm">Multilingual & Cultural Nuance</h4>
                   <p className="text-pastel-600 text-xs leading-relaxed">
-                    Native Tamil & English command, combined with Hindi, Marwari, and Telugu to unite cross-regional families and multinational corporate attendees.
+                    {data.languageHighlight}
                   </p>
                 </div>
               </div>
@@ -265,7 +261,7 @@ export const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locatio
             </div>
 
             <p className="text-pastel-700 text-sm leading-relaxed">
-              Whether orchestrating complex protocol for South India tech conventions at Chennai Trade Centre or elevating grand celebrations at The Leela Palace, Deepika ensures a memorable, world-class experience.
+              {data.venueHighlight}
             </p>
 
             {/* Iconic Venues Grid */}
@@ -320,13 +316,13 @@ export const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locatio
           <div className="text-center space-y-3 max-w-2xl mx-auto">
             <div className="inline-flex items-center gap-2 text-pastel-600 font-bold uppercase text-xs tracking-widest">
               <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-              <span>Real Client Stories</span>
+              <span>Client Reviews</span>
             </div>
             <h2 className="font-serif text-3xl font-bold text-pastel-900">
-              Verified Feedback from {data.city} Events
+              Feedback from {data.city} Events
             </h2>
             <p className="text-pastel-600 text-sm">
-              Read how Deepika brought poise, humor, and connection to luxury weddings and corporate galas.
+              Read how Deepika brought poise, humor, and connection to luxury celebrations and corporate galas.
             </p>
           </div>
 
@@ -421,15 +417,15 @@ export const LocationLandingPage: React.FC<{ locationKey: string }> = ({ locatio
             Share your dates, venue, and vision. We guarantee a bespoke proposal response within 6 hours.
           </p>
 
-          {/* Quick NAP Details */}
+          {/* Clickable NAP Details with tel: and mailto: links */}
           <div className="flex flex-wrap justify-center items-center gap-6 text-xs text-pastel-200 border-t border-b border-pastel-700/80 py-3 max-w-xl mx-auto">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-gold-light" />
-              <span>+91 80569 58856</span>
+              <a href="tel:+918056958856" className="hover:text-gold-light transition-colors">+91 80569 58856</a>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-gold-light" />
-              <span>dishajain395@gmail.com</span>
+              <a href="mailto:dishajain395@gmail.com" className="hover:text-gold-light transition-colors">dishajain395@gmail.com</a>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-gold-light" />

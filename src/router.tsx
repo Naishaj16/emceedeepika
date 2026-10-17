@@ -81,6 +81,12 @@ const workshopAdminRoute = createRoute({
   component: React.lazy(() => import('./routes/workshop-admin').then((m) => ({ default: m.WorkshopAdminPage }))),
 });
 
+const locationsHubRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/locations',
+  component: React.lazy(() => import('./routes/locations-hub').then((m) => ({ default: m.LocationsHubPage }))),
+});
+
 const routeTree = rootRoute.addChildren([
   homeRoute,
   aboutRoute,
@@ -92,6 +98,7 @@ const routeTree = rootRoute.addChildren([
   workshopAdminRoute,
   contactRoute,
   portfolioRoute,
+  locationsHubRoute,
   chennaiRoute,
   dubaiRoute,
   malaysiaRoute,

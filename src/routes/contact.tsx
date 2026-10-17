@@ -103,8 +103,14 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-pastel-900 text-base">Phone & WhatsApp</h4>
-                    <p className="text-pastel-700 font-medium">+91 8056958856 <span className="text-xs text-pastel-500 font-normal">(Primary / WhatsApp)</span></p>
-                    <p className="text-pastel-700 font-medium">+91 8056914320 <span className="text-xs text-pastel-500 font-normal">(Management Desk)</span></p>
+                    <p className="text-pastel-700 font-medium">
+                      <a href="tel:+918056958856" className="hover:text-gold-DEFAULT transition-colors">+91 8056958856</a>{' '}
+                      <span className="text-xs text-pastel-500 font-normal">(Primary / WhatsApp)</span>
+                    </p>
+                    <p className="text-pastel-700 font-medium">
+                      <a href="tel:+918056914320" className="hover:text-gold-DEFAULT transition-colors">+91 8056914320</a>{' '}
+                      <span className="text-xs text-pastel-500 font-normal">(Management Desk)</span>
+                    </p>
                   </div>
                 </div>
 

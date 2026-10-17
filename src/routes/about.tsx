@@ -16,6 +16,7 @@ export const AboutPage: React.FC = () => {
     url: 'https://www.emceedeepika.com/about',
     mainEntity: {
       '@type': ['Person', 'LocalBusiness'],
+      '@id': 'https://www.emceedeepika.com/#deepika-jain',
       name: 'Deepika Jain',
       jobTitle: 'International Multilingual Emcee & Event Host',
       description: 'Deepika Jain is a multilingual emcee with 12+ years and 2,500+ shows across 15+ countries including Singapore, Dubai, Bali, Phuket, and Maldives.',
@@ -26,7 +27,7 @@ export const AboutPage: React.FC = () => {
         '@type': 'PostalAddress',
         addressLocality: 'Chennai',
         addressRegion: 'Tamil Nadu',
-        addressCountry: 'India',
+        addressCountry: 'IN',
       },
       sameAs: [
         'https://www.instagram.com/emcee_deepikajain/',
@@ -38,8 +39,8 @@ export const AboutPage: React.FC = () => {
       workLocation: ['Chennai', 'Mumbai', 'Delhi NCR', 'Udaipur', 'Dubai', 'Singapore', 'Malaysia', 'Bali', 'Phuket', 'Maldives'],
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '9',
+        ratingValue: '5.0',
+        reviewCount: '3',
         bestRating: '5',
         worstRating: '1',
       },
@@ -141,7 +142,7 @@ export const AboutPage: React.FC = () => {
             Fluent in the languages her audiences actually speak
           </h2>
           <p className="text-base text-pastel-800 leading-relaxed">
-            Deepika hosts confidently in <strong>English, Hindi, Marwari, and Tamil</strong> — not as a party trick, but because a genuinely mixed guest list deserves a host who won't leave part of the room disconnected. Whether it's a North Indian and South Indian family sharing a wedding, or a Dubai crowd spanning South Asian, Gulf, and Western guests, she moves between languages naturally, without losing the moment's timing or tone.
+            Deepika hosts confidently in <strong>English, Hindi, Marwari, Tamil, and Telugu</strong> — not as a party trick, but because a genuinely mixed guest list deserves a host who won't leave part of the room disconnected. Whether it's a North Indian and South Indian family sharing a wedding, or a Dubai crowd spanning South Asian, Gulf, and Western guests, she moves between languages naturally, without losing the moment's timing or tone.
           </p>
         </div>
 

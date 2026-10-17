@@ -13,6 +13,8 @@ export interface LocationSEOData {
   secondaryKeywords: string[];
   faqs: { question: string; answer: string }[];
   marketContext: string;
+  venueHighlight: string;
+  languageHighlight: string;
   venues: string[];
   localStats: {
     localEvents: string;
@@ -60,6 +62,8 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
       'emcee Chennai',
     ],
     marketContext: 'Chennai and Tamil Nadu celebrations blend rich cultural rituals with cosmopolitan elegance. As a native bilingual anchor fluent in both Tamil and English (along with Hindi, Marwari, and Telugu), Deepika bridges family traditions and lively modern celebration, ensuring every guest feels deeply involved.',
+    venueHighlight: 'Whether orchestrating complex protocol for South India tech conventions at Chennai Trade Centre or elevating grand celebrations at The Leela Palace, Deepika ensures a memorable, world-class experience.',
+    languageHighlight: 'Native Tamil & English command, combined with Hindi, Marwari, and Telugu to unite cross-regional families and multinational corporate attendees.',
     venues: [
       'ITC Grand Chola (Guindy)',
       'The Leela Palace (MRC Nagar)',
@@ -176,6 +180,8 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
       'emcee for corporate event UAE',
     ],
     marketContext: 'Dubai is the global epicenter for ultra-luxury corporate events, international trade summits, and destination weddings. Deepika brings effortless multinational stage command, diplomatic VIP protocol management, and vibrant gala hosting across the UAE.',
+    venueHighlight: 'Whether hosting high-profile summits at Dubai World Trade Centre or orchestrating luxury gala evenings at Armani Hotel Burj Khalifa, Deepika delivers flawless international polish.',
+    languageHighlight: 'Fluent international English and Hindi, with diplomatic poise for multicultural delegations, VIP protocol, and pan-Arab destination guests.',
     venues: [
       'Atlantis The Royal & Atlantis The Palm',
       'Burj Al Arab Jumeirah',
@@ -183,6 +189,7 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
       'Armani Hotel Dubai (Burj Khalifa)',
       'Madinat Jumeirah Conference Centre',
       'Ritz-Carlton Dubai DIFC',
+      'Emirates Palace Mandarin Oriental (Abu Dhabi)',
     ],
     localStats: {
       localEvents: '350+',
@@ -201,16 +208,36 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
       },
       {
         title: 'Luxury Destination Weddings in the UAE',
-        desc: 'Royal Sangeets, cocktail soirees, and beachside receptions for NRI and international couples across Dubai and Abu Dhabi.',
+        desc: 'Royal Sangeets, cocktail soirees, and beachside receptions for NRI and international couples across Dubai, Abu Dhabi, and Ras Al Khaimah.',
+      },
+      {
+        title: 'High-Impact Brand Launches',
+        desc: 'Dynamic stage reveal choreography, executive product unveiling speeches, and media interviews for global luxury brands.',
       },
     ],
     testimonials: [
       {
         name: 'Sarah Mitchell',
-        role: 'VP of Global Events',
+        role: 'VP of Global Events, EMEA Summit Group',
         event: 'International Leadership Gala',
-        venue: 'Armani Hotel Dubai',
-        quote: 'Deepika’s energy is infectious! She didn’t just host our gala; she orchestrated an unforgettable experience for over 1,200 attendees in Dubai with true royal poise.',
+        venue: 'Armani Hotel Dubai (Burj Khalifa)',
+        quote: 'Deepika’s energy is infectious! She didn’t just host our gala; she orchestrated an unforgettable experience for over 1,200 attendees in Dubai with true royal poise and immaculate timing.',
+        rating: 5,
+      },
+      {
+        name: 'Kabir & Alisha Singhania',
+        role: 'Couple',
+        event: 'Luxury Destination Wedding Reception',
+        venue: 'Atlantis The Royal, Palm Jumeirah',
+        quote: 'Deepika commanded our 800-guest sangeet and reception with breathtaking grace. Her multilingual warmth made all our international and NRI family members feel celebrated.',
+        rating: 5,
+      },
+      {
+        name: 'Fariq Al-Mansoor',
+        role: 'Summit Director',
+        event: 'Middle East Tech & FinTech Forum',
+        venue: 'Dubai World Trade Centre (DWTC)',
+        quote: 'Deepika moderated our ministerial panels and VIP gala with incredible sharpness, intelligence, and composure under tight broadcast timelines.',
         rating: 5,
       },
     ],
@@ -226,6 +253,18 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
       {
         question: 'Can Deepika moderate panel discussions at conferences in Dubai?',
         answer: 'Absolutely. She is an experienced conference moderator skilled at facilitating engaging Q&As and keeping global summit panels on schedule.',
+      },
+      {
+        question: 'What is the fee structure for hiring an emcee in Dubai and the UAE?',
+        answer: 'Fees are tailored to the event format, session duration, and rehearsal commitments. Clear all-inclusive proposals including travel and technical coordination are shared within 6 hours.',
+      },
+      {
+        question: 'How far in advance should events in Dubai be booked?',
+        answer: 'Given the busy corporate and wedding season between October and April in the UAE, booking 3 to 6 months in advance is recommended to ensure calendar availability.',
+      },
+      {
+        question: 'What AV technical rider does Deepika need for UAE venues?',
+        answer: 'Standard international event specifications: two professional wireless handheld mics (Shure Axient or Sennheiser EW-D), active stage monitoring, and an AV tech run-through 60 minutes prior.',
       },
     ],
   },
@@ -258,12 +297,15 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
       'celebrity emcee Malaysia',
     ],
     marketContext: 'In Malaysia, corporate celebrations center around the electric energy of annual Dinner & Dance (D&D) nights and regional conventions. Deepika delivers high-octane audience games, executive stage decorum, and seamless multicultural rapport.',
+    venueHighlight: 'Whether electrifying annual Dinner & Dance celebrations at KLCC or anchoring executive awards at Mandarin Oriental Kuala Lumpur, Deepika keeps audience energy soaring.',
+    languageHighlight: 'Fluent English with cultural resonance in Tamil, Hindi, and Malaysian multicultural nuances for corporate teams and multi-ethnic wedding celebrations.',
     venues: [
       'Kuala Lumpur Convention Centre (KLCC)',
       'Mandarin Oriental Kuala Lumpur',
       'W Kuala Lumpur',
       'Shangri-La Kuala Lumpur',
-      'Sunway Resort Hotel',
+      'Sunway Resort Hotel & Convention Centre',
+      'The Westin Desaru Coast Resort',
     ],
     localStats: {
       localEvents: '180+',
@@ -280,14 +322,38 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
         title: 'Regional APAC Conferences & Expos',
         desc: 'Keynote pacing, summit agenda management, and seamless stage handover for regional tech and trade expos.',
       },
+      {
+        title: 'Grand Indian & Cross-Cultural Weddings',
+        desc: 'Energetic sangeet nights, varmala ceremony coordination, and bilingual hosting bridging Indian and Malaysian traditions.',
+      },
+      {
+        title: 'Annual Awards & Employee Gala Nights',
+        desc: 'Prestigious award presentation pacing, executive citations, and celebratory recognition with dignity and fanfare.',
+      },
     ],
     testimonials: [
       {
         name: 'Marcus Tan',
-        role: 'HR & Events Lead',
+        role: 'HR & Events Lead, TechLogix Malaysia',
         event: 'Annual Dinner & Dance Gala',
         venue: 'KLCC, Kuala Lumpur',
         quote: 'Deepika was sensational! Her ability to energize 600 corporate employees and keep the momentum soaring throughout our D&D was world-class.',
+        rating: 5,
+      },
+      {
+        name: 'Divya & Harish Pillai',
+        role: 'Bride & Groom',
+        event: 'Cross-Border Wedding Reception',
+        venue: 'Mandarin Oriental Kuala Lumpur',
+        quote: 'Deepika brought the absolute best vibes to our wedding in KL! Our families from India and Malaysia felt completely united and entertained all night.',
+        rating: 5,
+      },
+      {
+        name: 'Syahril Azman',
+        role: 'Corporate Communications Director',
+        event: 'ASEAN FinTech Summit',
+        venue: 'W Kuala Lumpur',
+        quote: 'Deepika handled our international keynote sessions with extraordinary professionalism and smooth stage transitions. Highly recommended!',
         rating: 5,
       },
     ],
@@ -299,6 +365,22 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
       {
         question: 'Is Deepika available for corporate events in Penang and Johor Bahru as well as KL?',
         answer: 'Yes! Deepika regularly travels across Malaysia, including Kuala Lumpur, Penang, and Johor Bahru for corporate galas and wedding celebrations.',
+      },
+      {
+        question: 'How does Deepika manage multilingual Malaysian audiences?',
+        answer: 'Deepika hosts primarily in international English with fluent integration of Tamil and Hindi, respecting multicultural corporate and social traditions throughout Malaysia.',
+      },
+      {
+        question: 'What are the booking rates for corporate events in Malaysia?',
+        answer: 'Pricing is based on full-day summit or evening D&D duration, venue location in Malaysia, and rehearsal schedule. A formal transparent quotation is provided within 6 hours.',
+      },
+      {
+        question: 'How early should we secure Deepika for a D&D in Kuala Lumpur?',
+        answer: 'Annual D&D season (November to February) books quickly across KL. Securing your date 2 to 4 months in advance is strongly advised.',
+      },
+      {
+        question: 'What technical sound requirements are needed for a D&D night?',
+        answer: 'Two high-grade cordless UHF handheld microphones, stage audio monitor wedges, and direct DJ/sound engineer coordination before guest arrivals.',
       },
     ],
   },
@@ -331,12 +413,15 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
       'emcee for company D&D Singapore',
     ],
     marketContext: 'As Asia’s premier convention and financial hub, Singapore demands an emcee of exceptional articulate refinement, cultural versatility, and time-discipline. Deepika provides flawless stage stewardship for C-suite assemblies and grand company celebrations.',
+    venueHighlight: 'Whether moderating global conventions at Marina Bay Sands or commanding grand celebrations at Resorts World Sentosa, Deepika brings unrivaled poise and precision.',
+    languageHighlight: 'Crystal-clear international English delivery, with multicultural nuance for Singapore’s corporate and cosmopolitan audiences.',
     venues: [
       'Marina Bay Sands Expo & Convention Centre',
       'Resorts World Sentosa (RWS)',
       'The Fullerton Hotel Singapore',
       'Capella Singapore (Sentosa)',
       'Suntec Singapore Convention & Exhibition Centre',
+      'Raffles Hotel Singapore',
     ],
     localStats: {
       localEvents: '220+',
@@ -353,14 +438,38 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
         title: 'Company Dinner & Dance (D&D) Extravaganzas',
         desc: 'High-energy entertainment, corporate lucky draws, and employee recognition nights that foster community.',
       },
+      {
+        title: 'Luxury Destination Weddings in Sentosa',
+        desc: 'Elegant island nuptials, grand ballroom banquets, and lively sangeet evenings with cross-cultural fluency.',
+      },
+      {
+        title: 'Product Keynotes & Innovation Showcases',
+        desc: 'Dynamic stage delivery, executive fireside chats, and smooth live Q&A moderation for tech giants.',
+      },
     ],
     testimonials: [
       {
         name: 'Evelyn Lim',
-        role: 'Head of Corporate Communications',
+        role: 'Head of Corporate Communications, FinGlobal APAC',
         event: 'Asia-Pacific Tech Summit',
         venue: 'Marina Bay Sands, Singapore',
         quote: 'Deepika was exceptionally poised, articulate, and adept at managing tight schedules with senior dignitaries. Truly one of the finest emcees in the region.',
+        rating: 5,
+      },
+      {
+        name: 'Siddharth & Priya Nair',
+        role: 'Bride & Groom',
+        event: 'Sentosa Island Wedding & Reception',
+        venue: 'Capella Singapore',
+        quote: 'Deepika was magnificent! She brought sophistication to our formal reception and electric excitement to our sangeet party. Every single guest complimented her hosting.',
+        rating: 5,
+      },
+      {
+        name: 'Jonathan Cheong',
+        role: 'Managing Director, Asia Retail Conglomerate',
+        event: 'Annual Corporate Gala & D&D',
+        venue: 'The Fullerton Hotel Singapore',
+        quote: 'Deepika struck the perfect balance between corporate prestige during our awards and pure fun during the dinner games. An absolute star host!',
         rating: 5,
       },
     ],
@@ -372,6 +481,22 @@ export const locationSeoMap: Record<string, LocationSEOData> = {
       {
         question: 'Does Deepika handle award ceremonies and gala dinners in Singapore?',
         answer: 'Yes, she is a sought-after Master of Ceremonies for high-profile award nights, company D&Ds at Marina Bay Sands and Resorts World Sentosa, and global tech summits.',
+      },
+      {
+        question: 'Can Deepika host corporate Dinner & Dance (D&D) in Singapore?',
+        answer: 'Yes! She specializes in D&D programs featuring interactive icebreakers, corporate lucky draws, best-dressed contests, and dance floor momentum.',
+      },
+      {
+        question: 'What are the emcee rates for Singapore events?',
+        answer: 'Rates depend on conference duration, dinner and dance programming, and pre-event script customization. Comprehensive bespoke proposals are delivered within 6 hours.',
+      },
+      {
+        question: 'How early should Singapore clients book Deepika?',
+        answer: 'Peak corporate gala and convention months (September through January) fill up fast. We recommend booking 2 to 4 months in advance.',
+      },
+      {
+        question: 'What stage audio equipment is required for Singapore venues?',
+        answer: 'Standard professional rider: two wireless UHF microphones (Shure ULX-D / Sennheiser), dedicated stage monitor, and a sound tech check 60 minutes before start.',
       },
     ],
   },
